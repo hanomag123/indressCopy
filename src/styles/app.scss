@@ -1,0 +1,56 @@
+@import "fonts";
+@import "config";
+@import "components";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+
+    &__content {
+        flex: 1 1 100%;
+    }
+}
+
+.scroll-disabled {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 90px;
+    max-width: 1512px;
+    width: 100%;
+
+    &._fill {
+        max-width: initial;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0 20px;
+    }
+}
+
+.animated-underline {
+    &:after {
+        content: '';
+        display: block;
+        margin-top: -1px;
+        width: 0;
+        height: 1px;
+        background: currentColor;
+        transition: $transition-default;
+    }
+
+    &:hover, &:focus {
+        &:after {
+            width: 100%;
+        }
+    }
+}

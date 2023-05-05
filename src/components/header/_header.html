@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="@@lang">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@@title</title>
+    <meta name="title" content="@@title">
+    <meta name="description" content="@@description">
+    <meta property="og:title" content="@@title">
+    <meta property="og:description" content="@@description">
+    <meta property="og:url" content="@@url">
+    <meta property="og:site_name" content="Indress">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- styles -->
+    <link rel="stylesheet" href="@@webRoot/css/vendor.min.css">
+    <link rel="stylesheet" href="@@webRoot/css/app.min.css">
+    <!-- end of styles -->
+</head>
+<body class="@@classes.body">
+<!-- wrapper -->
+<div class="wrapper">
+    <!--  header classes:
+    _dark - for black background
+    _sub-open - for show submenus  -->
+    <header class="header">
+        <div class="container _fill">
+            <div class="header__mobile_menu">
+                <div class="header__mobile_menu-btn">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                @@include("./_action.html", {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account"})
+                <div class="header__mobile_menu-wrapper">
+                    <form class="header__mobile_menu-search" action="/catalog/" method="get">
+                        <label for="header-search" class="header__search-label">
+                            <input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+                        </label>
+                    </form>
+                    <ul class="header__mobile_menu-list">
+                    @@for (let i = 0; i < mobileMenuItems.length; i++) {
+                        <li class="header__mobile_menu-item` + (mobileMenuItems[i].text === page ? ' _active' : '') + `">
+                            <a href="` + mobileMenuItems[i].link + `" class="header__mobile_menu-link animated-underline">` + mobileMenuItems[i].text + `</a>
+                        </li>
+                    }
+                    </ul>
+                </div>
+            </div>
+            <div class="header__logo">
+                <a href="/" class="header__logo-link" aria-label="На главную">
+                    @@include("../_logo.html", {
+                    "color": "#ffffff",
+                    })
+                </a>
+            </div>
+            <div class="header__menu">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        @@for (var i = 0; i < navItems.length; i++) {
+                        <li class="header__nav-item` + (navItems[i].text === page ? ' _active' : '') + `">
+                            <a href="` + navItems[i].link + `" class="header__nav-link animated-underline">` + navItems[i].text + `</a>
+                            ` + (navItems[i].child && navItems[i].child.length > 0 ? ('<ul class="header__submenu-list">' + navItems[i].child.reduce(function (result, item) {
+                            return result + '<li class="header__submenu-item"><a href="' + item.link + '" class="header__submenu-link animated-underline">' + item.text + '</a></li>';
+                            }, '') + '</ul>') : '') + `
+                        </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__action">
+                <div class="header__action-list">
+                    @@loop("./_action.html", [
+                    {"id": "header-search", "class": "header__action-search", "icon": "img/sprite.svg#search", "link": "#search"},
+                    {"id": "header-like", "class": "header__action-like", "icon": "img/sprite.svg#like", "link": "#like"},
+                    {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account"},
+                    {"id": "header-basket", "class": "header__action-basket", "icon": "img/sprite.svg#basket", "link": "#basket"},
+                    ])
+                </div>
+            </div>
+        </div>
+    </header>

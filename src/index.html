@@ -1,0 +1,27 @@
+@@include('components/header/_header.html', {
+"lang": "ru",
+"title": "Indress - Магазин одежды",
+"description": "",
+"url": "/",
+"breadcrumbs": [],
+"classes": {"body": ""},
+"page": "Главная",
+})
+
+<div class="wrapper__content">
+    @@include('components/fullwidth-banner/_fullwidth-banner.html')
+
+    @@include('components/category-banners/_category-banners.html', {
+    "item1": {"img": "img/category-1.jpg", "name": "Каталог", "link": "/catalog/"},
+    "item2": {"img": "img/category-2.jpg", "name": "Sale", "link": "/sale/"},
+    "item3": {"img": "img/category-3.jpg", "name": "Аксессуары", "link": "/accessories/"},
+    "item4": {"img": "img/category-4.jpg", "name": "Bestseller", "link": "/bestseller/"},
+    })
+
+    <div style="height: 100vh;"></div>
+    <div style="height: 100vh;"></div>
+</div>
+
+@@include('components/_footer.html', {
+"page": "home",
+})
