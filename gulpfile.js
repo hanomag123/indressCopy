@@ -2,7 +2,7 @@
 let preprocessor = 'sass', // Preprocessor
     imageswatch = 'png|jpg|jpeg|gif|svg|ico', // List of images extensions for watching & compression (comma separated)
     baseDir = 'src', // Base directory path without «/» at the end
-    buildDir = 'build' // Build directory
+    buildDir = 'docs' // Build directory
 ;
 
 let paths = {
