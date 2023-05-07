@@ -224,19 +224,21 @@ class Indress {
     }
 
     openFooterGroup(event) {
-        let group = this.closest('.footer__sitemap-col'),
-            list = group.querySelector('.footer__sitemap-list');
-        if (!group.classList.contains('_open')) {
-            list.style.height = 'initial';
-            let height = list.offsetHeight + 'px';
-            list.style.removeProperty('height');
-            window.requestAnimationFrame(function () {
-                list.style.setProperty('height', height);
-            });
-        } else {
-            list.style.removeProperty('height');
+        if (window.innerWidth < 768) {
+            let group = this.closest('.footer__sitemap-col'),
+                list = group.querySelector('.footer__sitemap-list');
+            if (!group.classList.contains('_open')) {
+                list.style.height = 'initial';
+                let height = list.offsetHeight + 'px';
+                list.style.removeProperty('height');
+                window.requestAnimationFrame(function () {
+                    list.style.setProperty('height', height);
+                });
+            } else {
+                list.style.removeProperty('height');
+            }
+            group.classList.toggle('_open');
         }
-        group.classList.toggle('_open');
     }
 }
 
