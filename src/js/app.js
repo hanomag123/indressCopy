@@ -7,7 +7,8 @@ class Indress {
         document.addEventListener('DOMContentLoaded', (function () {
             this.initEvents();
             this.initSliders();
-            this.calculateAppHeight()
+            this.calculateAppHeight();
+            this.checkHeaderMenuSize();
         }).bind(this));
     }
 
@@ -20,6 +21,7 @@ class Indress {
         this.addEventListener('.header__mobile_menu-btn', 'click', this.openMobileMenu.bind(this));
         this.addEventListener('input, select, textarea', 'focusin', this.disableZoom.bind(this), true, {passive: true});
         this.addEventListener('input, select, textarea', 'focusout', this.enableZoom.bind(this), true, {passive: true});
+        this.addEventListener('.footer__sitemap-name', 'click', this.openFooterGroup, true, {passive: true});
     }
 
     disableZoom() {
@@ -44,15 +46,35 @@ class Indress {
                     pagination = banner.querySelector('.swiper-pagination');
 
                 new Swiper(swiper, {
+                    slidesPerView: 1,
                     loop: true,
                     pagination: {
                         el: pagination,
                         clickable: true,
                     },
+                    autoplay: {
+                        delay: 7000,
+                    },
                 });
 
             }
         }
+
+        let productLines = document.querySelectorAll('.product-line');
+        if (productLines.length > 0) {
+            for (let productLine of productLines) {
+                let swiper = productLine.querySelector('.swiper');
+
+                new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    loop: false,
+                    freeMode: true,
+                });
+
+            }
+        }
+
+
     }
 
     onLoad(event) {
@@ -199,6 +221,22 @@ class Indress {
 
     calculateAppHeight() {
         document.documentElement.style.setProperty('--app-height', (window.innerHeight / 100) + 'px');
+    }
+
+    openFooterGroup(event) {
+        let group = this.closest('.footer__sitemap-col'),
+            list = group.querySelector('.footer__sitemap-list');
+        if (!group.classList.contains('_open')) {
+            list.style.height = 'initial';
+            let height = list.offsetHeight + 'px';
+            list.style.removeProperty('height');
+            window.requestAnimationFrame(function () {
+                list.style.setProperty('height', height);
+            });
+        } else {
+            list.style.removeProperty('height');
+        }
+        group.classList.toggle('_open');
     }
 }
 

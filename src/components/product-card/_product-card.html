@@ -1,2 +1,22 @@
-<div class="product-card">
-</div>
+<article class="product-card">
+    <div class="product-card__img">
+        <div class="product-card__like">
+            <svg>
+                <use xlink:href="@@webRoot/img/sprite.svg#like"></use>
+            </svg>
+        </div>
+        <picture class="product-card__picture">
+            <source srcset="@@webRoot/@@img">
+            <img src="@@webRoot/@@img" alt="@@name">
+        </picture>
+    </div>
+    <div class="product-card__info">
+        <h5 class="product-card__name" title="@@name">@@name</h5>
+        <div class="product-card__price">@@price</div>
+        <div class="product-card__colors">
+            @@for (let color in colors) {
+            <div class="product-card__color" title="` + colors[color] + `" style="background-color: ` + color + `"></div>
+            }
+        </div>
+    </div>
+</article>

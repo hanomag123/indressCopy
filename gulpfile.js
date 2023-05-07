@@ -203,6 +203,34 @@ function html() {
                         link: "/accessories/",
                     },
                 ],
+                sitemap: [
+                    {
+                        name: "Покупателям",
+                        items: [
+                            {text: "Оплата", link: "/about/payment/"},
+                            {text: "Доставка", link: "/about/delivery/"},
+                            {text: "Возврат", link: "/about/return/"},
+                            {text: "Подарочные сертификаты", link: "/certificates/"},
+                        ],
+                    },
+                    {
+                        name: "Компания",
+                        items: [
+                            {text: "О бренде", link: "/about/"},
+                            {text: "Наши магазины", link: "/about/stores/"},
+                            {text: "Связаться с нами", link: "/about/feedback/"},
+                        ],
+                    },
+                    {
+                        name: "Социальные сети",
+                        social: true,
+                        items: [
+                            {text: "Instagram", link: "https://instagram.com"},
+                            {text: "Telegram", link: "https://t.me"},
+                            {text: "Whatsapp", link: "https://wa.me"},
+                        ],
+                    },
+                ],
             }
         }))
         .pipe(htmlbeautify(options))

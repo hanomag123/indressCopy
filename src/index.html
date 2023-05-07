@@ -18,10 +18,12 @@
     "item4": {"img": "img/category-4.jpg", "name": "Bestseller", "link": "/bestseller/"},
     })
 
-    <div style="height: 100vh;"></div>
-    <div style="height: 100vh;"></div>
+    @@include('components/product-line/_product-line.html', {
+    "title": "Новинки",
+    })
+
 </div>
 
-@@include('components/_footer.html', {
+@@include('components/footer/_footer.html', {
 "page": "home",
 })

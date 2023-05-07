@@ -1,0 +1,38 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+                <div class="footer__logo-desktop">
+                    @@include("../_logo.html")
+                </div>
+                <div class="footer__logo-mobile">
+                    @@include("../_symbol-logo.html")
+                </div>
+            </div>
+            <nav class="footer__sitemap">
+                @@for (let group of sitemap) {
+                <div class="footer__sitemap-col` + (group.social ? ' _social' : '') + `">
+                    <h4 class="footer__sitemap-name">` + group.name + `
+                        <svg class="arrow">
+                            <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                        </svg>
+                    </h4>
+                    <ul class="footer__sitemap-list">
+                        ` + group.items.reduce(function (result, item) {
+                        return result + '<li class="footer__sitemap-item"><a href="' + item.link + '" class="footer__sitemap-link animated-underline">' + item.text + '</a></li>'
+                        }, '') + `
+                    </ul>
+                </div>
+                }
+            </nav>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- end of wrapper -->
+<!-- scripts -->
+<script src="js/vendor.min.js"></script>
+<script src="js/app.min.js"></script>
+<!-- end of scripts -->
+</body>
+</html>
