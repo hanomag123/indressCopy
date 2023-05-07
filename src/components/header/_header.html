@@ -37,7 +37,7 @@
                         <label for="header-search" class="header__search-label">
                             <input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
                             <svg>
-                                <use xlink:href="img/sprite.svg#search"></use>
+                                <use xlink:href="@@webRoot/img/sprite.svg#search"></use>
                             </svg>
                         </label>
                     </form>
@@ -83,3 +83,6 @@
             </div>
         </div>
     </header>
+    @@if (space) {
+    <div class="header__space"></div>
+    }

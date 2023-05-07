@@ -1,12 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Каталог Indress - Магазин одежды</title>
+	<meta name="title" content="Каталог Indress - Магазин одежды">
+	<meta name="description" content="">
+	<meta property="og:title" content="Каталог Indress - Магазин одежды">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="/catalog/">
+	<meta property="og:site_name" content="Indress">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<!-- styles -->
+	<link rel="stylesheet" href="../css/vendor.min.css">
+	<link rel="stylesheet" href="../css/app.min.css">
+	<!-- end of styles -->
 </head>
 
-<body>
+<body class="">
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!--  header classes:
+    _dark - for black background
+    _sub-open - for show submenus  -->
+		<header class="header">
+			<div class="container _fill">
+				<div class="header__mobile_menu">
+					<div class="header__mobile_menu-btn">
+						<hr>
+						<hr>
+						<hr>
+					</div>
+					<div class="header__action-item header__action-account" id="header-account">
+						<a href="#account" class="header__action-link">
+							<svg>
+								<use xlink:href="../img/sprite.svg#account"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header__mobile_menu-wrapper">
+						<form class="header__mobile_menu-search" action="/catalog/" method="get">
+							<label for="header-search" class="header__search-label">
+								<input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
+								<svg>
+									<use xlink:href="../img/sprite.svg#search"></use>
+								</svg>
+							</label>
+						</form>
+						<ul class="header__mobile_menu-list">
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/" class="header__mobile_menu-link animated-underline">Все</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/new/" class="header__mobile_menu-link animated-underline">Новинки</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/dress/" class="header__mobile_menu-link animated-underline">Платья</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/suit/" class="header__mobile_menu-link animated-underline">Костюмы</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/jacket/" class="header__mobile_menu-link animated-underline">Жакеты</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/shirts/" class="header__mobile_menu-link animated-underline">Рубашки</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/shorts/" class="header__mobile_menu-link animated-underline">Шорты</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/skirts/" class="header__mobile_menu-link animated-underline">Юбки</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/denim/" class="header__mobile_menu-link animated-underline">Деним</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/trousers/" class="header__mobile_menu-link animated-underline">Брюки</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/sweater/" class="header__mobile_menu-link animated-underline">Свитер, Джемпер</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/catalog/t-shirt/" class="header__mobile_menu-link animated-underline">Топ, Футболка и Лонгслив</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/bestseller/" class="header__mobile_menu-link animated-underline">Bestseller</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/sale/" class="header__mobile_menu-link animated-underline">Sale</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/shoes/" class="header__mobile_menu-link animated-underline">Обувь</a>
+							</li>
+							<li class="header__mobile_menu-item">
+								<a href="/accessories/" class="header__mobile_menu-link animated-underline">Аксессуары</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header__logo">
+					<a href="/" class="header__logo-link" aria-label="На главную">
+						<svg width="648" height="105" viewBox="0 0 648 105" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+							<path d="M294.18 64.0601C307.65 77.6401 320.9 90.9901 334.36 104.56C333.75 104.61 333.38 104.66 333.02 104.66C326.5 104.66 319.98 104.69 313.47 104.62C312.82 104.62 312.02 104.21 311.55 103.73C298.69 90.8101 285.87 77.8701 273.06 64.9101C272.42 64.2601 271.79 63.9401 270.87 63.9901C269.37 64.0601 267.85 64.0101 266.21 64.0101C266.21 64.6601 266.21 65.1701 266.21 65.6701C266.21 78.1701 266.19 90.6701 266.24 103.18C266.24 104.44 265.86 104.7 264.68 104.69C260.24 104.63 255.8 104.66 251.37 104.66C250.9 104.66 250.44 104.66 249.93 104.66V0.130068C250.44 0.110068 250.86 0.0700684 251.28 0.0700684C263.2 0.0900684 275.11 0.0600684 287.03 0.170068C294.88 0.250068 302.68 0.880069 310.19 3.46007C316.96 5.78007 322.83 9.42007 327.17 15.2201C336.68 27.9201 333.42 46.9001 320.28 55.7901C313.68 60.2501 306.41 62.7601 298.52 63.5701C297.17 63.7101 295.83 63.8801 294.2 64.0601H294.18ZM266.28 55.4201C266.61 55.4501 266.88 55.5001 267.15 55.5001C272.63 55.4601 278.1 55.4901 283.58 55.3501C289.11 55.2201 294.55 54.3801 299.82 52.6001C304.54 51.0001 308.82 48.6701 312.17 44.8901C318.16 38.1301 317.42 26.3701 311.81 19.7501C306.49 13.4701 299.43 10.2701 291.46 9.50007C283.76 8.76007 275.99 8.79007 268.24 8.49007C267.61 8.47007 266.98 8.55007 266.29 8.59007V55.4201H266.28Z" />
+							<path d="M141.15 0.0700096C141.83 0.0700096 142.35 0.0700096 142.86 0.0700096C156.65 0.0700096 170.45 0.33001 184.23 0.0100096C206.09 -0.48999 222.19 14.14 227.56 31.09C232.26 45.9 232.22 60.53 225.99 74.92C221.33 85.68 213.94 94.03 203.56 99.63C197.84 102.71 191.63 104.27 185.19 104.5C177.85 104.77 170.49 104.64 163.14 104.66C156.26 104.68 149.39 104.64 142.51 104.69C141.39 104.69 141.12 104.35 141.12 103.27C141.15 69.33 141.14 35.39 141.14 1.45001V0.0700096H141.15ZM157.64 8.85001V96C161.22 96 164.7 96 168.17 96C173.73 96.01 179.27 95.76 184.76 94.77C192.51 93.37 199.01 89.92 204.1 83.76C209.67 77.02 212.76 69.26 213.97 60.74C215.37 50.92 214.5 41.21 211.57 31.74C208 20.2 199.29 10.46 184.48 9.68001C176.02 9.23001 167.54 9.11001 159.07 8.85001C158.6 8.84001 158.13 8.85001 157.63 8.85001H157.64Z" />
+							<path d="M555.21 90.54C558.04 88.58 560.84 86.63 563.64 84.68C563.81 84.8 563.92 84.86 564 84.94C568.51 90.17 574.54 92.57 581.08 93.87C592.31 96.1 603.48 95.91 614.51 92.6C618.76 91.32 622.65 89.32 625.98 86.33C629.34 83.31 631.34 79.52 631.61 75.05C631.85 71.06 630.48 67.51 627.39 64.78C624.54 62.26 621.11 60.86 617.54 59.76C610.22 57.51 602.67 56.45 595.11 55.41C587.04 54.3 578.95 53.29 571.2 50.62C565.57 48.68 560.27 46.05 556.66 41.15C551.03 33.52 549.51 25.2 553.8 16.41C555.98 11.93 559.64 8.75996 564 6.41996C570.39 2.98996 577.25 1.14996 584.48 0.629962C595.48 -0.160038 606.36 0.529962 617.03 3.47996C623.12 5.15996 628.86 7.59996 633.99 11.34C637.22 13.7 639.67 16.8 642.25 19.88C639.12 21.4 636.07 22.88 632.99 24.37C632.71 24.02 632.46 23.76 632.28 23.46C629.34 18.55 624.82 15.68 619.63 13.69C610.69 10.26 601.41 9.41996 591.94 10.05C586.89 10.38 581.92 11.21 577.27 13.27C574.99 14.28 572.7 15.47 570.76 17.01C565.04 21.54 565.73 29.99 571.99 33.8C576.32 36.44 581.1 37.85 586.05 38.67C594.2 40.02 602.39 41.16 610.54 42.54C617.99 43.8 625.36 45.43 632.13 49.01C638.77 52.52 643.93 57.47 646.27 64.72C649.58 75 646.85 84.06 639.69 91.8C634.06 97.88 626.78 101.32 618.75 102.94C602.95 106.12 587.3 105.4 571.88 100.54C565.66 98.58 560.38 95.06 555.47 90.9C555.38 90.83 555.33 90.72 555.21 90.56V90.54Z" />
+							<path d="M539.33 19.76C536 21.38 532.96 22.86 529.86 24.37C529.58 24.01 529.31 23.72 529.11 23.38C526.3 18.71 522.02 15.9 517.1 13.91C511.15 11.51 504.94 10.31 498.56 9.97001C490.68 9.56001 482.87 9.92001 475.42 12.77C472.84 13.76 470.28 15.04 468.05 16.67C461.84 21.21 462.42 29.92 469.05 33.88C473.72 36.67 478.89 38.02 484.2 38.89C492.39 40.23 500.62 41.37 508.81 42.77C515.79 43.96 522.66 45.61 528.98 48.97C535.93 52.66 541.16 57.89 543.44 65.57C545.96 74.07 544.05 81.85 538.99 88.91C534.36 95.37 527.74 99.07 520.41 101.63C515.47 103.36 510.32 104.05 505.14 104.46C494.47 105.3 483.92 104.51 473.5 101.94C465.54 99.98 458.51 96.31 452.39 90.89C452.3 90.81 452.24 90.71 452.09 90.53C454.91 88.56 457.72 86.61 460.55 84.64C460.74 84.8 460.91 84.91 461.03 85.05C465.22 89.92 470.81 92.29 476.87 93.6C488.72 96.16 500.51 96 512.15 92.32C516.08 91.08 519.64 89.15 522.74 86.41C525.85 83.66 527.8 80.22 528.36 76.13C528.99 71.55 527.56 67.61 524.03 64.55C521.23 62.12 517.84 60.78 514.35 59.71C507.65 57.66 500.75 56.58 493.82 55.63C484.92 54.4 475.98 53.41 467.45 50.37C462.15 48.48 457.33 45.8 453.67 41.38C447.56 34 446.55 22.97 451.33 15.16C453.61 11.44 456.79 8.61001 460.62 6.53001C467.37 2.87001 474.61 1.02001 482.26 0.540007C492.3 -0.0899927 502.23 0.510007 512 2.95001C519.23 4.76001 526.14 7.38001 531.92 12.21C534.56 14.42 536.79 17.12 539.34 19.74L539.33 19.76Z" />
+							<path d="M34.4399 0.0700028C36.9899 0.0700028 39.2999 0.0200028 41.6099 0.110003C42.0599 0.130003 42.5799 0.580003 42.9299 0.960003C49.5199 8.25 56.0799 15.57 62.6499 22.88C79.0699 41.16 95.4999 59.43 111.92 77.71C112.18 78 112.36 78.35 112.58 78.68L112.96 78.45V0.140003H122.74V104.63C120.84 104.63 118.94 104.66 117.04 104.6C116.73 104.59 116.4 104.17 116.14 103.89C92.5399 77.61 68.9499 51.33 45.3599 25.04C45.0999 24.75 44.8699 24.44 44.3699 24.27V104.51C43.9499 104.57 43.6499 104.65 43.3499 104.65C40.7499 104.66 38.1499 104.63 35.5499 104.67C34.7399 104.68 34.3399 104.45 34.4299 103.59C34.4699 103.27 34.4299 102.95 34.4299 102.63C34.4299 69.08 34.4299 35.53 34.4299 1.99V0.0700028H34.4399Z" />
+							<path d="M350.28 0.22998H434.84V9.55998H366.64V47.67H401.93V57.16H366.63V95.16H434.86V104.4C434.45 104.42 434.02 104.46 433.59 104.46C408.8 104.56 384.01 104.67 359.22 104.76C356.7 104.76 354.18 104.62 351.67 104.7C350.4 104.74 350.17 104.3 350.17 103.14C350.22 77.98 350.24 52.81 350.26 27.65C350.26 18.98 350.26 10.32 350.27 1.64998C350.27 1.17998 350.27 0.70998 350.27 0.23998L350.28 0.22998Z" />
+							<path d="M16.18 104.14H0V0.149902H16.18V104.14Z" />
+						</svg>
+					</a>
+				</div>
+				<div class="header__menu">
+					<nav class="header__nav">
+						<ul class="header__nav-list">
+							<li class="header__nav-item">
+								<a href="/new/" class="header__nav-link animated-underline">Новинки</a>
+							</li>
+							<li class="header__nav-item _active">
+								<a href="/catalog/" class="header__nav-link animated-underline">Каталог</a>
+								<ul class="header__submenu-list">
+									<li class="header__submenu-item"><a href="/catalog/dress/" class="header__submenu-link animated-underline">Платья</a></li>
+									<li class="header__submenu-item"><a href="/catalog/suit/" class="header__submenu-link animated-underline">Костюмы</a></li>
+									<li class="header__submenu-item"><a href="/catalog/jacket/" class="header__submenu-link animated-underline">Жакеты</a></li>
+									<li class="header__submenu-item"><a href="/catalog/shirts/" class="header__submenu-link animated-underline">Рубашки</a></li>
+									<li class="header__submenu-item"><a href="/catalog/shorts/" class="header__submenu-link animated-underline">Шорты</a></li>
+									<li class="header__submenu-item"><a href="/catalog/skirts/" class="header__submenu-link animated-underline">Юбки</a></li>
+									<li class="header__submenu-item"><a href="/catalog/denim/" class="header__submenu-link animated-underline">Деним</a></li>
+									<li class="header__submenu-item"><a href="/catalog/trousers/" class="header__submenu-link animated-underline">Брюки</a></li>
+									<li class="header__submenu-item"><a href="/catalog/sweater/" class="header__submenu-link animated-underline">Свитер, Джемпер</a></li>
+									<li class="header__submenu-item"><a href="/catalog/t-shirt/" class="header__submenu-link animated-underline">Топ, Футболка и Лонгслив</a></li>
+								</ul>
+							</li>
+							<li class="header__nav-item">
+								<a href="/bestseller/" class="header__nav-link animated-underline">Bestseller</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="/sale/" class="header__nav-link animated-underline">Sale</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="/shoes/" class="header__nav-link animated-underline">Обувь</a>
+								<ul class="header__submenu-list">
+									<li class="header__submenu-item"><a href="/shoes/slippers/" class="header__submenu-link animated-underline">Туфли</a></li>
+									<li class="header__submenu-item"><a href="/shoes/boots/" class="header__submenu-link animated-underline">Ботинки</a></li>
+									<li class="header__submenu-item"><a href="/shoes/sneakers/" class="header__submenu-link animated-underline">Кроссовки</a></li>
+								</ul>
+							</li>
+							<li class="header__nav-item">
+								<a href="/accessories/" class="header__nav-link animated-underline">Аксессуары</a>
+								<ul class="header__submenu-list">
+									<li class="header__submenu-item"><a href="/accessories/hats/" class="header__submenu-link animated-underline">Головные уборы</a></li>
+									<li class="header__submenu-item"><a href="/accessories/bags/" class="header__submenu-link animated-underline">Сумки</a></li>
+									<li class="header__submenu-item"><a href="/accessories/belts/" class="header__submenu-link animated-underline">Ремни</a></li>
+									<li class="header__submenu-item"><a href="/accessories/scarves/" class="header__submenu-link animated-underline">Шарфы</a></li>
+									<li class="header__submenu-item"><a href="/accessories/certificates/" class="header__submenu-link animated-underline">Подарочные сертификаты</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__action">
+					<div class="header__action-list">
+						<div class="header__action-item header__action-search" id="header-search">
+							<a href="#search" class="header__action-link">
+								<svg>
+									<use xlink:href="../img/sprite.svg#search"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__action-item header__action-like" id="header-like">
+							<a href="#like" class="header__action-link">
+								<svg>
+									<use xlink:href="../img/sprite.svg#like"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__action-item header__action-account" id="header-account">
+							<a href="#account" class="header__action-link">
+								<svg>
+									<use xlink:href="../img/sprite.svg#account"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="header__action-item header__action-basket" id="header-basket">
+							<a href="#basket" class="header__action-link">
+								<svg>
+									<use xlink:href="../img/sprite.svg#basket"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header__space"></div>
+		<div class="wrapper__content">
+			<div class="breadcrumbs">
+				<div class="container">
+					<div class="breadcrumbs__wrapper">
+						<ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link animated-underline" itemprop="item" href="/">
+									<span itemprop="name" title="Главная">Главная</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link animated-underline" itemprop="item" href="/catalog/">
+									<span itemprop="name" title="Каталог">Каталог</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__wrapper">
+					<div class="footer__logo">
+						<div class="footer__logo-desktop">
+							<svg width="648" height="105" viewBox="0 0 648 105" fill="@@color" xmlns="http://www.w3.org/2000/svg">
+								<path d="M294.18 64.0601C307.65 77.6401 320.9 90.9901 334.36 104.56C333.75 104.61 333.38 104.66 333.02 104.66C326.5 104.66 319.98 104.69 313.47 104.62C312.82 104.62 312.02 104.21 311.55 103.73C298.69 90.8101 285.87 77.8701 273.06 64.9101C272.42 64.2601 271.79 63.9401 270.87 63.9901C269.37 64.0601 267.85 64.0101 266.21 64.0101C266.21 64.6601 266.21 65.1701 266.21 65.6701C266.21 78.1701 266.19 90.6701 266.24 103.18C266.24 104.44 265.86 104.7 264.68 104.69C260.24 104.63 255.8 104.66 251.37 104.66C250.9 104.66 250.44 104.66 249.93 104.66V0.130068C250.44 0.110068 250.86 0.0700684 251.28 0.0700684C263.2 0.0900684 275.11 0.0600684 287.03 0.170068C294.88 0.250068 302.68 0.880069 310.19 3.46007C316.96 5.78007 322.83 9.42007 327.17 15.2201C336.68 27.9201 333.42 46.9001 320.28 55.7901C313.68 60.2501 306.41 62.7601 298.52 63.5701C297.17 63.7101 295.83 63.8801 294.2 64.0601H294.18ZM266.28 55.4201C266.61 55.4501 266.88 55.5001 267.15 55.5001C272.63 55.4601 278.1 55.4901 283.58 55.3501C289.11 55.2201 294.55 54.3801 299.82 52.6001C304.54 51.0001 308.82 48.6701 312.17 44.8901C318.16 38.1301 317.42 26.3701 311.81 19.7501C306.49 13.4701 299.43 10.2701 291.46 9.50007C283.76 8.76007 275.99 8.79007 268.24 8.49007C267.61 8.47007 266.98 8.55007 266.29 8.59007V55.4201H266.28Z" />
+								<path d="M141.15 0.0700096C141.83 0.0700096 142.35 0.0700096 142.86 0.0700096C156.65 0.0700096 170.45 0.33001 184.23 0.0100096C206.09 -0.48999 222.19 14.14 227.56 31.09C232.26 45.9 232.22 60.53 225.99 74.92C221.33 85.68 213.94 94.03 203.56 99.63C197.84 102.71 191.63 104.27 185.19 104.5C177.85 104.77 170.49 104.64 163.14 104.66C156.26 104.68 149.39 104.64 142.51 104.69C141.39 104.69 141.12 104.35 141.12 103.27C141.15 69.33 141.14 35.39 141.14 1.45001V0.0700096H141.15ZM157.64 8.85001V96C161.22 96 164.7 96 168.17 96C173.73 96.01 179.27 95.76 184.76 94.77C192.51 93.37 199.01 89.92 204.1 83.76C209.67 77.02 212.76 69.26 213.97 60.74C215.37 50.92 214.5 41.21 211.57 31.74C208 20.2 199.29 10.46 184.48 9.68001C176.02 9.23001 167.54 9.11001 159.07 8.85001C158.6 8.84001 158.13 8.85001 157.63 8.85001H157.64Z" />
+								<path d="M555.21 90.54C558.04 88.58 560.84 86.63 563.64 84.68C563.81 84.8 563.92 84.86 564 84.94C568.51 90.17 574.54 92.57 581.08 93.87C592.31 96.1 603.48 95.91 614.51 92.6C618.76 91.32 622.65 89.32 625.98 86.33C629.34 83.31 631.34 79.52 631.61 75.05C631.85 71.06 630.48 67.51 627.39 64.78C624.54 62.26 621.11 60.86 617.54 59.76C610.22 57.51 602.67 56.45 595.11 55.41C587.04 54.3 578.95 53.29 571.2 50.62C565.57 48.68 560.27 46.05 556.66 41.15C551.03 33.52 549.51 25.2 553.8 16.41C555.98 11.93 559.64 8.75996 564 6.41996C570.39 2.98996 577.25 1.14996 584.48 0.629962C595.48 -0.160038 606.36 0.529962 617.03 3.47996C623.12 5.15996 628.86 7.59996 633.99 11.34C637.22 13.7 639.67 16.8 642.25 19.88C639.12 21.4 636.07 22.88 632.99 24.37C632.71 24.02 632.46 23.76 632.28 23.46C629.34 18.55 624.82 15.68 619.63 13.69C610.69 10.26 601.41 9.41996 591.94 10.05C586.89 10.38 581.92 11.21 577.27 13.27C574.99 14.28 572.7 15.47 570.76 17.01C565.04 21.54 565.73 29.99 571.99 33.8C576.32 36.44 581.1 37.85 586.05 38.67C594.2 40.02 602.39 41.16 610.54 42.54C617.99 43.8 625.36 45.43 632.13 49.01C638.77 52.52 643.93 57.47 646.27 64.72C649.58 75 646.85 84.06 639.69 91.8C634.06 97.88 626.78 101.32 618.75 102.94C602.95 106.12 587.3 105.4 571.88 100.54C565.66 98.58 560.38 95.06 555.47 90.9C555.38 90.83 555.33 90.72 555.21 90.56V90.54Z" />
+								<path d="M539.33 19.76C536 21.38 532.96 22.86 529.86 24.37C529.58 24.01 529.31 23.72 529.11 23.38C526.3 18.71 522.02 15.9 517.1 13.91C511.15 11.51 504.94 10.31 498.56 9.97001C490.68 9.56001 482.87 9.92001 475.42 12.77C472.84 13.76 470.28 15.04 468.05 16.67C461.84 21.21 462.42 29.92 469.05 33.88C473.72 36.67 478.89 38.02 484.2 38.89C492.39 40.23 500.62 41.37 508.81 42.77C515.79 43.96 522.66 45.61 528.98 48.97C535.93 52.66 541.16 57.89 543.44 65.57C545.96 74.07 544.05 81.85 538.99 88.91C534.36 95.37 527.74 99.07 520.41 101.63C515.47 103.36 510.32 104.05 505.14 104.46C494.47 105.3 483.92 104.51 473.5 101.94C465.54 99.98 458.51 96.31 452.39 90.89C452.3 90.81 452.24 90.71 452.09 90.53C454.91 88.56 457.72 86.61 460.55 84.64C460.74 84.8 460.91 84.91 461.03 85.05C465.22 89.92 470.81 92.29 476.87 93.6C488.72 96.16 500.51 96 512.15 92.32C516.08 91.08 519.64 89.15 522.74 86.41C525.85 83.66 527.8 80.22 528.36 76.13C528.99 71.55 527.56 67.61 524.03 64.55C521.23 62.12 517.84 60.78 514.35 59.71C507.65 57.66 500.75 56.58 493.82 55.63C484.92 54.4 475.98 53.41 467.45 50.37C462.15 48.48 457.33 45.8 453.67 41.38C447.56 34 446.55 22.97 451.33 15.16C453.61 11.44 456.79 8.61001 460.62 6.53001C467.37 2.87001 474.61 1.02001 482.26 0.540007C492.3 -0.0899927 502.23 0.510007 512 2.95001C519.23 4.76001 526.14 7.38001 531.92 12.21C534.56 14.42 536.79 17.12 539.34 19.74L539.33 19.76Z" />
+								<path d="M34.4399 0.0700028C36.9899 0.0700028 39.2999 0.0200028 41.6099 0.110003C42.0599 0.130003 42.5799 0.580003 42.9299 0.960003C49.5199 8.25 56.0799 15.57 62.6499 22.88C79.0699 41.16 95.4999 59.43 111.92 77.71C112.18 78 112.36 78.35 112.58 78.68L112.96 78.45V0.140003H122.74V104.63C120.84 104.63 118.94 104.66 117.04 104.6C116.73 104.59 116.4 104.17 116.14 103.89C92.5399 77.61 68.9499 51.33 45.3599 25.04C45.0999 24.75 44.8699 24.44 44.3699 24.27V104.51C43.9499 104.57 43.6499 104.65 43.3499 104.65C40.7499 104.66 38.1499 104.63 35.5499 104.67C34.7399 104.68 34.3399 104.45 34.4299 103.59C34.4699 103.27 34.4299 102.95 34.4299 102.63C34.4299 69.08 34.4299 35.53 34.4299 1.99V0.0700028H34.4399Z" />
+								<path d="M350.28 0.22998H434.84V9.55998H366.64V47.67H401.93V57.16H366.63V95.16H434.86V104.4C434.45 104.42 434.02 104.46 433.59 104.46C408.8 104.56 384.01 104.67 359.22 104.76C356.7 104.76 354.18 104.62 351.67 104.7C350.4 104.74 350.17 104.3 350.17 103.14C350.22 77.98 350.24 52.81 350.26 27.65C350.26 18.98 350.26 10.32 350.27 1.64998C350.27 1.17998 350.27 0.70998 350.27 0.23998L350.28 0.22998Z" />
+								<path d="M16.18 104.14H0V0.149902H16.18V104.14Z" />
+							</svg>
+						</div>
+						<div class="footer__logo-mobile">
+							<svg width="352" height="325" viewBox="0 0 352 325" fill="black" xmlns="http://www.w3.org/2000/svg">
+								<path d="M47.3702 26.8102V322.19C46.8702 322.22 46.4902 322.25 46.1002 322.25C31.5102 322.25 16.9202 322.24 2.34019 322.28C1.22019 322.28 0.950195 321.96 0.950195 320.88C0.970195 215.37 0.970196 109.87 0.970196 4.36017C0.970196 3.97017 1.00019 3.58017 1.03019 3.08017C1.58019 3.08017 2.0502 3.08017 2.5202 3.08017C23.8202 2.71017 45.1102 2.39017 66.4102 1.95017C101.21 1.23017 136.01 0.230171 170.82 1.00017C183.64 1.28017 196.46 1.90017 209.26 2.68017C221.26 3.41017 233.19 4.85017 244.95 7.49017C265.75 12.1702 283.85 21.9902 299.95 35.8302C320 53.0602 333.71 74.3802 341.86 99.4402C346.07 112.39 349.15 125.58 350.69 139.11C352.35 153.75 352.22 168.37 350.54 183.01C347.11 213.07 336.58 240.42 318.91 264.88C304.06 285.43 285.14 301.33 262.09 312.09C251.06 317.24 239.41 320.38 227.41 322.32C211.68 324.86 195.83 325.06 179.96 324.97C146.39 324.77 112.82 324.63 79.2502 324.47C78.8602 324.47 78.4602 324.47 77.9902 324.47V123.12H124.27V301.59C124.76 301.63 125.11 301.68 125.45 301.68C141.12 301.7 156.78 301.89 172.45 301.67C187.97 301.45 203.4 300.1 218.55 296.44C232.36 293.11 245.37 287.97 256.51 278.93C266.23 271.05 274.38 261.69 281.4 251.34C290.33 238.16 296.11 223.6 300.16 208.29C304.58 191.59 306.22 174.59 305.52 157.35C305.04 145.52 304.12 133.73 301.83 122.1C299.27 109.12 296.15 96.2902 290.45 84.2402C283.6 69.7602 273.87 57.4502 261.36 47.5302C249.84 38.3902 236.55 33.0602 221.93 31.0802C209.76 29.4402 197.54 28.5402 185.29 27.9502C146.23 26.0802 107.14 26.4002 68.0602 26.7102C61.7102 26.7602 55.3502 26.7702 49.0002 26.8002C48.5302 26.8002 48.0502 26.8002 47.3702 26.8002V26.8102Z" />
+							</svg>
+						</div>
+					</div>
+					<nav class="footer__sitemap">
+						<div class="footer__sitemap-col">
+							<h4 class="footer__sitemap-name">Покупателям
+								<svg class="arrow">
+									<use xlink:href="../img/sprite.svg#arrow"></use>
+								</svg>
+							</h4>
+							<ul class="footer__sitemap-list">
+								<li class="footer__sitemap-item"><a href="/about/payment/" class="footer__sitemap-link animated-underline">Оплата</a></li>
+								<li class="footer__sitemap-item"><a href="/about/delivery/" class="footer__sitemap-link animated-underline">Доставка</a></li>
+								<li class="footer__sitemap-item"><a href="/about/return/" class="footer__sitemap-link animated-underline">Возврат</a></li>
+								<li class="footer__sitemap-item"><a href="/certificates/" class="footer__sitemap-link animated-underline">Подарочные сертификаты</a></li>
+							</ul>
+						</div>
+						<div class="footer__sitemap-col">
+							<h4 class="footer__sitemap-name">Компания
+								<svg class="arrow">
+									<use xlink:href="../img/sprite.svg#arrow"></use>
+								</svg>
+							</h4>
+							<ul class="footer__sitemap-list">
+								<li class="footer__sitemap-item"><a href="/about/" class="footer__sitemap-link animated-underline">О бренде</a></li>
+								<li class="footer__sitemap-item"><a href="/about/stores/" class="footer__sitemap-link animated-underline">Наши магазины</a></li>
+								<li class="footer__sitemap-item"><a href="/about/feedback/" class="footer__sitemap-link animated-underline">Связаться с нами</a></li>
+							</ul>
+						</div>
+						<div class="footer__sitemap-col _social">
+							<h4 class="footer__sitemap-name">Социальные сети
+								<svg class="arrow">
+									<use xlink:href="../img/sprite.svg#arrow"></use>
+								</svg>
+							</h4>
+							<ul class="footer__sitemap-list">
+								<li class="footer__sitemap-item"><a href="https://instagram.com" class="footer__sitemap-link animated-underline">Instagram</a></li>
+								<li class="footer__sitemap-item"><a href="https://t.me" class="footer__sitemap-link animated-underline">Telegram</a></li>
+								<li class="footer__sitemap-item"><a href="https://wa.me" class="footer__sitemap-link animated-underline">Whatsapp</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="../js/vendor.min.js"></script>
+	<script src="../js/app.min.js"></script>
+	<!-- end of scripts -->
 </body>
 
 </html>

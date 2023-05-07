@@ -194,6 +194,7 @@
 
       &-col._social &-item {
         margin: 0;
+        color: #797979;
 
         &:not(:first-child) {
           margin: 0 0 0 20px;
@@ -204,7 +205,7 @@
             display: inline-block;
             width: 1px;
             height: 1.3em;
-            background: #797979;
+            background: currentColor;
             vertical-align: middle;
           }
         }

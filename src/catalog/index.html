@@ -1,10 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@@include('../components/header/_header.html', {
+"lang": "ru",
+"title": "Каталог Indress - Магазин одежды",
+"description": "",
+"url": "/catalog/",
+"classes": {"body": ""},
+"page": "Каталог",
+"space": true,
+})
+<div class="wrapper__content">
+    @@include("../components/breadcrumbs/_breadcrumbs.html", {
+    "items": [
+    {"text": "Главная", "link": "/"},
+    {"text": "Каталог", "link": "/catalog/"},
+    ],
+    })
 
-</body>
-</html>
+    @@include("../components/catalog-categories/_breadcrumbs.html", {
+    "items": [
+    {"text": "Все", "link": "/catalog/"},
+    {"text": "Новинки", "link": "/catalog/new/"},
+    {"text": "Bestseller", "link": "/catalog/bestseller/"},
+    {"text": "Sale", "link": "/catalog/sale/"},
+    {"text": "Платья", "link": "/catalog/dress/"},
+    {"text": "Шорты", "link": "/catalog/shorts/"},
+    {"text": "Юбки", "link": "/catalog/"},
+    {"text": "Брюки", "link": "/catalog/"},
+    {"text": "Топы, толстовки и логнсливы", "link": "/catalog/"},
+    {"text": "Свитеры и джемперы", "link": "/catalog/"},
+    {"text": "Деним", "link": "/catalog/"},
+    {"text": "Аксессуары", "link": "/catalog/"},
+    {"text": "Сумки", "link": "/catalog/"},
+    {"text": "Верхняя одежда", "link": "/catalog/"},
+    {"text": "Обувь", "link": "/catalog/"},
+    {"text": "Рубашки", "link": "/catalog/"},
+    {"text": "Костюмы", "link": "/catalog/"},
+    {"text": "Жакеты", "link": "/catalog/"},
+    ],
+    })
+
+
+
+</div>
+
+@@include('../components/footer/_footer.html')

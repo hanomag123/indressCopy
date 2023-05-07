@@ -90,7 +90,7 @@ function html() {
                 navItems: [
                     {
                         text: "Новинки",
-                        link: "/new/",
+                        link: "/catalog/new/",
                     },
                     {
                         text: "Каталог",
@@ -110,30 +110,30 @@ function html() {
                     },
                     {
                         text: "Bestseller",
-                        link: "/bestseller/",
+                        link: "/catalog/bestseller/",
                     },
                     {
                         text: "Sale",
-                        link: "/sale/",
+                        link: "/catalog/sale/",
                     },
                     {
                         text: "Обувь",
-                        link: "/shoes/",
+                        link: "/catalog/shoes/",
                         child: [
-                            {text: "Туфли", link: "/shoes/slippers/"},
-                            {text: "Ботинки", link: "/shoes/boots/"},
-                            {text: "Кроссовки", link: "/shoes/sneakers/"},
+                            {text: "Туфли", link: "/catalog/shoes/slippers/"},
+                            {text: "Ботинки", link: "/catalog/shoes/boots/"},
+                            {text: "Кроссовки", link: "/catalog/shoes/sneakers/"},
                         ],
                     },
                     {
                         text: "Аксессуары",
-                        link: "/accessories/",
+                        link: "/catalog/accessories/",
                         child: [
-                            {text: "Головные уборы", link: "/accessories/hats/"},
-                            {text: "Сумки", link: "/accessories/bags/"},
-                            {text: "Ремни", link: "/accessories/belts/"},
-                            {text: "Шарфы", link: "/accessories/scarves/"},
-                            {text: "Подарочные сертификаты", link: "/accessories/certificates/"},
+                            {text: "Головные уборы", link: "/catalog/accessories/hats/"},
+                            {text: "Сумки", link: "/catalog/accessories/bags/"},
+                            {text: "Ремни", link: "/catalog/accessories/belts/"},
+                            {text: "Шарфы", link: "/catalog/accessories/scarves/"},
+                            {text: "Подарочные сертификаты", link: "/catalog/accessories/certificates/"},
                         ],
                     },
                 ],
@@ -144,7 +144,7 @@ function html() {
                     },
                     {
                         text: "Новинки",
-                        link: "/new/",
+                        link: "/catalog/new/",
                     },
                     {
                         text: "Платья",
@@ -188,19 +188,19 @@ function html() {
                     },
                     {
                         text: "Bestseller",
-                        link: "/bestseller/",
+                        link: "/catalog/bestseller/",
                     },
                     {
                         text: "Sale",
-                        link: "/sale/",
+                        link: "/catalog/sale/",
                     },
                     {
                         text: "Обувь",
-                        link: "/shoes/",
+                        link: "/catalog/shoes/",
                     },
                     {
                         text: "Аксессуары",
-                        link: "/accessories/",
+                        link: "/catalog/accessories/",
                     },
                 ],
                 sitemap: [

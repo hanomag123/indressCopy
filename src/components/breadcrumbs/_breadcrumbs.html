@@ -1,0 +1,16 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__wrapper">
+            <ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                @@for (let i = 0; i < items.length; i++) {
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a class="breadcrumbs__link animated-underline" itemprop="item" href="` + items[i].link + `">
+                        <span itemprop="name" title="` + items[i].text + `">` + items[i].text + `</span>
+                    </a>
+                    <meta itemprop="position" content="` + (i + 1) + `"/>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
