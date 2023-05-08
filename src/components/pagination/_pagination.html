@@ -1,0 +1,98 @@
+@@if (count > 1) {
+<div class="pagination">
+    <div class="container">
+        <div class="pagination__wrapper">
+            <nav class="pagination__nav">
+                @@if (current < count) {
+                <a href="#load_more" class="pagination__more animated-underline">Загрузить ещё @@loadMoreText</a>
+                }
+                <ul class="pagination__list">
+                    @@for (let i = 0; i < 1; i++) {
+                    <li class="pagination__item pagination__prev` + (current <= 1 ? ' _disabled' : '') + `">
+                        <a href="?page=` + (current - 1) + `" class="pagination__link" title="Предыдущая страница">
+                            <svg>
+                                <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    }
+                    @@if (current > 1) {
+                    <li class="pagination__item pagination__prev">
+                        <a href="?page=1" class="pagination__link">
+                            <svg>
+                                <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    }
+                    @@if (count <= 7) {
+                    @@for (let i = 1; i <= count; i++) {
+                    <li class="pagination__item` + (i === current ? ' _active' : '') + `">
+                        <a href="?page=` + i + `" class="pagination__link animated-underline` + (i === current ? ' _active' : '') + `">` + i + `</a>
+                    </li>
+                    }
+                    }
+
+                    @@if (current < 4 && count > 7) {
+                    @@for (let i = 1; i <= 5; i++) {
+                    <li class="pagination__item` + (i === current ? ' _active' : '') + `">
+                        <a href="?page=` + i + `" class="pagination__link animated-underline` + (i === current ? ' _active' : '') + `">` + i + `</a>
+                    </li>
+                    }
+                    <li class="pagination__item">
+                        <a href="?page=..." class="pagination__link animated-underline">...</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="?page=@@count" class="pagination__link animated-underline">@@count</a>
+                    </li>
+                    }
+
+                    @@if (current > 3 && count > 7 && count - current <= 4) {
+                    <li class="pagination__item">
+                        <a href="?page=1" class="pagination__link animated-underline">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="?page=..." class="pagination__link animated-underline">...</a>
+                    </li>
+                    @@for (let i = count - 4; i <= count; i++) {
+                    <li class="pagination__item` + (i === current ? ' _active' : '') + `">
+                        <a href="?page=` + i + `" class="pagination__link animated-underline` + (i === current ? ' _active' : '') + `">` + i + `</a>
+                    </li>
+                    }
+                    }
+
+
+                    @@if (current > 3 && count > 8 && count - current > 4) {
+                    <li class="pagination__item">
+                        <a href="?page=1" class="pagination__link animated-underline">1</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="?page=..." class="pagination__link animated-underline">...</a>
+                    </li>
+                    @@for (let i = current; i <= (current + 2); i++) {
+                    <li class="pagination__item` + (i === current ? ' _active' : '') + `">
+                        <a href="?page=` + i + `" class="pagination__link animated-underline` + (i === current ? ' _active' : '') + `">` + i + `</a>
+                    </li>
+                    }
+                    <li class="pagination__item">
+                        <a href="?page=..." class="pagination__link animated-underline">...</a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="?page=@@count" class="pagination__link animated-underline">@@count</a>
+                    </li>
+                    }
+                    @@for (let i = 0; i < 1; i++) {
+                    <li class="pagination__item pagination__next` + (current >= count ? ' _disabled' : '') + `">
+                        <a href="?page=` + (current + 1) + `" class="pagination__link" title="Следующая страница">
+                            <svg>
+                                <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+}

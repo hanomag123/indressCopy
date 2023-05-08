@@ -1,0 +1,54 @@
+.catalog-filter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__filter,
+  &__sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 19px;
+    line-height: 1.2em;
+    font-variant: all-small-caps;
+    color: #000000;
+    transition: $transition-default;
+
+    svg {
+      margin-right: 10px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      fill: #000000;
+      transition: $transition-default;
+    }
+
+    &:hover {
+      color: #797979;
+      svg {
+        fill: #797979;
+      }
+    }
+
+    @media (max-width: 1199px) {
+
+      span {
+        display: none;
+      }
+
+      svg {
+        margin-right: 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}

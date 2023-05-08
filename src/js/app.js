@@ -9,6 +9,7 @@ class Indress {
             this.initSliders();
             this.calculateAppHeight();
             this.checkHeaderMenuSize();
+            this.checkHeaderDark();
         }).bind(this));
     }
 
@@ -69,6 +70,35 @@ class Indress {
                     slidesPerView: 'auto',
                     loop: false,
                     freeMode: true,
+                });
+
+            }
+        }
+
+        let categories = document.querySelectorAll('.categories');
+        if (categories.length > 0) {
+            for (let category of categories) {
+                let swiper = category.querySelector('.swiper'),
+                    prev = category.querySelector('.categories__prev'),
+                    next = category.querySelector('.categories__next');
+
+                new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    loop: false,
+                    freeMode: true,
+                    enabled: false,
+                    navigation: {
+                        prevEl: prev,
+                        nextEl: next,
+                    },
+                    breakpoints: {
+                        768: {
+                            enabled: true,
+                        },
+                        1200: {
+                            enabled: false,
+                        }
+                    },
                 });
 
             }
@@ -137,7 +167,7 @@ class Indress {
                     menu = header.querySelector('.header__menu'),
                     nav = header.querySelector('.header__nav');
                 header.classList.remove('_mobile');
-                header.classList.toggle('_mobile', window.innerWidth < 768 || nav.clientWidth >= menu.clientWidth);
+                header.classList.toggle('_mobile', window.innerWidth < 1200 || nav.clientWidth >= menu.clientWidth);
             }).bind(this));
         } catch (e) {
             console.error(e);

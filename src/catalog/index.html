@@ -15,9 +15,9 @@
     ],
     })
 
-    @@include("../components/catalog-categories/_breadcrumbs.html", {
+    @@include("../components/categories/_categories.html", {
     "items": [
-    {"text": "Все", "link": "/catalog/"},
+    {"text": "Все", "link": "/catalog/", "active": true},
     {"text": "Новинки", "link": "/catalog/new/"},
     {"text": "Bestseller", "link": "/catalog/bestseller/"},
     {"text": "Sale", "link": "/catalog/sale/"},
@@ -38,7 +38,11 @@
     ],
     })
 
-
+    @@include("../components/catalog-section/_catalog-section.html", {
+    "title": "Каталог",
+    "useFilter": true,
+    "showPagen": true,
+    })
 
 </div>
 

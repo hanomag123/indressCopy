@@ -1,0 +1,23 @@
+<div class="categories">
+    <div class="container">
+        <div class="swiper-button-prev categories__prev">
+            <svg>
+                <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+            </svg>
+        </div>
+        <div class="swiper categories__slider">
+            <div class="swiper-wrapper categories__wrapper">
+                @@for (let item of items) {
+                <div class="swiper-slide categories__item` + (item.active ? ' _active' : '') + `">
+                    <a href="` + item.link + `" class="categories__link animated-underline` + (item.active ? ' _active' : '') + `">` + item.text + `</a>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="swiper-button-next categories__next">
+            <svg>
+                <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+            </svg>
+        </div>
+    </div>
+</div>

@@ -48,7 +48,7 @@
         transition: $transition-default;
     }
 
-    &:hover, &:focus {
+    &:hover, &:focus, &._active {
         &:after {
             width: 100%;
         }
