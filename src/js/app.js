@@ -22,7 +22,8 @@ class Indress {
         this.addEventListener('.header__mobile_menu-btn', 'click', this.openMobileMenu.bind(this));
         this.addEventListener('input, select, textarea', 'focusin', this.disableZoom.bind(this), true, {passive: true});
         this.addEventListener('input, select, textarea', 'focusout', this.enableZoom.bind(this), true, {passive: true});
-        this.addEventListener('.footer__sitemap-name', 'click', this.openFooterGroup, true, {passive: true});
+        this.addEventListener('.footer__sitemap-name', 'click', this.openFooterGroup, true, {passive: false});
+        this.addEventListener('[data-tab-id]', 'click', this.showTab, true, {passive: false});
     }
 
     disableZoom() {
@@ -46,6 +47,8 @@ class Indress {
                 let swiper = banner.querySelector('.swiper'),
                     pagination = banner.querySelector('.swiper-pagination');
 
+                swiper.swiper && swiper.swiper.destroy();
+
                 new Swiper(swiper, {
                     slidesPerView: 1,
                     loop: true,
@@ -57,7 +60,6 @@ class Indress {
                         delay: 7000,
                     },
                 });
-
             }
         }
 
@@ -65,6 +67,8 @@ class Indress {
         if (productLines.length > 0) {
             for (let productLine of productLines) {
                 let swiper = productLine.querySelector('.swiper');
+
+                swiper.swiper && swiper.swiper.destroy();
 
                 new Swiper(swiper, {
                     slidesPerView: 'auto',
@@ -81,6 +85,8 @@ class Indress {
                 let swiper = category.querySelector('.swiper'),
                     prev = category.querySelector('.categories__prev'),
                     next = category.querySelector('.categories__next');
+
+                swiper.swiper && swiper.swiper.destroy();
 
                 new Swiper(swiper, {
                     slidesPerView: 'auto',
@@ -101,6 +107,42 @@ class Indress {
                     },
                 });
 
+            }
+        }
+
+        let productDetails = document.querySelectorAll('.product-detail__images');
+        if (productDetails.length > 0) {
+            for (let productDetail of productDetails) {
+                let swiper = productDetail.querySelector('.swiper'),
+                    pagination = productDetail.querySelector('.product-detail__slider-pagination'),
+                    scrollbar = productDetail.querySelector('.product-detail__slider-scrollbar');
+
+                swiper.swiper && swiper.swiper.destroy();
+
+                new Swiper(swiper, {
+                    slidesPerView: 1,
+                    autoHeight: true,
+                    mousewheel: true,
+                    loop: false,
+                    zoom: {
+                        minRatio: 1,
+                        maxRation: 5,
+                    },
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
+                    scrollbar: {
+                        el: scrollbar,
+                        draggable: true,
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 'auto',
+                            direction: 'vertical',
+                        }
+                    }
+                });
             }
         }
 
@@ -268,6 +310,24 @@ class Indress {
                 list.style.removeProperty('height');
             }
             group.classList.toggle('_open');
+        }
+    }
+
+    showTab(event) {
+        event.preventDefault();
+
+        let tabId = this.dataset.tabId;
+        if (tabId && tabId.length > 0) {
+            let prefix = tabId.substring(0, tabId.search('#'));
+            let tabs = document.querySelectorAll('[data-tab^="' + prefix + '#"],[data-tab-id^="' + prefix + '#"]')
+            tabs.forEach(function (tab) {
+                console.log(tab);
+                if (tab.dataset.tab) {
+                    tab.classList.toggle('_active', tab.dataset.tab === tabId)
+                } else if (tab.dataset.tabId) {
+                    tab.classList.toggle('_active', tab.dataset.tabId === tabId)
+                }
+            });
         }
     }
 }

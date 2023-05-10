@@ -1,0 +1,37 @@
+@@include('../components/header/_header.html', {
+"lang": "ru",
+"title": "Каталог Indress - Магазин одежды",
+"description": "",
+"url": "/catalog/",
+"classes": {"body": ""},
+"page": "Каталог",
+"space": true,
+})
+
+<div class="wrapper__content">
+  @@include("../components/breadcrumbs/_breadcrumbs.html", {
+  "items": [
+  {"text": "Главная", "link": "/"},
+  {"text": "Каталог", "link": "/catalog/"},
+  {"text": "Жакет двубортный «Гусиная лапка»", "link": "/product/"},
+  ],
+  })
+
+  @@include("../components/product-detail/_product-detail.html", {
+  "name": "Жакет двубортный «Гусиная лапка»",
+  "images": ["img/product-1.jpg", "img/product-2.jpg", "img/product-3.jpg", "img/product-4.jpg"],
+  "isNew": false,
+  "artnumber": "fgjs-9298",
+  "price": "7 890 р.",
+  "colors": {"black": "Черный", "orange": "Оранжевый", "blue": "Синий"},
+  "currentColor": "Черный",
+  "sizes": ["XS", "S", "M", "L", "XL"],
+  "available": true,
+  })
+
+  @@include("../components/product-list/_product-list.html", {
+  "title": "Дополните образ",
+  })
+</div>
+
+@@include('../components/footer/_footer.html')

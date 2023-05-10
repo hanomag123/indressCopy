@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Indress - Магазин одежды</title>
-	<meta name="title" content="Indress - Магазин одежды">
+	<title>Каталог Indress - Магазин одежды</title>
+	<meta name="title" content="Каталог Indress - Магазин одежды">
 	<meta name="description" content="">
-	<meta property="og:title" content="Indress - Магазин одежды">
+	<meta property="og:title" content="Каталог Indress - Магазин одежды">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="/">
+	<meta property="og:url" content="/catalog/">
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
-	<link rel="stylesheet" href="./css/vendor.min.css">
-	<link rel="stylesheet" href="./css/app.min.css">
+	<link rel="stylesheet" href="../css/vendor.min.css">
+	<link rel="stylesheet" href="../css/app.min.css">
 	<!-- end of styles -->
 </head>
 
@@ -36,7 +36,7 @@
 					<div class="header__action-item header__action-account" id="header-account">
 						<a href="#account" class="header__action-link">
 							<svg>
-								<use xlink:href="./img/sprite.svg#account"></use>
+								<use xlink:href="../img/sprite.svg#account"></use>
 							</svg>
 						</a>
 					</div>
@@ -45,7 +45,7 @@
 							<label for="header-search" class="header__search-label">
 								<input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
 								<svg>
-									<use xlink:href="./img/sprite.svg#search"></use>
+									<use xlink:href="../img/sprite.svg#search"></use>
 								</svg>
 							</label>
 						</form>
@@ -120,7 +120,7 @@
 							<li class="header__nav-item">
 								<a href="/catalog/new/" class="header__nav-link animated-underline">Новинки</a>
 							</li>
-							<li class="header__nav-item">
+							<li class="header__nav-item _active">
 								<a href="/catalog/" class="header__nav-link animated-underline">Каталог</a>
 								<ul class="header__submenu-list">
 									<li class="header__submenu-item"><a href="/catalog/dress/" class="header__submenu-link animated-underline">Платья</a></li>
@@ -167,28 +167,28 @@
 						<div class="header__action-item header__action-search" id="header-search">
 							<a href="#search" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#search"></use>
+									<use xlink:href="../img/sprite.svg#search"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-like" id="header-like">
 							<a href="#like" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#like"></use>
+									<use xlink:href="../img/sprite.svg#like"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-account" id="header-account">
 							<a href="#account" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#account"></use>
+									<use xlink:href="../img/sprite.svg#account"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-basket" id="header-basket">
 							<a href="#basket" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#basket"></use>
+									<use xlink:href="../img/sprite.svg#basket"></use>
 								</svg>
 							</a>
 						</div>
@@ -196,159 +196,288 @@
 				</div>
 			</div>
 		</header>
+		<div class="header__space"></div>
 		<div class="wrapper__content">
-			<div class="fullwidth-banner">
-				<div class="swiper fullwidth-banner__slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 23</h3>
-							</div>
-						</div>
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 24</h3>
-							</div>
-						</div>
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 25</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-pagination fullwidth-banner__pagination"></div>
-			</div>
-			<div class="category-banners">
+			<div class="breadcrumbs">
 				<div class="container">
-					<div class="category-banners__wrapper">
-						<a href="/catalog/" class="category-banners__item" style="background-image: url(./img/category-1.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Каталог</h4>
-							</div>
-						</a>
-						<a href="/sale/" class="category-banners__item" style="background-image: url(./img/category-2.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Sale</h4>
-							</div>
-						</a>
-						<a href="/accessories/" class="category-banners__item" style="background-image: url(./img/category-3.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Аксессуары</h4>
-							</div>
-						</a>
-						<a href="/bestseller/" class="category-banners__item" style="background-image: url(./img/category-4.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Bestseller</h4>
-							</div>
-						</a>
+					<div class="breadcrumbs__wrapper">
+						<ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link animated-underline" itemprop="item" href="/">
+									<span itemprop="name" title="Главная">Главная</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link animated-underline" itemprop="item" href="/catalog/">
+									<span itemprop="name" title="Каталог">Каталог</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link animated-underline" itemprop="item" href="/product/">
+									<span itemprop="name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</span>
+								</a>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<section class="product-line">
+			<div class="product-detail">
 				<div class="container">
-					<h2 class="product-line__title">Новинки</h2>
-					<div class="swiper product-line__slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-1.jpg">
-											<img src="./img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+					<div class="product-detail__wrapper">
+						<div class="product-detail__images">
+							<div class="swiper product-detail__slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide product-detail__slide">
+										<div class="swiper-zoom-container">
+											<picture class="product-detail__picture">
+												<source srcset="../img/product-1.jpg">
+												<img src="../img/product-1.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+											</picture>
 										</div>
 									</div>
+									<div class="swiper-slide product-detail__slide">
+										<div class="swiper-zoom-container">
+											<picture class="product-detail__picture">
+												<source srcset="../img/product-2.jpg">
+												<img src="../img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+											</picture>
+										</div>
+									</div>
+									<div class="swiper-slide product-detail__slide">
+										<div class="swiper-zoom-container">
+											<picture class="product-detail__picture">
+												<source srcset="../img/product-3.jpg">
+												<img src="../img/product-3.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+											</picture>
+										</div>
+									</div>
+									<div class="swiper-slide product-detail__slide">
+										<div class="swiper-zoom-container">
+											<picture class="product-detail__picture">
+												<source srcset="../img/product-4.jpg">
+												<img src="../img/product-4.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-pagination product-detail__slider-pagination"></div>
+								<div class="swiper-scrollbar product-detail__slider-scrollbar"></div>
+							</div>
+						</div>
+						<div class="product-detail__info">
+							<h1 class="product-detail__name">Жакет двубортный «Гусиная лапка»</h1>
+							<div class="product-detail__artnumber">арт. fgjs-9298</div>
+							<div class="product-detail__price">
+								<span>7 890 р.</span>
+							</div>
+							<div class="product-detail__props">
+								<div class="product-detail__prop _color">
+									<div class="product-detail__prop-name">Цвет: <span>Черный</span></div>
+									<div class="product-detail__prop-list">
+										<div class="product-detail__prop-item" title="Черный" style="background-color: black"></div>
+										<div class="product-detail__prop-item" title="Оранжевый" style="background-color: orange"></div>
+										<div class="product-detail__prop-item" title="Синий" style="background-color: blue"></div>
+									</div>
+								</div>
+								<div class="product-detail__prop _size">
+									<div class="product-detail__prop-name">Размер <span></span></div>
+									<div class="product-detail__prop-list">
+										<div class="product-detail__prop-item">XS</div>
+										<div class="product-detail__prop-item">S</div>
+										<div class="product-detail__prop-item">M</div>
+										<div class="product-detail__prop-item">L</div>
+										<div class="product-detail__prop-item">XL</div>
+									</div>
+									<a href="#size_table" class="product-detail__size-table" data-modail-id="size-table">Таблица размеров</a>
+								</div>
+							</div>
+							<div class="product-detail__buttons">
+								<a href="#buy" class="product-detail__buy">добавить в корзину</a>
+								<a href="#like" class="product-detail__like">
+									<svg>
+										<use xlink:href="../img/sprite.svg#like"></use>
+									</svg>
 								</a>
 							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-2.jpg">
-											<img src="./img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
-										</div>
-									</div>
-								</a>
+						</div>
+						<div class="product-detail__text">
+							<div class="product-detail__tabs">
+								<a href="#tab1" class="product-detail__tab animated-underline _active" data-tab-id="product-detail-tab#1">Описание</a>
+								<a href="#tab2" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#2">Уход</a>
+								<a href="#tab3" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#3">Доставка и оплата</a>
+								<a href="#tab4" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#4">Возврат</a>
 							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-3.jpg">
-											<img src="./img/product-3.jpg" loading="lazy" alt="Свитер «Леопард»">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Свитер «Леопард»">Свитер «Леопард»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
-										</div>
-									</div>
-								</a>
+							<div class="product-detail__tab-text _active" data-tab-id="product-detail-tab#1">
+								Наш бестселлер — универсальный двубортный пиджак в новом исполнении. Для модели выбрали турецкую костюмную плотную ткань с небольшим мягким ворсом. Изделие можно легко дополнить костюмными брюками, любимыми джинсами или юбкой, которая идет к этой коллекции.
+								<br>
+								<br>
+								<b>Состав</b>
+								<br>
+								<br>
+								Ткань верха: 65% вискоза, 32% полиэстер, 3% эластан Подкладочная ткань: 70% вискоза, 30% полиэстер
 							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-4.jpg">
-											<img src="./img/product-4.jpg" loading="lazy" alt="Платье расклешённое">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Платье расклешённое">Платье расклешённое</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
-										</div>
-									</div>
-								</a>
+							<div class="product-detail__tab-text" data-tab="product-detail-tab#2">
+								Рекомендации по уходу
+							</div>
+							<div class="product-detail__tab-text" data-tab="product-detail-tab#3">
+								Информация по доставке и оплате
+							</div>
+							<div class="product-detail__tab-text" data-tab="product-detail-tab#4">
+								Условия возврата
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+			<div class="product-list">
+				<div class="container">
+					<h3 class="product-list__title">Дополните образ</h3>
+					<div class="product-list__wrapper">
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-1.jpg">
+										<img src="../img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+										<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
+										<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-2.jpg">
+										<img src="../img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+										<div class="product-card__color" title="Черный" style="background-color: black"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-3.jpg">
+										<img src="../img/product-3.jpg" loading="lazy" alt="Свитер «Леопард»">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Свитер «Леопард»">Свитер «Леопард»</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+										<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-4.jpg">
+										<img src="../img/product-4.jpg" loading="lazy" alt="Платье расклешённое">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Платье расклешённое">Платье расклешённое</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Черный" style="background-color: black"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-1.jpg">
+										<img src="../img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+										<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
+										<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="product-list__item">
+							<a href="/product/" class="product-card">
+								<div class="product-card__img">
+									<div class="product-card__like">
+										<svg>
+											<use xlink:href="../img/sprite.svg#like"></use>
+										</svg>
+									</div>
+									<picture class="product-card__picture">
+										<source srcset="../img/product-2.jpg">
+										<img src="../img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+									</picture>
+								</div>
+								<div class="product-card__info">
+									<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
+									<div class="product-card__price">7 890 р.</div>
+									<div class="product-card__colors">
+										<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+										<div class="product-card__color" title="Черный" style="background-color: black"></div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
@@ -375,7 +504,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Покупателям
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -388,7 +517,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Компания
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -400,7 +529,7 @@
 						<div class="footer__sitemap-col _social">
 							<h4 class="footer__sitemap-name">Социальные сети
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -416,8 +545,8 @@
 	</div>
 	<!-- end of wrapper -->
 	<!-- scripts -->
-	<script src="./js/vendor.min.js"></script>
-	<script src="./js/app.min.js"></script>
+	<script src="../js/vendor.min.js"></script>
+	<script src="../js/app.min.js"></script>
 	<!-- end of scripts -->
 </body>
 

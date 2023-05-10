@@ -1,0 +1,87 @@
+<div class="product-detail">
+    <div class="container">
+        <div class="product-detail__wrapper">
+            <div class="product-detail__images">
+                <div class="swiper product-detail__slider">
+                    <div class="swiper-wrapper">
+                        @@for (let img of images) {
+                        <div class="swiper-slide product-detail__slide">
+                            <div class="swiper-zoom-container">
+                                <picture class="product-detail__picture">
+                                    <source srcset="@@webRoot/` + img + `">
+                                    <img src="@@webRoot/` + img + `" loading="lazy" alt="@@name">
+                                </picture>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                    <div class="swiper-pagination product-detail__slider-pagination"></div>
+                    <div class="swiper-scrollbar product-detail__slider-scrollbar"></div>
+                </div>
+            </div>
+            <div class="product-detail__info">
+                <h1 class="product-detail__name">@@name</h1>
+                @@if (isNew) {
+                <span class="product-detail__new">New</span>
+                }
+                <div class="product-detail__artnumber">арт. @@artnumber</div>
+                <div class="product-detail__price">
+                    <span>@@price</span>
+                </div>
+                <div class="product-detail__props">
+                    <div class="product-detail__prop _color">
+                        <div class="product-detail__prop-name">Цвет: <span>@@currentColor</span></div>
+                        <div class="product-detail__prop-list">
+                            @@for (let color in colors) {
+                            <div class="product-detail__prop-item" title="` + colors[color] + `" style="background-color: ` + color + `"></div>
+                            }
+                        </div>
+                    </div>
+                    <div class="product-detail__prop _size">
+                        <div class="product-detail__prop-name">Размер <span></span></div>
+                        <div class="product-detail__prop-list">
+                            @@for (let size of sizes) {
+                            <div class="product-detail__prop-item">` + size + `</div>
+                            }
+                        </div>
+                        <a href="#size_table" class="product-detail__size-table" data-modail-id="size-table">Таблица размеров</a>
+                    </div>
+                </div>
+                <div class="product-detail__buttons">
+                    <a href="#buy" class="product-detail__buy">добавить в корзину</a>
+                    <a href="#like" class="product-detail__like">
+                        <svg>
+                            <use xlink:href="@@webRoot/img/sprite.svg#like"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="product-detail__text">
+                <div class="product-detail__tabs">
+                    <a href="#tab1" class="product-detail__tab animated-underline _active" data-tab-id="product-detail-tab#1">Описание</a>
+                    <a href="#tab2" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#2">Уход</a>
+                    <a href="#tab3" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#3">Доставка и оплата</a>
+                    <a href="#tab4" class="product-detail__tab animated-underline" data-tab-id="product-detail-tab#4">Возврат</a>
+                </div>
+                <div class="product-detail__tab-text _active" data-tab-id="product-detail-tab#1">
+                    Наш бестселлер — универсальный двубортный пиджак в новом исполнении. Для модели выбрали турецкую костюмную плотную ткань с небольшим мягким ворсом. Изделие можно легко дополнить костюмными брюками, любимыми джинсами или юбкой, которая идет к этой коллекции.
+                    <br>
+                    <br>
+                    <b>Состав</b>
+                    <br>
+                    <br>
+                    Ткань верха: 65% вискоза, 32% полиэстер, 3% эластан Подкладочная ткань: 70% вискоза, 30% полиэстер
+                </div>
+                <div class="product-detail__tab-text" data-tab="product-detail-tab#2">
+                    Рекомендации по уходу
+                </div>
+                <div class="product-detail__tab-text" data-tab="product-detail-tab#3">
+                    Информация по доставке и оплате
+                </div>
+                <div class="product-detail__tab-text" data-tab="product-detail-tab#4">
+                    Условия возврата
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
