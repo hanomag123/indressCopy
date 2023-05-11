@@ -31,7 +31,7 @@
                     <hr>
                     <hr>
                 </div>
-                @@include("./_action.html", {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account"})
+                @@include("./_action.html", {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account", "attrs": "data-modal-id=\"modal-auth\""})
                 <div class="header__mobile_menu-wrapper">
                     <form class="header__mobile_menu-search" action="/catalog/" method="get">
                         <label for="header-search" class="header__search-label">
@@ -76,7 +76,7 @@
                     @@loop("./_action.html", [
                     {"id": "header-search", "class": "header__action-search", "icon": "img/sprite.svg#search", "link": "#search"},
                     {"id": "header-like", "class": "header__action-like", "icon": "img/sprite.svg#like", "link": "#like"},
-                    {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account"},
+                    {"id": "header-account", "class": "header__action-account", "icon": "img/sprite.svg#account", "link": "#account", "attrs": "data-modal-id=\"modal-auth\""},
                     {"id": "header-basket", "class": "header__action-basket", "icon": "img/sprite.svg#basket", "link": "#basket"},
                     ])
                 </div>

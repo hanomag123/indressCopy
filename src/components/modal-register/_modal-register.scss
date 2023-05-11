@@ -1,0 +1,72 @@
+.modal-register {
+
+  &__tabs {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tab {
+    font-size: 12px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: #000000;
+
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+
+    &._active {
+      font-weight: 500;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 11px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 40px;
+      font-size: 19px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      text-transform: initial;
+      font-variant: all-small-caps;
+    }
+  }
+
+  &__form {
+
+    &-item {
+      margin-bottom: 30px;
+
+      &._checkbox {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<div class="modal _right modal-auth" id="modal-auth">
+    <div class="modal__close"></div>
+    <div class="modal__wrapper">
+        <div class="modal-auth__tabs">
+            <a href="#auth" class="modal-auth__tab animated-underline _active">Авторизация</a>
+            <a href="#register" class="modal-auth__tab animated-underline" data-modal-id="modal-register">Регистрация</a>
+        </div>
+        <h2 class="modal-auth__title">Авторизация</h2>
+        <form action="/profile/" class="modal-auth__form">
+            <div class="modal-auth__form-item">
+                <label for="login" class="form-label">Эл. адрес или мобильный телефон</label>
+                <input type="text" class="form-input" id="login" name="login">
+            </div>
+            <div class="modal-auth__form-item">
+                <label for="password" class="form-label">Пароль</label>
+                <input type="password" class="form-input" id="password" name="password" autocomplete="current-password">
+            </div>
+            <a href="#restore" class="modal-auth__restore animated-underline _active" data-modal-id="modal-restore">Забыли пароль?</a>
+            <div class="modal-auth__form-item">
+                <input type="submit" class="form-submit" name="auth" value="Войти">
+            </div>
+        </form>
+    </div>
+</div>

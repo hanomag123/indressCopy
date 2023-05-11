@@ -1,0 +1,16 @@
+<div class="modal _right modal-restore" id="modal-restore">
+    <div class="modal__close"></div>
+    <div class="modal__wrapper">
+        <h2 class="modal-restore__title">Восстановление пароля</h2>
+        <form action="/profile/" class="modal-restore__form">
+            <div class="modal-restore__form-item">
+                <label for="login" class="form-label">Эл. адрес или мобильный телефон</label>
+                <input type="text" class="form-input" id="login" name="login">
+            </div>
+            <div class="modal-restore__form-item">
+                <input type="submit" class="form-submit" name="restore" value="Восстановить пароль">
+            </div>
+            <a href="#auth" class="modal-restore__auth animated-underline _active" data-modal-id="modal-auth">Вернуться к авторизации</a>
+        </form>
+    </div>
+</div>

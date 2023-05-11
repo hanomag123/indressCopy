@@ -34,7 +34,7 @@
 						<hr>
 					</div>
 					<div class="header__action-item header__action-account" id="header-account">
-						<a href="#account" class="header__action-link">
+						<a href="#account" class="header__action-link" data-modal-id="modal-auth">
 							<svg>
 								<use xlink:href="../img/sprite.svg#account"></use>
 							</svg>
@@ -165,28 +165,28 @@
 				<div class="header__action">
 					<div class="header__action-list">
 						<div class="header__action-item header__action-search" id="header-search">
-							<a href="#search" class="header__action-link">
+							<a href="#search" class="header__action-link" @@attrs>
 								<svg>
 									<use xlink:href="../img/sprite.svg#search"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-like" id="header-like">
-							<a href="#like" class="header__action-link">
+							<a href="#like" class="header__action-link" @@attrs>
 								<svg>
 									<use xlink:href="../img/sprite.svg#like"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-account" id="header-account">
-							<a href="#account" class="header__action-link">
+							<a href="#account" class="header__action-link" data-modal-id="modal-auth">
 								<svg>
 									<use xlink:href="../img/sprite.svg#account"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-basket" id="header-basket">
-							<a href="#basket" class="header__action-link">
+							<a href="#basket" class="header__action-link" @@attrs>
 								<svg>
 									<use xlink:href="../img/sprite.svg#basket"></use>
 								</svg>
@@ -861,6 +861,81 @@
 		</footer>
 	</div>
 	<!-- end of wrapper -->
+	<div class="modal _right modal-auth" id="modal-auth">
+		<div class="modal__close"></div>
+		<div class="modal__wrapper">
+			<div class="modal-auth__tabs">
+				<a href="#auth" class="modal-auth__tab animated-underline _active">Авторизация</a>
+				<a href="#register" class="modal-auth__tab animated-underline" data-modal-id="modal-register">Регистрация</a>
+			</div>
+			<h2 class="modal-auth__title">Авторизация</h2>
+			<form action="/profile/" class="modal-auth__form">
+				<div class="modal-auth__form-item">
+					<label for="login" class="form-label">Эл. адрес или мобильный телефон</label>
+					<input type="text" class="form-input" id="login" name="login">
+				</div>
+				<div class="modal-auth__form-item">
+					<label for="password" class="form-label">Пароль</label>
+					<input type="password" class="form-input" id="password" name="password" autocomplete="current-password">
+				</div>
+				<a href="#restore" class="modal-auth__restore animated-underline _active" data-modal-id="modal-restore">Забыли пароль?</a>
+				<div class="modal-auth__form-item">
+					<input type="submit" class="form-submit" name="auth" value="Войти">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal _right modal-register" id="modal-register">
+		<div class="modal__close"></div>
+		<div class="modal__wrapper">
+			<div class="modal-register__tabs">
+				<a href="#auth" class="modal-register__tab animated-underline" data-modal-id="modal-auth">Авторизация</a>
+				<a href="#register" class="modal-register__tab animated-underline _active">Регистрация</a>
+			</div>
+			<h2 class="modal-register__title">Регистрация</h2>
+			<form action="/profile/" class="modal-register__form">
+				<div class="modal-register__form-item">
+					<label for="email" class="form-label">Эл. адрес</label>
+					<input type="email" class="form-input" id="email" name="email">
+				</div>
+				<div class="modal-register__form-item">
+					<label for="tel" class="form-label">Мобильный телефон</label>
+					<input type="tel" class="form-input" id="tel" name="tel">
+				</div>
+				<div class="modal-register__form-item">
+					<label for="password" class="form-label">Пароль</label>
+					<input type="password" class="form-input" id="password" name="password" autocomplete="new-password">
+				</div>
+				<div class="modal-register__form-item">
+					<label for="confirm-password" class="form-label">Подтвердите пароль</label>
+					<input type="password" class="form-input" id="confirm-password" name="confirm-password" autocomplete="new-password">
+				</div>
+				<div class="modal-register__form-item _checkbox">
+					<input type="checkbox" class="form-input-checkbox" id="agree" name="agree">
+					<label for="agree" class="form-label-checkbox">Я разрешаю использовать мои личные данные в соответствии с конфиденциальным соглашением</label>
+				</div>
+				<div class="modal-register__form-item">
+					<input type="submit" class="form-submit" name="register" value="Зарегистрироваться">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal _right modal-restore" id="modal-restore">
+		<div class="modal__close"></div>
+		<div class="modal__wrapper">
+			<h2 class="modal-restore__title">Восстановление пароля</h2>
+			<form action="/profile/" class="modal-restore__form">
+				<div class="modal-restore__form-item">
+					<label for="login" class="form-label">Эл. адрес или мобильный телефон</label>
+					<input type="text" class="form-input" id="login" name="login">
+				</div>
+				<div class="modal-restore__form-item">
+					<input type="submit" class="form-submit" name="restore" value="Восстановить пароль">
+				</div>
+				<a href="#auth" class="modal-restore__auth animated-underline _active" data-modal-id="modal-auth">Вернуться к авторизации</a>
+			</form>
+		</div>
+	</div>
 	<div class="overlay"></div>
 	<!-- scripts -->
 	<script src="../js/vendor.min.js"></script>

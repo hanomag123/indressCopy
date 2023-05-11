@@ -261,10 +261,26 @@
         font-size: 15px;
         line-height: 1.2em;
         color: #000000;
+        cursor: pointer;
 
         @media (max-width: 767px) {
             font-size: 14px;
             margin-bottom: 5px;
+        }
+
+        &-checkbox {
+            margin-left: 20px;
+            display: block;
+            max-width: 30em;
+            font-size: 15px;
+            line-height: 1.2em;
+            color: #000000;
+            cursor: pointer;
+
+            @media (max-width: 767px) {
+                margin-left: 15px;
+                font-size: 12px;
+            }
         }
     }
 
@@ -277,7 +293,7 @@
         color: #000000;
         border: 1px solid #d2d2d2;
         border-radius: 0;
-        -webkit-appearance: none;
+        appearance: none;
         background: #fff;
         outline: none;
         transition: $transition-default;
@@ -288,6 +304,22 @@
 
         &:focus {
             border-color: #000000;
+        }
+
+        &-checkbox {
+            padding: 2px;
+            display: block;
+            width: 1em;
+            height: 1em;
+            border: 1px solid #000000;
+            border-radius: 0;
+            appearance: none;
+            background-clip: content-box;
+            transition: $transition-default;
+
+            &:checked {
+                background: #000 content-box;
+            }
         }
 
         @media (max-width: 1199px) {
@@ -308,6 +340,7 @@
         display: block;
         width: 100%;
         max-width: 500px;
+        font-weight: 400;
         font-size: 15px;
         line-height: 1.2em;
         text-align: center;
@@ -316,6 +349,8 @@
         color: #ffffff;
         background: #000000;
         border: 1px solid #000000;
+        border-radius: 0;
+        appearance: none;
         transition: $transition-default;
 
         &:hover, &:focus {

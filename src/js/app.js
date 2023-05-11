@@ -342,6 +342,13 @@ class Indress {
                 let overlay = document.querySelector('body > .overlay');
                 overlay.classList.add('_active');
 
+                let modals = document.querySelectorAll('.modal._active');
+                if (modals && modals.length > 0) {
+                    modals.forEach(function (modal) {
+                        modal.classList.remove('_active');
+                    });
+                }
+
                 modal.classList.add('_active');
 
                 if (!modal.querySelector('.modal__close')) {
