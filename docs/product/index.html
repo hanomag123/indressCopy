@@ -234,7 +234,7 @@
 										<div class="swiper-zoom-container">
 											<picture class="product-detail__picture">
 												<source srcset="../img/product-1.jpg">
-												<img src="../img/product-1.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+												<img src="../img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
 											</picture>
 										</div>
 									</div>
@@ -242,7 +242,7 @@
 										<div class="swiper-zoom-container">
 											<picture class="product-detail__picture">
 												<source srcset="../img/product-2.jpg">
-												<img src="../img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+												<img src="../img/product-2.jpg" alt="Жакет двубортный «Гусиная лапка»">
 											</picture>
 										</div>
 									</div>
@@ -250,7 +250,7 @@
 										<div class="swiper-zoom-container">
 											<picture class="product-detail__picture">
 												<source srcset="../img/product-3.jpg">
-												<img src="../img/product-3.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+												<img src="../img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
 											</picture>
 										</div>
 									</div>
@@ -258,7 +258,7 @@
 										<div class="swiper-zoom-container">
 											<picture class="product-detail__picture">
 												<source srcset="../img/product-4.jpg">
-												<img src="../img/product-4.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+												<img src="../img/product-4.jpg" alt="Жакет двубортный «Гусиная лапка»">
 											</picture>
 										</div>
 									</div>
@@ -291,7 +291,7 @@
 										<div class="product-detail__prop-item">L</div>
 										<div class="product-detail__prop-item">XL</div>
 									</div>
-									<a href="#size_table" class="product-detail__size-table" data-modail-id="size-table">Таблица размеров</a>
+									<a href="#size_table" class="product-detail__size-table" data-modal-id="modal-size-table">Таблица размеров</a>
 								</div>
 							</div>
 							<div class="product-detail__buttons">
@@ -329,6 +329,100 @@
 								Условия возврата
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal modal-size-table" id="modal-size-table">
+				<div class="modal__close"></div>
+				<div class="modal__wrapper">
+					<h2 class="modal-size-table__title">Таблица размеров</h2>
+					<div class="modal-size-table__item">
+						<h3 class="modal-size-table__item-title">Одежда</h3>
+						<table class="modal-size-table__item-table">
+							<thead>
+								<tr>
+									<th>Размер</th>
+									<th>RUS</th>
+									<th>Рост</th>
+									<th>Грудь</th>
+									<th>Талия</th>
+									<th>Бёдра</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="_current">
+									<td>xs</td>
+									<td>40</td>
+									<td>160-164</td>
+									<td>82</td>
+									<td>62</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>S</td>
+									<td>42</td>
+									<td>164-168</td>
+									<td>86</td>
+									<td>66</td>
+									<td>94</td>
+								</tr>
+								<tr>
+									<td>M</td>
+									<td>44</td>
+									<td>168-172</td>
+									<td>90</td>
+									<td>70</td>
+									<td>98</td>
+								</tr>
+								<tr>
+									<td>L</td>
+									<td>46</td>
+									<td>168-172</td>
+									<td>94</td>
+									<td>74</td>
+									<td>102</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="modal-size-table__current-size">Размер на модели: <span>xs</span></p>
+						<p class="modal-size-table__current-height">Рост модели: <span>170</span> см</p>
+					</div>
+					<div class="modal-size-table__item">
+						<h3 class="modal-size-table__item-title">Обувь</h3>
+						<table class="modal-size-table__item-table _centered">
+							<thead>
+								<tr>
+									<th>Размер</th>
+									<th>СМ</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>36</td>
+									<td>23</td>
+								</tr>
+								<tr>
+									<td>37</td>
+									<td>23.5</td>
+								</tr>
+								<tr>
+									<td>38</td>
+									<td>24</td>
+								</tr>
+								<tr>
+									<td>39</td>
+									<td>24.5</td>
+								</tr>
+								<tr>
+									<td>40</td>
+									<td>25</td>
+								</tr>
+								<tr>
+									<td>41</td>
+									<td>25.5</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -544,6 +638,7 @@
 		</footer>
 	</div>
 	<!-- end of wrapper -->
+	<div class="overlay"></div>
 	<!-- scripts -->
 	<script src="../js/vendor.min.js"></script>
 	<script src="../js/app.min.js"></script>

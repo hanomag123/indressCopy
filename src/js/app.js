@@ -22,8 +22,10 @@ class Indress {
         this.addEventListener('.header__mobile_menu-btn', 'click', this.openMobileMenu.bind(this));
         this.addEventListener('input, select, textarea', 'focusin', this.disableZoom.bind(this), true, {passive: true});
         this.addEventListener('input, select, textarea', 'focusout', this.enableZoom.bind(this), true, {passive: true});
-        this.addEventListener('.footer__sitemap-name', 'click', this.openFooterGroup, true, {passive: false});
-        this.addEventListener('[data-tab-id]', 'click', this.showTab, true, {passive: false});
+        this.addEventListener('.footer__sitemap-name', 'click', this.openFooterGroup, true);
+        this.addEventListener('[data-tab-id]', 'click', this.showTab, true);
+        this.addEventListener('[data-modal-id]', 'click', this.showModal, true);
+        this.addEventListener('.overlay, .modal__close', 'click', this.closeModal, true);
     }
 
     disableZoom() {
@@ -327,6 +329,44 @@ class Indress {
                 } else if (tab.dataset.tabId) {
                     tab.classList.toggle('_active', tab.dataset.tabId === tabId)
                 }
+            });
+        }
+    }
+
+    showModal(event) {
+        if (this.dataset.modalId && this.dataset.modalId.length) {
+            let modal = document.querySelector('#' + this.dataset.modalId);
+            if (modal) {
+                document.body.classList.add('scroll-disabled');
+
+                let overlay = document.querySelector('body > .overlay');
+                overlay.classList.add('_active');
+
+                modal.classList.add('_active');
+
+                if (!modal.querySelector('.modal__close')) {
+                    let modalClose = document.createElement('div');
+                    modalClose.className = 'modal__close';
+                    modal.appendChild(modalClose);
+                }
+            } else {
+                console.error('modal ' + this.dataset.modalId + ' not found');
+            }
+        }
+    }
+
+    closeModal(event) {
+        document.body.classList.remove('scroll-disabled');
+
+        let overlay = document.querySelector('body > .overlay._active');
+        if (overlay) {
+            overlay.classList.remove('_active');
+        }
+
+        let modals = document.querySelectorAll('.modal._active');
+        if (modals && modals.length > 0) {
+            modals.forEach(function (modal) {
+                modal.classList.remove('_active');
             });
         }
     }

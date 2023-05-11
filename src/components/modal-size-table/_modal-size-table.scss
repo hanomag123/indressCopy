@@ -1,0 +1,127 @@
+.modal-size-table {
+
+  &__title {
+    margin-bottom: 80px;
+    font-size: 23px;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    
+    @media (max-width: 767px) {
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    margin: 0 auto 60px;
+    max-width: 700px;
+
+    &-title {
+      margin-bottom: 60px;
+      font-size: 19px;
+      line-height: 1.2em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-table {
+      margin-bottom: 30px;
+      width: 100%;
+      font-size: 19px;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      border-collapse: collapse;
+      color: #000000;
+      white-space: nowrap;
+
+      @media (max-width: 767px) {
+        margin-bottom: 40px;
+        font-size: 14px;
+      }
+
+      tr {
+        border-bottom: 1px solid #D2D2D2;
+
+        @media (max-width: 767px) {
+          border: none;
+        }
+        
+        &._current {
+          background: #D2D2D2;
+
+          @media (max-width: 767px) {
+            background: none;
+          }
+        }
+      }
+
+      th {
+        padding: 1em 1em 30px 1em;
+        font-weight: 400;
+        color: #797979;
+        text-align: center;
+
+        &:first-child {
+          padding-left: 0;
+          font-weight: 500;
+          color: #000000;
+          text-align: left;
+        }
+      }
+
+      td {
+        padding: 1em;
+        text-align: center;
+        color: #000000;
+
+        &:first-child {
+          padding-left: 1.2em;
+          font-weight: 500;
+          text-align: left;
+        }
+
+        &:last-child {
+          padding-right: 1.2em;
+        }
+      }
+
+      &._centered {
+        table-layout: fixed;
+        width: 100%;
+
+        th:first-child {
+          padding-left: 1em;
+          text-align: center;
+        }
+
+        td:first-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__current-size,
+  &__current-height {
+    margin: 10px 0;
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #000000;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+}
