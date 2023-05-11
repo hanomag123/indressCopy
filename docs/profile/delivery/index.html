@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Indress - Магазин одежды</title>
-	<meta name="title" content="Indress - Магазин одежды">
+	<title>Личный кабинет | Indress - Магазин одежды</title>
+	<meta name="title" content="Личный кабинет | Indress - Магазин одежды">
 	<meta name="description" content="">
-	<meta property="og:title" content="Indress - Магазин одежды">
+	<meta property="og:title" content="Личный кабинет | Indress - Магазин одежды">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="/">
+	<meta property="og:url" content="/profile/">
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
-	<link rel="stylesheet" href="./css/vendor.min.css">
-	<link rel="stylesheet" href="./css/app.min.css">
+	<link rel="stylesheet" href="../../css/vendor.min.css">
+	<link rel="stylesheet" href="../../css/app.min.css">
 	<!-- end of styles -->
 </head>
 
@@ -36,7 +36,7 @@
 					<div class="header__action-item header__action-account" id="header-account">
 						<a href="#account" class="header__action-link">
 							<svg>
-								<use xlink:href="./img/sprite.svg#account"></use>
+								<use xlink:href="../../img/sprite.svg#account"></use>
 							</svg>
 						</a>
 					</div>
@@ -45,7 +45,7 @@
 							<label for="header-search" class="header__search-label">
 								<input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
 								<svg>
-									<use xlink:href="./img/sprite.svg#search"></use>
+									<use xlink:href="../../img/sprite.svg#search"></use>
 								</svg>
 							</label>
 						</form>
@@ -167,28 +167,28 @@
 						<div class="header__action-item header__action-search" id="header-search">
 							<a href="#search" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#search"></use>
+									<use xlink:href="../../img/sprite.svg#search"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-like" id="header-like">
 							<a href="#like" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#like"></use>
+									<use xlink:href="../../img/sprite.svg#like"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-account" id="header-account">
 							<a href="#account" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#account"></use>
+									<use xlink:href="../../img/sprite.svg#account"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-basket" id="header-basket">
 							<a href="#basket" class="header__action-link">
 								<svg>
-									<use xlink:href="./img/sprite.svg#basket"></use>
+									<use xlink:href="../../img/sprite.svg#basket"></use>
 								</svg>
 							</a>
 						</div>
@@ -196,159 +196,89 @@
 				</div>
 			</div>
 		</header>
+		<div class="header__space"></div>
 		<div class="wrapper__content">
-			<div class="fullwidth-banner">
-				<div class="swiper fullwidth-banner__slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 23</h3>
-							</div>
-						</div>
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 24</h3>
-							</div>
-						</div>
-						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
-							<div class="fullwidth-banner__content">
-								<h3 class="fullwidth-banner__title">New collection’ 25</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-pagination fullwidth-banner__pagination"></div>
-			</div>
-			<div class="category-banners">
+			<div class="breadcrumbs">
 				<div class="container">
-					<div class="category-banners__wrapper">
-						<a href="/catalog/" class="category-banners__item" style="background-image: url(./img/category-1.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Каталог</h4>
-							</div>
-						</a>
-						<a href="/sale/" class="category-banners__item" style="background-image: url(./img/category-2.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Sale</h4>
-							</div>
-						</a>
-						<a href="/accessories/" class="category-banners__item" style="background-image: url(./img/category-3.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Аксессуары</h4>
-							</div>
-						</a>
-						<a href="/bestseller/" class="category-banners__item" style="background-image: url(./img/category-4.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Bestseller</h4>
-							</div>
-						</a>
+					<div class="breadcrumbs__wrapper">
+						<ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link" itemprop="item" href="/">
+									<span itemprop="name" title="Главная">Главная</span>
+								</a>
+								<meta itemprop="position" content="1" />
+							</li>
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link" itemprop="item" href="/profile/">
+									<span itemprop="name" title="Личный кабинет">Личный кабинет</span>
+								</a>
+								<meta itemprop="position" content="2" />
+							</li>
+							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+								<a class="breadcrumbs__link" itemprop="item" href="/profile/delivery/">
+									<span itemprop="name" title="Доставка">Доставка</span>
+								</a>
+								<meta itemprop="position" content="3" />
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<section class="product-line">
+			<div class="profile-delivery">
 				<div class="container">
-					<h2 class="product-line__title">Новинки</h2>
-					<div class="swiper product-line__slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-1.jpg">
-											<img src="./img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-2.jpg">
-											<img src="./img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-3.jpg">
-											<img src="./img/product-3.jpg" loading="lazy" alt="Свитер «Леопард»">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Свитер «Леопард»">Свитер «Леопард»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-4.jpg">
-											<img src="./img/product-4.jpg" loading="lazy" alt="Платье расклешённое">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Платье расклешённое">Платье расклешённое</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
-										</div>
-									</div>
-								</a>
-							</div>
+					<div class="profile-delivery__wrapper">
+						<h1 class="profile-delivery__title">Личный кабинет</h1>
+						<div class="profile-sections">
+							<nav class="profile-sections__nav">
+								<ul class="profile-sections__list">
+									<li class="profile-sections__item undefined">
+										<a href="/profile/info/" class="profile-sections__link animated-underline">Данные</a>
+									</li>
+									<li class="profile-sections__item _active undefined">
+										<a href="/profile/delivery/" class="profile-sections__link animated-underline _active">Доставка</a>
+									</li>
+									<li class="profile-sections__item undefined">
+										<a href="/profile/orders/" class="profile-sections__link animated-underline">Покупки</a>
+									</li>
+									<li class="profile-sections__item undefined">
+										<a href="/profile/like/" class="profile-sections__link animated-underline">Избранное</a>
+									</li>
+									<li class="profile-sections__item _exit">
+										<a href="?logout=Y" class="profile-sections__link animated-underline">Выйти</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
+						<form action="/profile/delivery/" class="profile-delivery__form">
+							<div class="form-grid">
+								<div class="form-item _big">
+									<label for="city" class="form-label">Населенный пункт</label>
+									<input type="text" class="form-input" id="city" name="city">
+								</div>
+								<div class="form-item _big">
+									<label for="address" class="form-label">Улица</label>
+									<input type="text" class="form-input" id="address" name="address">
+								</div>
+								<div class="form-item _short">
+									<label for="house" class="form-label">Дом</label>
+									<input type="text" class="form-input" id="house" name="house">
+								</div>
+								<div class="form-item _short">
+									<label for="apartment" class="form-label">Квартира/офис</label>
+									<input type="text" class="form-input" id="apartment" name="apartment">
+								</div>
+								<div class="form-item _short">
+									<label for="postcode" class="form-label">Почтовый индекс</label>
+									<input type="number" class="form-input" id="postcode" name="postcode">
+								</div>
+								<div class="form-item _submit">
+									<input type="submit" class="form-submit" id="save" name="save" value="сохранить изменения">
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
-			</section>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
@@ -375,7 +305,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Покупателям
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -388,7 +318,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Компания
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -400,7 +330,7 @@
 						<div class="footer__sitemap-col _social">
 							<h4 class="footer__sitemap-name">Социальные сети
 								<svg class="arrow">
-									<use xlink:href="./img/sprite.svg#arrow"></use>
+									<use xlink:href="../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -417,8 +347,8 @@
 	<!-- end of wrapper -->
 	<div class="overlay"></div>
 	<!-- scripts -->
-	<script src="./js/vendor.min.js"></script>
-	<script src="./js/app.min.js"></script>
+	<script src="../../js/vendor.min.js"></script>
+	<script src="../../js/app.min.js"></script>
 	<!-- end of scripts -->
 </body>
 

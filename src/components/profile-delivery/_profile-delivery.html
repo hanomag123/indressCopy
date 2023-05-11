@@ -1,0 +1,44 @@
+<div class="profile-delivery">
+  <div class="container">
+    <div class="profile-delivery__wrapper">
+      <h1 class="profile-delivery__title">Личный кабинет</h1>
+      @@include("../profile-sections/_profile-sections.html", {
+      "items": [
+      {"text": "Данные", "link": "/profile/info/"},
+      {"text": "Доставка", "link": "/profile/delivery/", "selected": true},
+      {"text": "Покупки", "link": "/profile/orders/"},
+      {"text": "Избранное", "link": "/profile/like/"},
+      {"text": "Выйти", "link": "?logout=Y", "class": "_exit"},
+      ],
+      })
+
+      <form action="/profile/delivery/" class="profile-delivery__form">
+        <div class="form-grid">
+          <div class="form-item _big">
+            <label for="city" class="form-label">Населенный пункт</label>
+            <input type="text" class="form-input" id="city" name="city">
+          </div>
+          <div class="form-item _big">
+            <label for="address" class="form-label">Улица</label>
+            <input type="text" class="form-input" id="address" name="address">
+          </div>
+          <div class="form-item _short">
+            <label for="house" class="form-label">Дом</label>
+            <input type="text" class="form-input" id="house" name="house">
+          </div>
+          <div class="form-item _short">
+            <label for="apartment" class="form-label">Квартира/офис</label>
+            <input type="text" class="form-input" id="apartment" name="apartment">
+          </div>
+          <div class="form-item _short">
+            <label for="postcode" class="form-label">Почтовый индекс</label>
+            <input type="number" class="form-input" id="postcode" name="postcode">
+          </div>
+          <div class="form-item _submit">
+            <input type="submit" class="form-submit" id="save" name="save" value="сохранить изменения">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

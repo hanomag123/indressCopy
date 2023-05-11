@@ -362,6 +362,7 @@
       }
 
       svg {
+        display: block;
         fill: #000000;
       }
     }
@@ -372,6 +373,14 @@
 
       &:hover, &:focus {
         color: inherit;
+      }
+    }
+
+    &-like {
+
+      svg {
+        fill: none;
+        stroke: #000000;
       }
     }
   }
@@ -400,6 +409,11 @@
   body:not(.scroll-disabled) &._dark &__nav-item,
   body:not(.scroll-disabled) &._dark &__action-item {
     color: #ffffff;
+  }
+
+  body:not(.scroll-disabled) &._dark &__action-like svg {
+    fill: none;
+    filter: invert(1);
   }
 
   body:not(.scroll-disabled) &._dark &__submenu-item {

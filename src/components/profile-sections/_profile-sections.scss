@@ -1,0 +1,88 @@
+.profile-sections {
+  margin-bottom: 60px;
+
+  @media (max-width: 1199px) {
+    margin-bottom: 50px;
+  }
+
+  &__nav {
+
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 767px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    font-size: 23px;
+    line-height: 1.2em;
+    font-variant: all-small-caps;
+    color: #000000;
+
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+
+    &._active {
+      font-weight: 500;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 15px;
+      font-variant: initial;
+      text-transform: uppercase;
+
+      &._exit {
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        bottom: auto;
+        font-size: 19px;
+        text-transform: initial;
+        color: #797979;
+
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      font-variant: all-small-caps;
+      text-transform: initial;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+
+      &._exit {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover, &:focus {
+      color: inherit;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__item._exit &__link {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}

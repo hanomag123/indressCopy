@@ -1,0 +1,27 @@
+.profile-delivery {
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 29px;
+    line-height: 1.2em;
+    font-variant: all-small-caps;
+    text-align: center;
+    color: #000000;
+    
+    @media (max-width: 1199px) {
+      font-size: 19px;
+      font-variant: initial;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+  }
+}

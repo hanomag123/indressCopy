@@ -1,0 +1,24 @@
+@@include('../../components/header/_header.html', {
+"lang": "ru",
+"title": "Личный кабинет | Indress - Магазин одежды",
+"description": "",
+"url": "/profile/",
+"classes": {"body": ""},
+"page": "Личный кабинет",
+"space": true,
+})
+
+<div class="wrapper__content">
+  @@include("../../components/breadcrumbs/_breadcrumbs.html", {
+  "items": [
+  {"text": "Главная", "link": "/"},
+  {"text": "Личный кабинет", "link": "/profile/"},
+  {"text": "Доставка", "link": "/profile/delivery/"},
+  ],
+  })
+
+  @@include("../../components/profile-delivery/_profile-delivery.html", {})
+
+</div>
+
+@@include('../../components/footer/_footer.html')

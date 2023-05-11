@@ -33,7 +33,8 @@
                         <div class="product-detail__prop-name">Цвет: <span>@@currentColor</span></div>
                         <div class="product-detail__prop-list">
                             @@for (let color in colors) {
-                            <div class="product-detail__prop-item" title="` + colors[color] + `" style="background-color: ` + color + `"></div>
+                            <div class="product-detail__prop-item" title="` + colors[color] + `" data-name="product-color"
+                                 style="background-color: ` + color + `" onclick="Indress.chooseColor.call(this, event)"></div>
                             }
                         </div>
                     </div>
@@ -41,7 +42,7 @@
                         <div class="product-detail__prop-name">Размер <span></span></div>
                         <div class="product-detail__prop-list">
                             @@for (let size of sizes) {
-                            <div class="product-detail__prop-item">` + size + `</div>
+                            <div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">` + size + `</div>
                             }
                         </div>
                         <a href="#size_table" class="product-detail__size-table" data-modal-id="modal-size-table">Таблица размеров</a>
@@ -49,7 +50,7 @@
                 </div>
                 <div class="product-detail__buttons">
                     <a href="#buy" class="product-detail__buy">добавить в корзину</a>
-                    <a href="#like" class="product-detail__like">
+                    <a href="#like" class="product-detail__like" onclick="Indress.productLike.call(this, event);">
                         <svg>
                             <use xlink:href="@@webRoot/img/sprite.svg#like"></use>
                         </svg>

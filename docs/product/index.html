@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Каталог Indress - Магазин одежды</title>
-	<meta name="title" content="Каталог Indress - Магазин одежды">
+	<title>Жакет двубортный «Гусиная лапка» | Indress - Магазин одежды</title>
+	<meta name="title" content="Жакет двубортный «Гусиная лапка» | Indress - Магазин одежды">
 	<meta name="description" content="">
-	<meta property="og:title" content="Каталог Indress - Магазин одежды">
+	<meta property="og:title" content="Жакет двубортный «Гусиная лапка» | Indress - Магазин одежды">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="/catalog/">
+	<meta property="og:url" content="/product/">
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
@@ -120,7 +120,7 @@
 							<li class="header__nav-item">
 								<a href="/catalog/new/" class="header__nav-link animated-underline">Новинки</a>
 							</li>
-							<li class="header__nav-item _active">
+							<li class="header__nav-item">
 								<a href="/catalog/" class="header__nav-link animated-underline">Каталог</a>
 								<ul class="header__submenu-list">
 									<li class="header__submenu-item"><a href="/catalog/dress/" class="header__submenu-link animated-underline">Платья</a></li>
@@ -277,26 +277,26 @@
 								<div class="product-detail__prop _color">
 									<div class="product-detail__prop-name">Цвет: <span>Черный</span></div>
 									<div class="product-detail__prop-list">
-										<div class="product-detail__prop-item" title="Черный" style="background-color: black"></div>
-										<div class="product-detail__prop-item" title="Оранжевый" style="background-color: orange"></div>
-										<div class="product-detail__prop-item" title="Синий" style="background-color: blue"></div>
+										<div class="product-detail__prop-item" title="Черный" data-name="product-color" style="background-color: black" onclick="Indress.chooseColor.call(this, event)"></div>
+										<div class="product-detail__prop-item" title="Оранжевый" data-name="product-color" style="background-color: orange" onclick="Indress.chooseColor.call(this, event)"></div>
+										<div class="product-detail__prop-item" title="Синий" data-name="product-color" style="background-color: blue" onclick="Indress.chooseColor.call(this, event)"></div>
 									</div>
 								</div>
 								<div class="product-detail__prop _size">
 									<div class="product-detail__prop-name">Размер <span></span></div>
 									<div class="product-detail__prop-list">
-										<div class="product-detail__prop-item">XS</div>
-										<div class="product-detail__prop-item">S</div>
-										<div class="product-detail__prop-item">M</div>
-										<div class="product-detail__prop-item">L</div>
-										<div class="product-detail__prop-item">XL</div>
+										<div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">XS</div>
+										<div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">S</div>
+										<div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">M</div>
+										<div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">L</div>
+										<div class="product-detail__prop-item" data-name="product-size" onclick="Indress.chooseSize.call(this, event)">XL</div>
 									</div>
 									<a href="#size_table" class="product-detail__size-table" data-modal-id="modal-size-table">Таблица размеров</a>
 								</div>
 							</div>
 							<div class="product-detail__buttons">
 								<a href="#buy" class="product-detail__buy">добавить в корзину</a>
-								<a href="#like" class="product-detail__like">
+								<a href="#like" class="product-detail__like" onclick="Indress.productLike.call(this, event);">
 									<svg>
 										<use xlink:href="../img/sprite.svg#like"></use>
 									</svg>
@@ -433,7 +433,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>
@@ -457,7 +457,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>
@@ -480,7 +480,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>
@@ -503,7 +503,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>
@@ -525,7 +525,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>
@@ -549,7 +549,7 @@
 						<div class="product-list__item">
 							<a href="/product/" class="product-card">
 								<div class="product-card__img">
-									<div class="product-card__like">
+									<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
 										<svg>
 											<use xlink:href="../img/sprite.svg#like"></use>
 										</svg>

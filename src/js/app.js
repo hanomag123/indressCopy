@@ -370,6 +370,25 @@ class Indress {
             });
         }
     }
+
+    productLike(event) {
+        event.preventDefault();
+        this.classList.toggle('_active');
+    }
+
+    chooseColor(event) {
+        event.preventDefault();
+        document.querySelectorAll('[data-name="product-color"]').forEach((function (el) {
+            el.classList.toggle('_active', el === this);
+        }).bind(this));
+    }
+
+    chooseSize(event) {
+        event.preventDefault();
+        document.querySelectorAll('[data-name="product-size"]').forEach((function (el) {
+            el.classList.toggle('_active', el === this);
+        }).bind(this));
+    }
 }
 
 

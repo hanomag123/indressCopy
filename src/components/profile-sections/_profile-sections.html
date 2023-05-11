@@ -1,0 +1,11 @@
+<div class="profile-sections">
+    <nav class="profile-sections__nav">
+        <ul class="profile-sections__list">
+            @@for (let item of items) {
+            <li class="profile-sections__item` + (item.selected ? ' _active ' : ' ') + item.class + `">
+                <a href="` + item.link + `" class="profile-sections__link animated-underline` + (item.selected ? ' _active' : '') + `">` + item.text + `</a>
+            </li>
+            }
+        </ul>
+    </nav>
+</div>
