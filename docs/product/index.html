@@ -186,7 +186,7 @@
 							</a>
 						</div>
 						<div class="header__action-item header__action-basket" id="header-basket">
-							<a href="#basket" class="header__action-link" @@attrs>
+							<a href="#basket" class="header__action-link" data-modal-id="modal-basket">
 								<svg>
 									<use xlink:href="../img/sprite.svg#basket"></use>
 								</svg>
@@ -672,24 +672,24 @@
 			<h2 class="modal-register__title">Регистрация</h2>
 			<form action="/profile/" class="modal-register__form">
 				<div class="modal-register__form-item">
-					<label for="email" class="form-label">Эл. адрес</label>
-					<input type="email" class="form-input" id="email" name="email">
+					<label for="register-email" class="form-label">Эл. адрес</label>
+					<input type="email" class="form-input" id="register-email" name="email">
 				</div>
 				<div class="modal-register__form-item">
-					<label for="tel" class="form-label">Мобильный телефон</label>
-					<input type="tel" class="form-input" id="tel" name="tel">
+					<label for="register-tel" class="form-label">Мобильный телефон</label>
+					<input type="tel" class="form-input" id="register-tel" name="tel">
 				</div>
 				<div class="modal-register__form-item">
-					<label for="password" class="form-label">Пароль</label>
-					<input type="password" class="form-input" id="password" name="password" autocomplete="new-password">
+					<label for="register-password" class="form-label">Пароль</label>
+					<input type="password" class="form-input" id="register-password" name="password" autocomplete="new-password">
 				</div>
 				<div class="modal-register__form-item">
-					<label for="confirm-password" class="form-label">Подтвердите пароль</label>
-					<input type="password" class="form-input" id="confirm-password" name="confirm-password" autocomplete="new-password">
+					<label for="register-confirm-password" class="form-label">Подтвердите пароль</label>
+					<input type="password" class="form-input" id="register-confirm-password" name="confirm-password" autocomplete="new-password">
 				</div>
 				<div class="modal-register__form-item _checkbox">
-					<label for="agree" class="form-label-checkbox">
-						<input type="checkbox" class="form-input-checkbox" id="agree" name="agree" value="Y">
+					<label for="register-agree" class="form-label-checkbox">
+						<input type="checkbox" class="form-input-checkbox" id="register-agree" name="agree" value="Y">
 						<span>Я разрешаю использовать мои личные данные в соответствии с конфиденциальным соглашением</span>
 					</label>
 				</div>
@@ -705,14 +705,81 @@
 			<h2 class="modal-restore__title">Восстановление пароля</h2>
 			<form action="/profile/" class="modal-restore__form">
 				<div class="modal-restore__form-item">
-					<label for="login" class="form-label">Эл. адрес или мобильный телефон</label>
-					<input type="text" class="form-input" id="login" name="login">
+					<label for="restore-login" class="form-label">Эл. адрес или мобильный телефон</label>
+					<input type="text" class="form-input" id="restore-login" name="login">
 				</div>
 				<div class="modal-restore__form-item">
 					<input type="submit" class="form-submit" name="restore" value="Восстановить пароль">
 				</div>
 				<a href="#auth" class="modal-restore__auth animated-underline _active" data-modal-id="modal-auth">Вернуться к авторизации</a>
 			</form>
+		</div>
+	</div>
+	<div class="modal _right modal-basket" id="modal-basket">
+		<div class="modal__close"></div>
+		<div class="modal__wrapper">
+			<h2 class="modal-basket__title">Корзина</h2>
+			<div class="modal-basket__list">
+				<div class="modal-basket__item" data-basket-item-id="1">
+					<div class="modal-basket__item-image">
+						<img src="../img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
+					</div>
+					<div class="modal-basket__item-info">
+						<div class="modal-basket__item-top">
+							<a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
+							<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(1);">удалить</div>
+						</div>
+						<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+						<ul class="modal-basket__item-props">
+							<li class="modal-basket__item-prop">чёрный</li>
+							<li class="modal-basket__item-prop">s</li>
+						</ul>
+					</div>
+					<div class="modal-basket__item-bottom">
+						<div class="modal-basket__item-quantity">
+							<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(1);"></span>
+							<input type="number" value="1" name="quantity">
+							<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(1);"></span>
+						</div>
+						<div class="modal-basket__item-price">
+							<span class="old-price">5 490 р.</span>
+							<span class="current-price">2 190 р.</span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-basket__item" data-basket-item-id="2">
+					<div class="modal-basket__item-image">
+						<img src="../img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
+					</div>
+					<div class="modal-basket__item-info">
+						<div class="modal-basket__item-top">
+							<a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
+							<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(2);">удалить</div>
+						</div>
+						<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+						<ul class="modal-basket__item-props">
+							<li class="modal-basket__item-prop">чёрный</li>
+							<li class="modal-basket__item-prop">s</li>
+						</ul>
+					</div>
+					<div class="modal-basket__item-bottom">
+						<div class="modal-basket__item-quantity">
+							<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(2);"></span>
+							<input type="number" value="1" name="quantity">
+							<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(2);"></span>
+						</div>
+						<div class="modal-basket__item-price">
+							<span class="current-price">2 590 р.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="modal-basket__summary">
+				<span>Итого:</span>
+				<span class="modal-basket__summary-price">4 780 р.</span>
+			</div>
+			<a href="/order/" class="modal-basket__button">Оформить заказ</a>
 		</div>
 	</div>
 	<div class="overlay"></div>

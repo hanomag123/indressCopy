@@ -1,0 +1,67 @@
+<div class="modal _right modal-basket" id="modal-basket">
+    <div class="modal__close"></div>
+    <div class="modal__wrapper">
+        <h2 class="modal-basket__title">Корзина</h2>
+        <div class="modal-basket__list">
+            <div class="modal-basket__item" data-basket-item-id="1">
+                <div class="modal-basket__item-image">
+                    <img src="@@webRoot/img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
+                </div>
+                <div class="modal-basket__item-info">
+                    <div class="modal-basket__item-top">
+                        <a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
+                        <div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(1);">удалить</div>
+                    </div>
+                    <p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+                    <ul class="modal-basket__item-props">
+                        <li class="modal-basket__item-prop">чёрный</li>
+                        <li class="modal-basket__item-prop">s</li>
+                    </ul>
+                </div>
+                <div class="modal-basket__item-bottom">
+                    <div class="modal-basket__item-quantity">
+                        <span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(1);"></span>
+                        <input type="number" value="1" name="quantity">
+                        <span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(1);"></span>
+                    </div>
+                    <div class="modal-basket__item-price">
+                        <span class="old-price">5 490 р.</span>
+                        <span class="current-price">2 190 р.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-basket__item" data-basket-item-id="2">
+                <div class="modal-basket__item-image">
+                    <img src="@@webRoot/img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
+                </div>
+                <div class="modal-basket__item-info">
+                    <div class="modal-basket__item-top">
+                        <a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
+                        <div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(2);">удалить</div>
+                    </div>
+                    <p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+                    <ul class="modal-basket__item-props">
+                        <li class="modal-basket__item-prop">чёрный</li>
+                        <li class="modal-basket__item-prop">s</li>
+                    </ul>
+                </div>
+                <div class="modal-basket__item-bottom">
+                    <div class="modal-basket__item-quantity">
+                        <span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(2);"></span>
+                        <input type="number" value="1" name="quantity">
+                        <span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(2);"></span>
+                    </div>
+                    <div class="modal-basket__item-price">
+                        <span class="current-price">2 590 р.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="modal-basket__summary">
+            <span>Итого:</span>
+            <span class="modal-basket__summary-price">4 780 р.</span>
+        </div>
+        <a href="/order/" class="modal-basket__button">Оформить заказ</a>
+    </div>
+</div>

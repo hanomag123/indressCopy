@@ -396,6 +396,33 @@ class Indress {
             el.classList.toggle('_active', el === this);
         }).bind(this));
     }
+
+    deleteBasketItem(basketId) {
+        let basketItem = document.querySelector('[data-basket-item-id="' + basketId + '"]');
+        if (basketItem) {
+            basketItem.remove();
+        }
+    }
+
+    decreaseBasketItem(basketId) {
+        let basketItem = document.querySelector('[data-basket-item-id="' + basketId + '"]');
+        if (basketItem) {
+            let quantity = basketItem.querySelector('input[name="quantity"]');
+            if (quantity) {
+                quantity.value = Math.max(~~quantity.value - 1, 1);
+            }
+        }
+    }
+
+    increaseBasketItem(basketId) {
+        let basketItem = document.querySelector('[data-basket-item-id="' + basketId + '"]');
+        if (basketItem) {
+            let quantity = basketItem.querySelector('input[name="quantity"]');
+            if (quantity) {
+                quantity.value = Math.max(~~quantity.value + 1, 1);
+            }
+        }
+    }
 }
 
 
