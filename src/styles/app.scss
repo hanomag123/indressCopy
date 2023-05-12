@@ -269,17 +269,24 @@
         }
 
         &-checkbox {
-            margin-left: 20px;
-            display: block;
+            display: flex;
+            align-items: center;
             max-width: 30em;
             font-size: 15px;
             line-height: 1.2em;
             color: #000000;
             cursor: pointer;
 
+            span {
+                margin-left: 20px;
+            }
+
             @media (max-width: 767px) {
-                margin-left: 15px;
                 font-size: 12px;
+
+                span {
+                    margin-left: 15px;
+                }
             }
         }
     }
@@ -307,18 +314,30 @@
         }
 
         &-checkbox {
-            padding: 2px;
             display: block;
             width: 1em;
             height: 1em;
+            font-size: 18px;
             border: 1px solid #000000;
             border-radius: 0;
             appearance: none;
-            background-clip: content-box;
+            flex-shrink: 0;
             transition: $transition-default;
 
+            &[type="radio"] {
+                border-radius: 1em;
+            }
+
             &:checked {
-                background: #000 content-box;
+                background: #000;
+            }
+
+            @media (max-width: 1199px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 12px;
             }
         }
 

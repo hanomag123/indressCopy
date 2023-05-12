@@ -1,0 +1,25 @@
+<div class="modal _right modal-sort" id="modal-sort">
+    <div class="modal__close"></div>
+    <div class="modal__wrapper">
+        <h2 class="modal-sort__title">
+            <svg>
+                <use xlink:href="@@webRoot/img/sprite.svg#sorting"></use>
+            </svg>
+            <span>Сортировка</span>
+        </h2>
+        <form action="" class="modal-sort__form">
+            <ul class="modal-sort__list">
+                @@loop("./_radio-item.html", [
+                {"text": "по новизне", "value": "new", "name": "sort"},
+                {"text": "по популярности", "value": "shows", "name": "sort"},
+                {"text": "по размеру скидок", "value": "discount", "name": "sort"},
+                {"text": "по возрастанию цены", "value": "price_asc", "name": "sort"},
+                {"text": "по убыванию цены", "value": "price_desc", "name": "sort"},
+                ])
+            </ul>
+            <div class="modal-sort__submit">
+                <input type="submit" class="form-submit" name="apply" value="Применить">
+            </div>
+        </form>
+    </div>
+</div>

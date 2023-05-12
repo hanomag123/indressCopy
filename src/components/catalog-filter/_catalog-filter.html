@@ -1,14 +1,16 @@
 <div class="catalog-filter">
-    <div class="catalog-filter__filter" data-modal-id="catalog-filter">
+    <div class="catalog-filter__filter" data-modal-id="modal-filter">
         <svg>
             <use xlink:href="@@webRoot/img/sprite.svg#tune"></use>
         </svg>
         <span>Фильтр</span>
     </div>
-    <div class="catalog-filter__sort" data-modal-id="catalog-sort">
+    <div class="catalog-filter__sort" data-modal-id="modal-sort">
         <svg>
             <use xlink:href="@@webRoot/img/sprite.svg#sorting"></use>
         </svg>
         <span>Сортировка</span>
     </div>
+    @@include("../modal-filter/_modal-filter.html")
+    @@include("../modal-sort/_modal-sort.html")
 </div>

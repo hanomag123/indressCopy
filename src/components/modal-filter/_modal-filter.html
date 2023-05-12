@@ -1,0 +1,44 @@
+<div class="modal _left modal-filter" id="modal-filter">
+    <div class="modal__close"></div>
+    <div class="modal__wrapper">
+        <h2 class="modal-filter__title">
+            <svg>
+                <use xlink:href="@@webRoot/img/sprite.svg#tune"></use>
+            </svg>
+            <span>Фильтр</span>
+        </h2>
+        <form action="?filter=Y" class="modal-filter__form">
+            <div class="modal-filter__group">
+                <div class="modal-filter__group-title">Размер</div>
+                <hr>
+                <ul class="modal-filter__list">
+                    @@loop("./_checkbox-item.html", [
+                    {"text": "One size", "value": "1", "name": "size[]"},
+                    {"text": "xs", "value": "2", "name": "size[]"},
+                    {"text": "s", "value": "3", "name": "size[]"},
+                    {"text": "m", "value": "4", "name": "size[]"},
+                    {"text": "l", "value": "5", "name": "size[]"},
+                    ])
+                </ul>
+            </div>
+            <div class="modal-filter__group">
+                <div class="modal-filter__group-title">Цвет</div>
+                <hr>
+                <ul class="modal-filter__list">
+                    @@loop("./_checkbox-item.html", [
+                    {"text": "бежевая палитра", "value": "1", "name": "color[]"},
+                    {"text": "зеленая палитра", "value": "1", "name": "color[]"},
+                    {"text": "красная палитра", "value": "1", "name": "color[]"},
+                    {"text": "фиолетовая палитра", "value": "1", "name": "color[]"},
+                    {"text": "черно-белая палитра", "value": "1", "name": "color[]"},
+                    {"text": "принт", "value": "1", "name": "color[]"},
+                    {"text": "синяя палитра", "value": "1", "name": "color[]"},
+                    ])
+                </ul>
+            </div>
+            <div class="modal-filter__submit">
+                <input type="submit" class="form-submit" name="apply" value="Применить">
+            </div>
+        </form>
+    </div>
+</div>
