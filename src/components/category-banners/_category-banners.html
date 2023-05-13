@@ -1,5 +1,8 @@
 <div class="category-banners">
     <div class="container">
+        @@if(title) {
+        <h3 class="category-banners__title">@@title</h3>
+        }
         <div class="category-banners__wrapper">
             <a href="@@item1.link" class="category-banners__item" style="background-image: url(@@webRoot/@@item1.img)">
                 <div class="category-banners__content">
@@ -16,11 +19,13 @@
                     <h4 class="category-banners__name">@@item3.name</h4>
                 </div>
             </a>
+            @@if (item4) {
             <a href="@@item4.link" class="category-banners__item" style="background-image: url(@@webRoot/@@item4.img)">
                 <div class="category-banners__content">
                     <h4 class="category-banners__name">@@item4.name</h4>
                 </div>
             </a>
+            }
         </div>
     </div>
 </div>

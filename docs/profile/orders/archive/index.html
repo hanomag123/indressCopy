@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Личный кабинет | Indress - Магазин одежды</title>
-	<meta name="title" content="Личный кабинет | Indress - Магазин одежды">
+	<title>Архив покупок | Indress - Магазин одежды</title>
+	<meta name="title" content="Архив покупок | Indress - Магазин одежды">
 	<meta name="description" content="">
-	<meta property="og:title" content="Личный кабинет | Indress - Магазин одежды">
+	<meta property="og:title" content="Архив покупок | Indress - Магазин одежды">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="/profile/info/">
+	<meta property="og:url" content="/profile/orders/archive/">
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
-	<link rel="stylesheet" href="../../css/vendor.min.css">
-	<link rel="stylesheet" href="../../css/app.min.css">
+	<link rel="stylesheet" href="../../../css/vendor.min.css">
+	<link rel="stylesheet" href="../../../css/app.min.css">
 	<!-- end of styles -->
 </head>
 
@@ -36,7 +36,7 @@
 					<div class="header__action-item header__action-account" id="header-account">
 						<a href="#account" class="header__action-link" data-modal-id="modal-auth">
 							<svg>
-								<use xlink:href="../../img/sprite.svg#account"></use>
+								<use xlink:href="../../../img/sprite.svg#account"></use>
 							</svg>
 						</a>
 					</div>
@@ -45,7 +45,7 @@
 							<label for="header-search" class="header__search-label">
 								<input type="search" id="header-search" name="q" class="header__search" placeholder="Введите название или артикул">
 								<svg>
-									<use xlink:href="../../img/sprite.svg#search"></use>
+									<use xlink:href="../../../img/sprite.svg#search"></use>
 								</svg>
 							</label>
 						</form>
@@ -167,28 +167,28 @@
 						<div class="header__action-item header__action-search" id="header-search">
 							<a href="#search" class="header__action-link" @@attrs>
 								<svg>
-									<use xlink:href="../../img/sprite.svg#search"></use>
+									<use xlink:href="../../../img/sprite.svg#search"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-like" id="header-like">
 							<a href="#like" class="header__action-link" @@attrs>
 								<svg>
-									<use xlink:href="../../img/sprite.svg#like"></use>
+									<use xlink:href="../../../img/sprite.svg#like"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-account" id="header-account">
 							<a href="#account" class="header__action-link" data-modal-id="modal-auth">
 								<svg>
-									<use xlink:href="../../img/sprite.svg#account"></use>
+									<use xlink:href="../../../img/sprite.svg#account"></use>
 								</svg>
 							</a>
 						</div>
 						<div class="header__action-item header__action-basket" id="header-basket">
 							<a href="#basket" class="header__action-link" data-modal-id="modal-basket">
 								<svg>
-									<use xlink:href="../../img/sprite.svg#basket"></use>
+									<use xlink:href="../../../img/sprite.svg#basket"></use>
 								</svg>
 							</a>
 						</div>
@@ -215,8 +215,8 @@
 								<meta itemprop="position" content="2" />
 							</li>
 							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-								<a class="breadcrumbs__link" itemprop="item" href="/profile/info/">
-									<span itemprop="name" title="Данные">Данные</span>
+								<a class="breadcrumbs__link" itemprop="item" href="/profile/orders/archive/">
+									<span itemprop="name" title="Покупки">Покупки</span>
 								</a>
 								<meta itemprop="position" content="3" />
 							</li>
@@ -224,21 +224,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="profile-info">
+			<div class="profile-orders">
 				<div class="container">
-					<div class="profile-info__wrapper">
-						<h1 class="profile-info__title">Личный кабинет</h1>
+					<div class="profile-orders__wrapper">
+						<h1 class="profile-orders__title">Личный кабинет</h1>
 						<div class="profile-sections">
 							<nav class="profile-sections__nav">
 								<ul class="profile-sections__list">
-									<li class="profile-sections__item _active undefined">
-										<a href="/profile/info/" class="profile-sections__link animated-underline _active">Данные</a>
+									<li class="profile-sections__item undefined">
+										<a href="/profile/info/" class="profile-sections__link animated-underline">Данные</a>
 									</li>
 									<li class="profile-sections__item undefined">
 										<a href="/profile/delivery/" class="profile-sections__link animated-underline">Доставка</a>
 									</li>
-									<li class="profile-sections__item undefined">
-										<a href="/profile/orders/" class="profile-sections__link animated-underline">Покупки</a>
+									<li class="profile-sections__item _active undefined">
+										<a href="/profile/orders/" class="profile-sections__link animated-underline _active">Покупки</a>
 									</li>
 									<li class="profile-sections__item undefined">
 										<a href="/profile/like/" class="profile-sections__link animated-underline">Избранное</a>
@@ -249,33 +249,33 @@
 								</ul>
 							</nav>
 						</div>
-						<form action="/profile/info/" class="profile-info__form">
-							<div class="form-grid">
-								<div class="form-item">
-									<label for="firstname" class="form-label">Имя</label>
-									<input type="text" class="form-input" id="firstname" name="firstname">
+						<div class="profile-orders__tabs">
+							<a href="/profile/orders/" class="profile-orders__tab ">Активные <span>&nbsp;0</span></a>
+							<a href="/profile/orders/archive/" class="profile-orders__tab _active">Архив <span>&nbsp;0</span></a>
+						</div>
+						<p class="profile-orders__text">У вас нет архивных заказов</p>
+					</div>
+				</div>
+				<div class="category-banners">
+					<div class="container">
+						<h3 class="category-banners__title">Перейти в</h3>
+						<div class="category-banners__wrapper">
+							<a href="/catalog/" class="category-banners__item" style="background-image: url(../../../img/category-1.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Каталог</h4>
 								</div>
-								<div class="form-item">
-									<label for="lastname" class="form-label">Фамилия</label>
-									<input type="text" class="form-input" id="lastname" name="lastname">
+							</a>
+							<a href="/sale/" class="category-banners__item" style="background-image: url(../../../img/category-2.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Sale</h4>
 								</div>
-								<div class="form-item _short _birthdate">
-									<label for="birthdate" class="form-label">Дата рождения</label>
-									<input type="date" class="form-input" id="birthdate" name="birthdate">
+							</a>
+							<a href="/accessories/" class="category-banners__item" style="background-image: url(../../../img/category-3.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Аксессуары</h4>
 								</div>
-								<div class="form-item">
-									<label for="email" class="form-label">Email</label>
-									<input type="email" class="form-input" id="email" name="email">
-								</div>
-								<div class="form-item">
-									<label for="tel" class="form-label">Телефон</label>
-									<input type="tel" class="form-input" id="tel" name="tel">
-								</div>
-								<div class="form-item _submit">
-									<input type="submit" class="form-submit" id="save" name="save" value="сохранить изменения">
-								</div>
-							</div>
-						</form>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -305,7 +305,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Покупателям
 								<svg class="arrow">
-									<use xlink:href="../../img/sprite.svg#arrow"></use>
+									<use xlink:href="../../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -318,7 +318,7 @@
 						<div class="footer__sitemap-col">
 							<h4 class="footer__sitemap-name">Компания
 								<svg class="arrow">
-									<use xlink:href="../../img/sprite.svg#arrow"></use>
+									<use xlink:href="../../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -330,7 +330,7 @@
 						<div class="footer__sitemap-col _social">
 							<h4 class="footer__sitemap-name">Социальные сети
 								<svg class="arrow">
-									<use xlink:href="../../img/sprite.svg#arrow"></use>
+									<use xlink:href="../../../img/sprite.svg#arrow"></use>
 								</svg>
 							</h4>
 							<ul class="footer__sitemap-list">
@@ -429,7 +429,7 @@
 			<div class="modal-basket__list">
 				<div class="modal-basket__item" data-basket-item-id="1">
 					<div class="modal-basket__item-image">
-						<img src="../../img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
+						<img src="../../../img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
 					</div>
 					<div class="modal-basket__item-info">
 						<div class="modal-basket__item-top">
@@ -456,7 +456,7 @@
 				</div>
 				<div class="modal-basket__item" data-basket-item-id="2">
 					<div class="modal-basket__item-image">
-						<img src="../../img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
+						<img src="../../../img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
 					</div>
 					<div class="modal-basket__item-info">
 						<div class="modal-basket__item-top">
@@ -491,8 +491,8 @@
 	</div>
 	<div class="overlay"></div>
 	<!-- scripts -->
-	<script src="../../js/vendor.min.js"></script>
-	<script src="../../js/app.min.js"></script>
+	<script src="../../../js/vendor.min.js"></script>
+	<script src="../../../js/app.min.js"></script>
 	<!-- end of scripts -->
 </body>
 

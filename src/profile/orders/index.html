@@ -1,10 +1,10 @@
 @@include('../../components/header/_header.html', {
 "lang": "ru",
-"title": "Личный кабинет | Indress - Магазин одежды",
+"title": "Покупки | Indress - Магазин одежды",
 "description": "",
-"url": "/profile/info/",
+"url": "/profile/orders/",
 "classes": {"body": ""},
-"page": "Личный кабинет",
+"page": "Покупки",
 "space": true,
 })
 
@@ -13,11 +13,16 @@
   "items": [
   {"text": "Главная", "link": "/"},
   {"text": "Личный кабинет", "link": "/profile/"},
-  {"text": "Данные", "link": "/profile/info/"},
+  {"text": "Данные", "link": "/profile/orders/"},
   ],
   })
 
-  @@include("../../components/profile-info/_profile-info.html", {})
+  @@include("../../components/profile-orders/_profile-orders.html", {
+  "archive": false,
+  "activeCount": 0,
+  "archiveCount": 0,
+  "items": [],
+  })
 
 </div>
 

@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>Личный кабинет | Indress - Магазин одежды</title>
-	<meta name="title" content="Личный кабинет | Indress - Магазин одежды">
+	<title>Покупки | Indress - Магазин одежды</title>
+	<meta name="title" content="Покупки | Indress - Магазин одежды">
 	<meta name="description" content="">
-	<meta property="og:title" content="Личный кабинет | Indress - Магазин одежды">
+	<meta property="og:title" content="Покупки | Indress - Магазин одежды">
 	<meta property="og:description" content="">
-	<meta property="og:url" content="/profile/info/">
+	<meta property="og:url" content="/profile/orders/">
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
@@ -215,7 +215,7 @@
 								<meta itemprop="position" content="2" />
 							</li>
 							<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-								<a class="breadcrumbs__link" itemprop="item" href="/profile/info/">
+								<a class="breadcrumbs__link" itemprop="item" href="/profile/orders/">
 									<span itemprop="name" title="Данные">Данные</span>
 								</a>
 								<meta itemprop="position" content="3" />
@@ -224,21 +224,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="profile-info">
+			<div class="profile-orders">
 				<div class="container">
-					<div class="profile-info__wrapper">
-						<h1 class="profile-info__title">Личный кабинет</h1>
+					<div class="profile-orders__wrapper">
+						<h1 class="profile-orders__title">Личный кабинет</h1>
 						<div class="profile-sections">
 							<nav class="profile-sections__nav">
 								<ul class="profile-sections__list">
-									<li class="profile-sections__item _active undefined">
-										<a href="/profile/info/" class="profile-sections__link animated-underline _active">Данные</a>
+									<li class="profile-sections__item undefined">
+										<a href="/profile/info/" class="profile-sections__link animated-underline">Данные</a>
 									</li>
 									<li class="profile-sections__item undefined">
 										<a href="/profile/delivery/" class="profile-sections__link animated-underline">Доставка</a>
 									</li>
-									<li class="profile-sections__item undefined">
-										<a href="/profile/orders/" class="profile-sections__link animated-underline">Покупки</a>
+									<li class="profile-sections__item _active undefined">
+										<a href="/profile/orders/" class="profile-sections__link animated-underline _active">Покупки</a>
 									</li>
 									<li class="profile-sections__item undefined">
 										<a href="/profile/like/" class="profile-sections__link animated-underline">Избранное</a>
@@ -249,33 +249,33 @@
 								</ul>
 							</nav>
 						</div>
-						<form action="/profile/info/" class="profile-info__form">
-							<div class="form-grid">
-								<div class="form-item">
-									<label for="firstname" class="form-label">Имя</label>
-									<input type="text" class="form-input" id="firstname" name="firstname">
+						<div class="profile-orders__tabs">
+							<a href="/profile/orders/" class="profile-orders__tab _active">Активные <span>&nbsp;0</span></a>
+							<a href="/profile/orders/archive/" class="profile-orders__tab ">Архив <span>&nbsp;0</span></a>
+						</div>
+						<p class="profile-orders__text">У вас нет активных заказов</p>
+					</div>
+				</div>
+				<div class="category-banners">
+					<div class="container">
+						<h3 class="category-banners__title">Перейти в</h3>
+						<div class="category-banners__wrapper">
+							<a href="/catalog/" class="category-banners__item" style="background-image: url(../../img/category-1.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Каталог</h4>
 								</div>
-								<div class="form-item">
-									<label for="lastname" class="form-label">Фамилия</label>
-									<input type="text" class="form-input" id="lastname" name="lastname">
+							</a>
+							<a href="/sale/" class="category-banners__item" style="background-image: url(../../img/category-2.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Sale</h4>
 								</div>
-								<div class="form-item _short _birthdate">
-									<label for="birthdate" class="form-label">Дата рождения</label>
-									<input type="date" class="form-input" id="birthdate" name="birthdate">
+							</a>
+							<a href="/accessories/" class="category-banners__item" style="background-image: url(../../img/category-3.jpg)">
+								<div class="category-banners__content">
+									<h4 class="category-banners__name">Аксессуары</h4>
 								</div>
-								<div class="form-item">
-									<label for="email" class="form-label">Email</label>
-									<input type="email" class="form-input" id="email" name="email">
-								</div>
-								<div class="form-item">
-									<label for="tel" class="form-label">Телефон</label>
-									<input type="tel" class="form-input" id="tel" name="tel">
-								</div>
-								<div class="form-item _submit">
-									<input type="submit" class="form-submit" id="save" name="save" value="сохранить изменения">
-								</div>
-							</div>
-						</form>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

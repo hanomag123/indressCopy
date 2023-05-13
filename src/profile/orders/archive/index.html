@@ -1,0 +1,29 @@
+@@include('../../../components/header/_header.html', {
+"lang": "ru",
+"title": "Архив покупок | Indress - Магазин одежды",
+"description": "",
+"url": "/profile/orders/archive/",
+"classes": {"body": ""},
+"page": "Архив покупок",
+"space": true,
+})
+
+<div class="wrapper__content">
+  @@include("../../../components/breadcrumbs/_breadcrumbs.html", {
+  "items": [
+  {"text": "Главная", "link": "/"},
+  {"text": "Личный кабинет", "link": "/profile/"},
+  {"text": "Покупки", "link": "/profile/orders/archive/"},
+  ],
+  })
+
+  @@include("../../../components/profile-orders/_profile-orders.html", {
+  "archive": true,
+  "activeCount": 0,
+  "archiveCount": 0,
+  "items": [],
+  })
+
+</div>
+
+@@include('../../../components/footer/_footer.html')

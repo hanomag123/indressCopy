@@ -1,0 +1,36 @@
+<div class="profile-orders">
+  <div class="container">
+    <div class="profile-orders__wrapper">
+      <h1 class="profile-orders__title">Личный кабинет</h1>
+      @@include("../profile-sections/_profile-sections.html", {
+      "items": [
+      {"text": "Данные", "link": "/profile/info/"},
+      {"text": "Доставка", "link": "/profile/delivery/"},
+      {"text": "Покупки", "link": "/profile/orders/", "selected": true},
+      {"text": "Избранное", "link": "/profile/like/"},
+      {"text": "Выйти", "link": "/?logout=Y", "class": "_exit"},
+      ],
+      })
+
+      <div class="profile-orders__tabs">
+        <a href="/profile/orders/" class="profile-orders__tab @@if (!archive) {_active}">Активные <span>&nbsp;@@activeCount</span></a>
+        <a href="/profile/orders/archive/" class="profile-orders__tab @@if (archive) {_active}">Архив <span>&nbsp;@@archiveCount</span></a>
+      </div>
+      @@if (items.length > 0) {
+
+      }
+      @@if (items.length <= 0) {
+      <p class="profile-orders__text">У вас нет @@if (!archive) {активных} @@if (archive) {архивных} заказов</p>
+      }
+    </div>
+  </div>
+  @@if (items.length <= 0) {
+  @@include('../category-banners/_category-banners.html', {
+  "title": "Перейти в",
+  "item1": {"img": "img/category-1.jpg", "name": "Каталог", "link": "/catalog/"},
+  "item2": {"img": "img/category-2.jpg", "name": "Sale", "link": "/sale/"},
+  "item3": {"img": "img/category-3.jpg", "name": "Аксессуары", "link": "/accessories/"},
+  "item4": null,
+  })
+  }
+</div>
