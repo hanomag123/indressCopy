@@ -16,15 +16,49 @@
         <a href="/profile/orders/" class="profile-orders__tab @@if (!archive) {_active}">Активные <span>&nbsp;@@activeCount</span></a>
         <a href="/profile/orders/archive/" class="profile-orders__tab @@if (archive) {_active}">Архив <span>&nbsp;@@archiveCount</span></a>
       </div>
-      @@if (items.length > 0) {
-
+      @@if (orders.length > 0) {
+        <div class="profile-orders__list">
+          @@for (let order of orders) {
+          <div class="profile-orders__item">
+            <div class="profile-orders__item-info">
+              <div class="profile-orders__item-date">` + order.date + `</div>
+              <div class="profile-orders__item-delivery">` + order.delivery + `</div>
+              <div class="profile-orders__item-name">Заказ № ` + order.id + `</div>
+              <div class="profile-orders__item-count"><span class="_name">кол-во товаров:</span> ` + order.count + `</div>
+              <div class="profile-orders__item-count _mob">` + order.count + ` товара</div>
+              <div class="profile-orders__item-price"><span class="_name">сумма:</span> ` + order.price + `</div>
+              <div class="profile-orders__item-status"><span class="_name">статус заказа:</span> <span style="color: ` + order.statusColor + `">` + order.status + `</span></div>
+            </div>
+            <div class="profile-orders__item-products">
+              <p>состав заказа:</p>
+              <div class="swiper-button-prev profile-orders__item-prev">
+                <svg>
+                  <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+              <div class="swiper profile-orders__item-slider">
+                <div class="swiper-wrapper">
+                  ` + (order.items.reduce(function (result, item) {
+                  return result + '<div class="swiper-slide profile-orders__item-slide"><img src="@@webRoot/' + item.img + '" alt="product"></div>';
+                  }, '')) + `
+                </div>
+              </div>
+              <div class="swiper-button-next profile-orders__item-next">
+                <svg>
+                  <use xlink:href="@@webRoot/img/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
       }
-      @@if (items.length <= 0) {
+      @@if (orders.length <= 0) {
       <p class="profile-orders__text">У вас нет @@if (!archive) {активных} @@if (archive) {архивных} заказов</p>
       }
     </div>
   </div>
-  @@if (items.length <= 0) {
+  @@if (orders.length <= 0) {
   @@include('../category-banners/_category-banners.html', {
   "title": "Перейти в",
   "item1": {"img": "img/category-1.jpg", "name": "Каталог", "link": "/catalog/"},

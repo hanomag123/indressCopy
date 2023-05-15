@@ -148,6 +148,32 @@ class Indress {
             }
         }
 
+        let orderProducts = document.querySelectorAll('.profile-orders__item-products');
+        if (orderProducts.length > 0) {
+            for (let orderProduct of orderProducts) {
+                let swiper = orderProduct.querySelector('.swiper'),
+                    prev = orderProduct.querySelector('.swiper-button-prev'),
+                    next = orderProduct.querySelector('.swiper-button-next');
+
+                swiper.swiper && swiper.swiper.destroy();
+
+                new Swiper(swiper, {
+                    slidesPerView: 5,
+                    loop: false,
+                    navigation: {
+                        prevEl: prev,
+                        nextEl: next,
+                    },
+                    enabled: false,
+                    breakpoints: {
+                        1200: {
+                            enabled: true,
+                        },
+                    },
+                });
+            }
+        }
+
 
     }
 
