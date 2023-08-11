@@ -1,6 +1,6 @@
 // variables
 $primary-font-family: 'TT Norms Pro Trial', sans-serif;
-$primary-font-size: 16px;
+$primary-font-size: 1.6rem;
 $primary-line-height: 1.38;
 $primary-color: #000000;
 $white-color: #FFFFFF;
@@ -9,7 +9,38 @@ $brand-secondary-color: #E8145A;
 $grey-color: rgba(0, 0, 0, 0.1);
 $light-grey-color: #F7F7F8;
 
+:root {
+  --white: #FFFFFF;
+  --black: #0D0D0D;
+  --grey: #D9D9D9;
+  --grey-2: #797979;
+  --text-accent: #A37E88;
+}
+
 $transition-default: 0.25s ease-in-out;
+
+$cos_bp: 1440px;
+$xl-bp: 1024px;
+$sm-bp: 500px;
+
+@mixin breakpoint($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1512 * 10);
+
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 768 * 10);
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 390 * 10);
+  }
+}
 
 :root {
     --app-height: 1vh;

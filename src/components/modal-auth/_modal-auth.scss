@@ -1,28 +1,28 @@
 .modal-auth {
 
   &__tabs {
-    margin-bottom: 50px;
+    margin-bottom: 5.0rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media (max-width: 1199px) {
-      margin-bottom: 80px;
+      margin-bottom: 8.0rem;
     }
 
     @media (max-width: 767px) {
-      margin-bottom: 40px;
+      margin-bottom: 4.0rem;
     }
   }
 
   &__tab {
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.2em;
     text-transform: uppercase;
     color: #000000;
 
     &:not(:first-child) {
-      margin-left: 60px;
+      margin-left: 6.0rem;
     }
 
     &._active {
@@ -30,29 +30,29 @@
     }
 
     @media (max-width: 1199px) {
-      font-size: 15px;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 11px;
+      font-size: 1.1rem;
     }
   }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 6.0rem;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
 
     @media (max-width: 1199px) {
-      margin-bottom: 40px;
-      font-size: 19px;
+      margin-bottom: 4.0rem;
+      font-size: 1.9rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 18px;
+      font-size: 1.8rem;
       text-transform: initial;
       font-variant: all-small-caps;
     }
@@ -61,13 +61,13 @@
   &__form {
 
     &-item {
-      margin-bottom: 30px;
+      margin-bottom: 3.0rem;
     }
   }
 
   &__restore {
-    margin-bottom: 30px;
-    font-size: 15px;
+    margin-bottom: 3.0rem;
+    font-size: 1.5rem;
     line-height: 1.2em;
     color: #797979;
   }

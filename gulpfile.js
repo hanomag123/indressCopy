@@ -78,7 +78,6 @@ const uglify = require('gulp-uglify-es').default;
 function browsersync() {
     browserSync.init({
         server: {baseDir: buildDir + '/'},
-        browser: "Yandex",
         notify: false
     })
 }

@@ -14,8 +14,8 @@
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
-	<link rel="stylesheet" href="../../css/vendor.min.css">
-	<link rel="stylesheet" href="../../css/app.min.css">
+	<link rel="stylesheet" href="../../css/vendor.min.css?3">
+	<link rel="stylesheet" href="../../css/app.min.css?3">
 	<!-- end of styles -->
 </head>
 
@@ -256,28 +256,30 @@
 						<p class="profile-orders__text">У вас нет активных заказов</p>
 					</div>
 				</div>
-				<div class="category-banners">
-					<div class="container">
-						<h3 class="category-banners__title">Перейти в</h3>
-						<div class="category-banners__wrapper">
-							<a href="/catalog/" class="category-banners__item" style="background-image: url(../../img/category-1.jpg)">
-								<div class="category-banners__content">
-									<h4 class="category-banners__name">Каталог</h4>
-								</div>
-							</a>
-							<a href="/sale/" class="category-banners__item" style="background-image: url(../../img/category-2.jpg)">
-								<div class="category-banners__content">
-									<h4 class="category-banners__name">Sale</h4>
-								</div>
-							</a>
-							<a href="/accessories/" class="category-banners__item" style="background-image: url(../../img/category-3.jpg)">
-								<div class="category-banners__content">
-									<h4 class="category-banners__name">Аксессуары</h4>
-								</div>
-							</a>
-						</div>
+				<section class="directory mt-60 container">
+					<div class="swiper directory-swiper">
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#">
+									<img src="../../img/category-1.jpg" alt="directory">
+									<h2 class="directory-title">каталог</h2>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#">
+									<img src="../../img/category-2.jpg" alt="directory">
+									<h2 class="directory-title">sale</h2>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#">
+									<img src="../../img/category-3.jpg" alt="directory">
+									<h2 class="directory-title">аксессуары</h2>
+								</a>
+							</li>
+						</ul>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
 		<footer class="footer">
@@ -492,7 +494,7 @@
 	<div class="overlay"></div>
 	<!-- scripts -->
 	<script src="../../js/vendor.min.js"></script>
-	<script src="../../js/app.min.js"></script>
+	<script src="../../js/app.min.js?2"></script>
 	<!-- end of scripts -->
 </body>
 

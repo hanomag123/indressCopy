@@ -11,17 +11,98 @@
 <div class="wrapper__content">
     @@include('components/fullwidth-banner/_fullwidth-banner.html')
 
-    @@include('components/category-banners/_category-banners.html', {
-    "title": null,
-    "item1": {"img": "img/category-1.jpg", "name": "Каталог", "link": "/catalog/"},
-    "item2": {"img": "img/category-2.jpg", "name": "Sale", "link": "/sale/"},
-    "item3": {"img": "img/category-3.jpg", "name": "Аксессуары", "link": "/accessories/"},
-    "item4": {"img": "img/category-4.jpg", "name": "Bestseller", "link": "/bestseller/"},
-    })
+    <section class="directory mt-60 container">
+      <div class="swiper directory-swiper">
+        <ul class="swiper-wrapper">
+    
+          <li class="swiper-slide">
+            <a href="./catalog/">
+              <picture>
+                <source srcset="img/category-1-sm.jpg" media="(max-width:500px)">
+                <img src="img/category-1.jpg" alt="directory">
+              </picture>
+              <h2 class="directory-title">каталог</h2>
+            </a>
+          </li>
+    
+          <li class="swiper-slide">
+            <a href="./catalog/">
+              <img src="img/category-2.jpg" alt="directory">
+              <h2 class="directory-title">sale</h2>
+            </a>
+          </li>
+    
+          <li class="swiper-slide">
+            <a href="./catalog/">
+              <img src="img/category-3.jpg" alt="directory">
+              <h2 class="directory-title">аксессуары</h2>
+            </a>
+          </li>
+    
+        </ul>
+      </div>
+    </section>
 
-    @@include('components/product-line/_product-line.html', {
-    "title": "Новинки",
-    })
+    <div class="mobile-reverse">
+      <section class="bestSell mt-60 container">
+        <div class="bestSell-swiper-wrapper">
+          <div class="swiper bestSell-swiper">
+            <ul class="swiper-wrapper">
+        
+              <li class="swiper-slide">
+                <a href="#">
+                  <picture>
+                    <source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+                    <img src="./img/category-4-new.jpg" alt="bestsell">
+                  </picture>
+                  <img src="./img/category-4-new.jpg" alt="bestsell">
+                  <div class="bestSell-block">
+                    <h2 class="bestSell-title">Bestseller</h2>
+                    <span class="bestSell-button">смотреть</span>
+                  </div>
+                </a>
+              </li>
+    
+              <li class="swiper-slide">
+                <a href="#">
+                  <picture>
+                    <source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+                    <img src="./img/category-4-new.jpg" alt="bestsell">
+                  </picture>
+                  <img src="./img/category-4-new.jpg" alt="bestsell">
+                  <div class="bestSell-block">
+                    <h2 class="bestSell-title">Bestseller</h2>
+                    <span class="bestSell-button">смотреть</span>
+                  </div>
+                </a>
+              </li>
+    
+              <li class="swiper-slide">
+                <a href="#">
+                  <picture>
+                    <source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+                    <img src="./img/category-4-new.jpg" alt="bestsell">
+                  </picture>
+                  <img src="./img/category-4-new.jpg" alt="bestsell">
+                  <div class="bestSell-block">
+                    <h2 class="bestSell-title">Bestseller</h2>
+                    <span class="bestSell-button">смотреть</span>
+                  </div>
+                </a>
+              </li>
+        
+            </ul>
+          </div>
+  
+          <div class="swiper-pagination"></div>
+        </div>
+      
+      </section>
+  
+      @@include('components/product-line/_product-line.html', {
+      "title": "Новинки",
+      })
+    </div>
 
 </div>
 

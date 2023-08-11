@@ -1,41 +1,41 @@
 .footer {
-  margin-top: 120px;
+  margin-top: 12rem;
   display: block;
-  border-top: 1px solid #D2D2D2;
+  border-top: 0.1rem solid #D2D2D2;
 
   &__wrapper {
-    padding: 110px 0 220px;
+    padding: 11rem 0 22rem;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 1199px) {
-      padding: 60px 0 120px;
+      padding: 6.0rem 0 12rem;
       flex-direction: column;
       justify-content: center;
     }
 
     @media (max-width: 1199px) {
-      padding: 40px 0 80px;
+      padding: 4.0rem 0 8.0rem;
       flex-direction: column;
       justify-content: center;
     }
   }
 
   &__logo {
-    margin: 0 120px 0 0;
+    margin: 0 12rem 0 0;
     flex-shrink: 0;
 
     @media (max-width: 1199px) {
-      margin: 0 0 80px 0;
+      margin: 0 0 8.0rem 0;
     }
 
     @media (max-width: 767px) {
-      margin: 0 0 50px 0;
+      margin: 0 0 5.0rem 0;
     }
 
     &-desktop {
       display: block;
-      height: 28px;
+      height: 2.8rem;
 
       @media (max-width: 767px) {
         display: none;
@@ -44,7 +44,7 @@
 
     &-mobile {
       display: none;
-      height: 28px;
+      height: 2.8rem;
 
       @media (max-width: 767px) {
         display: block;
@@ -76,21 +76,22 @@
     &-col {
       position: relative;
       display: block;
-      width: calc((100% - 60px) / 3);
+      width: calc((100% - 6.0rem) / 3);
 
       &:not(:first-child) {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 3.0rem;
       }
 
       svg.arrow {
         position: absolute;
-        top: calc(0.2em + 10px);
+        top: calc(0.2em + 1.0rem);
         right: 0;
         display: none;
         width: 0.85em;
         height: 0.85em;
         transition: $transition-default;
         pointer-events: none;
+        transform: rotate(90deg);
       }
 
       @media (max-width: 767px) {
@@ -98,7 +99,7 @@
         width: 100%;
 
         &:not(:first-child) {
-          margin: 10px 0 0;
+          margin: 1.0rem 0 0;
         }
 
         svg.arrow {
@@ -109,23 +110,23 @@
     }
 
     &-name {
-      margin-bottom: 36px;
+      margin-bottom: 3.6rem;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 2.0rem;
       line-height: 1.2em;
       font-variant: all-small-caps;
       color: #000000;
       cursor: pointer;
 
       @media (max-width: 1199px) {
-        margin-bottom: 28px;
-        font-size: 23px;
+        margin-bottom: 2.8rem;
+        font-size: 2.3rem;
       }
 
       @media (max-width: 767px) {
         margin-bottom: 0;
-        padding: 10px 0;
-        font-size: 15px;
+        padding: 1.0rem 0;
+        font-size: 1.5rem;
       }
     }
 
@@ -138,20 +139,20 @@
     }
 
     &-item {
-      margin: 10px 0;
+      margin: 1.0rem 0;
       display: block;
-      font-size: 20px;
+      font-size: 2.0rem;
       font-weight: 300;
       line-height: 1.2em;
       color: #000000;
 
       @media (max-width: 1199px) {
-        margin: 15px 0;
+        margin: 1.5rem 0;
       }
 
       @media (max-width: 767px) {
-        margin: 0 0 10px;
-        font-size: 15px;
+        margin: 0 0 1.0rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -171,7 +172,7 @@
       }
 
       &-col._social {
-        margin-top: 40px;
+        margin-top: 4.0rem;
 
         svg.arrow {
           display: none;
@@ -179,7 +180,7 @@
       }
 
       &-col._social &-name {
-        margin-bottom: 20px;
+        margin-bottom: 2.0rem;
         font-variant: initial;
         color: #797979;
         text-align: center;
@@ -197,13 +198,13 @@
         color: #797979;
 
         &:not(:first-child) {
-          margin: 0 0 0 20px;
+          margin: 0 0 0 2.0rem;
 
           &:before {
             content: '';
-            margin: 0 20px 0 0;
+            margin: 0 2.0rem 0 0;
             display: inline-block;
-            width: 1px;
+            width: 0.1rem;
             height: 1.3em;
             background: currentColor;
             vertical-align: middle;

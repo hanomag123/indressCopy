@@ -1,8 +1,8 @@
 .profile-sections {
-  margin-bottom: 60px;
+  margin-bottom: 6.0rem;
 
   @media (max-width: 1199px) {
-    margin-bottom: 50px;
+    margin-bottom: 5.0rem;
   }
 
   &__nav {
@@ -20,13 +20,13 @@
   }
 
   &__item {
-    font-size: 23px;
+    font-size: 2.3rem;
     line-height: 1.2em;
     font-variant: all-small-caps;
     color: #000000;
 
     &:not(:first-child) {
-      margin-left: 60px;
+      margin-left: 6.0rem;
     }
 
     &._active {
@@ -34,7 +34,7 @@
     }
 
     @media (max-width: 1199px) {
-      font-size: 15px;
+      font-size: 1.5rem;
       font-variant: initial;
       text-transform: uppercase;
 
@@ -44,7 +44,7 @@
         left: auto;
         right: 0;
         bottom: auto;
-        font-size: 19px;
+        font-size: 1.9rem;
         text-transform: initial;
         color: #797979;
 
@@ -55,7 +55,7 @@
     }
 
     @media (max-width: 767px) {
-      font-size: 12px;
+      font-size: 1.2rem;
       font-variant: all-small-caps;
       text-transform: initial;
 
@@ -64,7 +64,7 @@
       }
 
       &._exit {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
     }
   }

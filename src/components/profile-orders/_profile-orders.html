@@ -58,13 +58,33 @@
       }
     </div>
   </div>
-  @@if (orders.length <= 0) {
-  @@include('../category-banners/_category-banners.html', {
-  "title": "Перейти в",
-  "item1": {"img": "img/category-1.jpg", "name": "Каталог", "link": "/catalog/"},
-  "item2": {"img": "img/category-2.jpg", "name": "Sale", "link": "/sale/"},
-  "item3": {"img": "img/category-3.jpg", "name": "Аксессуары", "link": "/accessories/"},
-  "item4": null,
-  })
-  }
+
+  <section class="directory mt-60 container">
+    <div class="swiper directory-swiper">
+      <ul class="swiper-wrapper">
+  
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="@@webRoot/img/category-1.jpg" alt="directory">
+            <h2 class="directory-title">каталог</h2>
+          </a>
+        </li>
+  
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="@@webRoot/img/category-2.jpg" alt="directory">
+            <h2 class="directory-title">sale</h2>
+          </a>
+        </li>
+  
+        <li class="swiper-slide">
+          <a href="#">
+            <img src="@@webRoot/img/category-3.jpg" alt="directory">
+            <h2 class="directory-title">аксессуары</h2>
+          </a>
+        </li>
+  
+      </ul>
+    </div>
+  </section>
 </div>

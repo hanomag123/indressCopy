@@ -1,5 +1,10 @@
 <div class="swiper-slide fullwidth-banner__slide">
-  <div class="fullwidth-banner__image" style="background-image: url(@@webRoot/@@img);"></div>
+  <div class="fullwidth-banner__image">
+    <picture>
+      <source srcset="./img/main-banner-1-sm.jpg" media="(max-width:500px)">
+      <img class="back-cover" src="./img/main-banner-1.jpg" alt="main">
+    </picture>
+  </div>
   <div class="fullwidth-banner__content">
     <h3 class="fullwidth-banner__title">@@title</h3>
   </div>

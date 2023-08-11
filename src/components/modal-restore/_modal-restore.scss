@@ -1,19 +1,19 @@
 .modal-restore {
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 6.0rem;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
 
     @media (max-width: 1199px) {
-      margin-bottom: 40px;
-      font-size: 19px;
+      margin-bottom: 4.0rem;
+      font-size: 1.9rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 18px;
+      font-size: 1.8rem;
       text-transform: initial;
       font-variant: all-small-caps;
     }
@@ -22,20 +22,20 @@
   &__form {
 
     &-item {
-      margin-bottom: 30px;
+      margin-bottom: 3.0rem;
 
       &:nth-child(2) {
-        margin: 60px 0;
+        margin: 6.0rem 0;
 
         @media (max-width: 767px) {
-          margin: 30px 0;
+          margin: 3.0rem 0;
         }
       }
     }
   }
 
   &__auth {
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.2em;
     color: #797979;
   }

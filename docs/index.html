@@ -14,8 +14,8 @@
 	<meta property="og:site_name" content="Indress">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<!-- styles -->
-	<link rel="stylesheet" href="./css/vendor.min.css">
-	<link rel="stylesheet" href="./css/app.min.css">
+	<link rel="stylesheet" href="./css/vendor.min.css?3">
+	<link rel="stylesheet" href="./css/app.min.css?3">
 	<!-- end of styles -->
 </head>
 
@@ -201,154 +201,231 @@
 				<div class="swiper fullwidth-banner__slider">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
+							<div class="fullwidth-banner__image">
+								<picture>
+									<source srcset="./img/main-banner-1-sm.jpg" media="(max-width:500px)">
+									<img class="back-cover" src="./img/main-banner-1.jpg" alt="main">
+								</picture>
+							</div>
 							<div class="fullwidth-banner__content">
 								<h3 class="fullwidth-banner__title">New collection’ 23</h3>
 							</div>
 						</div>
 						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
+							<div class="fullwidth-banner__image">
+								<picture>
+									<source srcset="./img/main-banner-1-sm.jpg" media="(max-width:500px)">
+									<img class="back-cover" src="./img/main-banner-1.jpg" alt="main">
+								</picture>
+							</div>
 							<div class="fullwidth-banner__content">
 								<h3 class="fullwidth-banner__title">New collection’ 24</h3>
 							</div>
 						</div>
 						<div class="swiper-slide fullwidth-banner__slide">
-							<div class="fullwidth-banner__image" style="background-image: url(./img/main-banner-1.jpg);"></div>
+							<div class="fullwidth-banner__image">
+								<picture>
+									<source srcset="./img/main-banner-1-sm.jpg" media="(max-width:500px)">
+									<img class="back-cover" src="./img/main-banner-1.jpg" alt="main">
+								</picture>
+							</div>
 							<div class="fullwidth-banner__content">
 								<h3 class="fullwidth-banner__title">New collection’ 25</h3>
+							</div>
+						</div>
+						<div class="swiper-slide fullwidth-banner__slide">
+							<div class="fullwidth-banner__image">
+								<picture>
+									<source srcset="./img/main-banner-1-sm.jpg" media="(max-width:500px)">
+									<img class="back-cover" src="./img/main-banner-1.jpg" alt="main">
+								</picture>
+							</div>
+							<div class="fullwidth-banner__content">
+								<h3 class="fullwidth-banner__title">New collection’ 26</h3>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="swiper-pagination fullwidth-banner__pagination"></div>
 			</div>
-			<div class="category-banners">
-				<div class="container">
-					<div class="category-banners__wrapper">
-						<a href="/catalog/" class="category-banners__item" style="background-image: url(./img/category-1.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Каталог</h4>
-							</div>
-						</a>
-						<a href="/sale/" class="category-banners__item" style="background-image: url(./img/category-2.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Sale</h4>
-							</div>
-						</a>
-						<a href="/accessories/" class="category-banners__item" style="background-image: url(./img/category-3.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Аксессуары</h4>
-							</div>
-						</a>
-						<a href="/bestseller/" class="category-banners__item" style="background-image: url(./img/category-4.jpg)">
-							<div class="category-banners__content">
-								<h4 class="category-banners__name">Bestseller</h4>
-							</div>
-						</a>
-					</div>
+			<section class="directory mt-60 container">
+				<div class="swiper directory-swiper">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="./catalog/">
+								<picture>
+									<source srcset="img/category-1-sm.jpg" media="(max-width:500px)">
+									<img src="img/category-1.jpg" alt="directory">
+								</picture>
+								<h2 class="directory-title">каталог</h2>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="./catalog/">
+								<img src="img/category-2.jpg" alt="directory">
+								<h2 class="directory-title">sale</h2>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="./catalog/">
+								<img src="img/category-3.jpg" alt="directory">
+								<h2 class="directory-title">аксессуары</h2>
+							</a>
+						</li>
+					</ul>
 				</div>
-			</div>
-			<section class="product-line">
-				<div class="container">
-					<h2 class="product-line__title">Новинки</h2>
-					<div class="swiper product-line__slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-1.jpg">
-											<img src="./img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
+			</section>
+			<div class="mobile-reverse">
+				<section class="bestSell mt-60 container">
+					<div class="bestSell-swiper-wrapper">
+						<div class="swiper bestSell-swiper">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#">
+										<picture>
+											<source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+											<img src="./img/category-4-new.jpg" alt="bestsell">
 										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+										<img src="./img/category-4-new.jpg" alt="bestsell">
+										<div class="bestSell-block">
+											<h2 class="bestSell-title">Bestseller</h2>
+											<span class="bestSell-button">смотреть</span>
 										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-2.jpg">
-											<img src="./img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">
+										<picture>
+											<source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+											<img src="./img/category-4-new.jpg" alt="bestsell">
 										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
+										<img src="./img/category-4-new.jpg" alt="bestsell">
+										<div class="bestSell-block">
+											<h2 class="bestSell-title">Bestseller</h2>
+											<span class="bestSell-button">смотреть</span>
 										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
-										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-3.jpg">
-											<img src="./img/product-3.jpg" loading="lazy" alt="Свитер «Леопард»">
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#">
+										<picture>
+											<source srcset="./img/category-4-new-sm.jpg" media="(max-width:500px)">
+											<img src="./img/category-4-new.jpg" alt="bestsell">
 										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Свитер «Леопард»">Свитер «Леопард»</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Серый" style="background-color: grey"></div>
-											<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+										<img src="./img/category-4-new.jpg" alt="bestsell">
+										<div class="bestSell-block">
+											<h2 class="bestSell-title">Bestseller</h2>
+											<span class="bestSell-button">смотреть</span>
 										</div>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide product-line__slide">
-								<a href="/product/" class="product-card">
-									<div class="product-card__img">
-										<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
-											<svg>
-												<use xlink:href="./img/sprite.svg#like"></use>
-											</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</section>
+				<section class="product-line">
+					<div class="container">
+						<h2 class="product-line__title">Новинки</h2>
+						<div class="swiper product-line__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide product-line__slide">
+									<a href="./product/" class="product-card">
+										<div class="product-card__img">
+											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+												<svg>
+													<use xlink:href="./img/sprite.svg#like"></use>
+												</svg>
+											</div>
+											<picture class="product-card__picture">
+												<source srcset="./img/product-1.jpg">
+												<img src="./img/product-1.jpg" loading="lazy" alt="Костюм трикотажный c двойным">
+											</picture>
 										</div>
-										<picture class="product-card__picture">
-											<source srcset="./img/product-4.jpg">
-											<img src="./img/product-4.jpg" loading="lazy" alt="Платье расклешённое">
-										</picture>
-									</div>
-									<div class="product-card__info">
-										<h5 class="product-card__name" title="Платье расклешённое">Платье расклешённое</h5>
-										<div class="product-card__price">7 890 р.</div>
-										<div class="product-card__colors">
-											<div class="product-card__color" title="Черный" style="background-color: black"></div>
+										<div class="product-card__info">
+											<h5 class="product-card__name" title="Костюм трикотажный c двойным">Костюм трикотажный c двойным</h5>
+											<div class="product-card__price">7 890 р.</div>
+											<div class="product-card__colors">
+												<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+												<div class="product-card__color" title="Розово-коричневый" style="background-color: rosybrown"></div>
+												<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+											</div>
 										</div>
-									</div>
-								</a>
+									</a>
+								</div>
+								<div class="swiper-slide product-line__slide">
+									<a href="./product/" class="product-card">
+										<div class="product-card__img">
+											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+												<svg>
+													<use xlink:href="./img/sprite.svg#like"></use>
+												</svg>
+											</div>
+											<picture class="product-card__picture">
+												<source srcset="./img/product-2.jpg">
+												<img src="./img/product-2.jpg" loading="lazy" alt="Жакет двубортный «Гусиная лапка»">
+											</picture>
+										</div>
+										<div class="product-card__info">
+											<h5 class="product-card__name" title="Жакет двубортный «Гусиная лапка»">Жакет двубортный «Гусиная лапка»</h5>
+											<div class="product-card__price">7 890 р.</div>
+											<div class="product-card__colors">
+												<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+												<div class="product-card__color" title="Черный" style="background-color: black"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide product-line__slide">
+									<a href="./product/" class="product-card">
+										<div class="product-card__img">
+											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+												<svg>
+													<use xlink:href="./img/sprite.svg#like"></use>
+												</svg>
+											</div>
+											<picture class="product-card__picture">
+												<source srcset="./img/product-3.jpg">
+												<img src="./img/product-3.jpg" loading="lazy" alt="Свитер «Леопард»">
+											</picture>
+										</div>
+										<div class="product-card__info">
+											<h5 class="product-card__name" title="Свитер «Леопард»">Свитер «Леопард»</h5>
+											<div class="product-card__price">7 890 р.</div>
+											<div class="product-card__colors">
+												<div class="product-card__color" title="Серый" style="background-color: grey"></div>
+												<div class="product-card__color" title="Коричневый" style="background-color: brown"></div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide product-line__slide">
+									<a href="./product/" class="product-card">
+										<div class="product-card__img">
+											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+												<svg>
+													<use xlink:href="./img/sprite.svg#like"></use>
+												</svg>
+											</div>
+											<picture class="product-card__picture">
+												<source srcset="./img/product-4.jpg">
+												<img src="./img/product-4.jpg" loading="lazy" alt="Платье расклешённое">
+											</picture>
+										</div>
+										<div class="product-card__info">
+											<h5 class="product-card__name" title="Платье расклешённое">Платье расклешённое</h5>
+											<div class="product-card__price">7 890 р.</div>
+											<div class="product-card__colors">
+												<div class="product-card__color" title="Черный" style="background-color: black"></div>
+											</div>
+										</div>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="container">
@@ -562,7 +639,7 @@
 	<div class="overlay"></div>
 	<!-- scripts -->
 	<script src="./js/vendor.min.js"></script>
-	<script src="./js/app.min.js"></script>
+	<script src="./js/app.min.js?2"></script>
 	<!-- end of scripts -->
 </body>
 

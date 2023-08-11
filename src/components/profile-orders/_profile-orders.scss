@@ -5,35 +5,35 @@
   }
 
   &__title {
-    margin-bottom: 60px;
-    font-size: 29px;
+    margin-bottom: 6.0rem;
+    font-size: 2.9rem;
     line-height: 1.2em;
     font-variant: all-small-caps;
     text-align: center;
     color: #000000;
     
     @media (max-width: 1199px) {
-      font-size: 19px;
+      font-size: 1.9rem;
       font-variant: initial;
       text-align: left;
       text-transform: uppercase;
     }
 
     @media (max-width: 767px) {
-      margin-bottom: 40px;
-      font-size: 14px;
+      margin-bottom: 4.0rem;
+      font-size: 1.4rem;
     }
   }
 
   &__tabs {
-    margin-bottom: 60px;
+    margin-bottom: 6.0rem;
     display: flex;
     align-items: center;
   }
 
   &__tab {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.2em;
     text-decoration: none;
     color: #797979;
@@ -43,7 +43,7 @@
     }
 
     &:not(:first-child) {
-      margin-left: 30px;
+      margin-left: 3.0rem;
     }
 
     &._active {
@@ -52,14 +52,14 @@
   }
 
   &__text {
-    font-size: 23px;
+    font-size: 2.3rem;
     font-weight: 400;
     line-height: 1.2em;
     color: #000000;
   }
 
   .category-banners {
-    margin: 60px 0 0 !important;
+    margin: 6.0rem 0 0 !important;
     
     &__content {
       justify-content: center;
@@ -77,15 +77,15 @@
   }
 
   &__item {
-    margin-bottom: 60px;
-    padding-bottom: 30px;
+    margin-bottom: 6.0rem;
+    padding-bottom: 3.0rem;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    border-bottom: 1px solid #797979;
+    border-bottom: 0.1rem solid #797979;
 
     @media (max-width: 767px) {
-      padding-bottom: 20px;
+      padding-bottom: 2.0rem;
     }
 
     &-info {
@@ -102,16 +102,16 @@
 
     &-date,
     &-delivery {
-      margin-bottom: 20px;
+      margin-bottom: 2.0rem;
       width: 50%;
-      font-size: 19px;
+      font-size: 1.9rem;
       font-weight: 400;
       line-height: 1.2em;
       color: #797979;
       white-space: nowrap;
       
       @media (max-width: 767px) {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
     }
 
@@ -126,9 +126,9 @@
     }
 
     &-name {
-      margin-bottom: 50px;
+      margin-bottom: 5.0rem;
       width: 100%;
-      font-size: 23px;
+      font-size: 2.3rem;
       font-weight: 400;
       line-height: 1.2em;
       text-transform: uppercase;
@@ -143,22 +143,22 @@
       }
 
       @media (max-width: 767px) {
-        margin-bottom: 10px;
-        font-size: 14px;
+        margin-bottom: 1.0rem;
+        font-size: 1.4rem;
       }
     }
 
     &-count,
     &-price,
     &-status {
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: 500;
       line-height: 1.2em;
       color: #000000;
       white-space: nowrap;
 
       @media (max-width: 767px) {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
 
       ._name {
@@ -209,14 +209,14 @@
       order: 6;
 
       @media (max-width: 1199px) {
-        font-size: 19px;
+        font-size: 1.9rem;
         font-weight: 400;
         text-transform: lowercase;
         order: 4;
       }
 
       @media (max-width: 767px) {
-        font-size: 12px;
+        font-size: 1.2rem;
       }
 
       ._name {
@@ -228,7 +228,7 @@
 
     &-products {
       position: relative;
-      padding: 0 34px;
+      padding: 0 3.4rem;
       width: 42%;
       flex-shrink: 0;
       
@@ -237,8 +237,8 @@
       }
       
       p {
-        margin-bottom: 15px;
-        font-size: 19px;
+        margin-bottom: 1.5rem;
+        font-size: 1.9rem;
         font-weight: 400;
         line-height: 1.2em;
         text-transform: uppercase;
@@ -256,11 +256,11 @@
 
     &-prev,
     &-next {
-      margin-top: 7px;
-      padding: 2px;
+      margin-top: 0.7rem;
+      padding: 0.2rem;
       display: block;
-      width: 24px;
-      height: 24px;
+      width: 2.4rem;
+      height: 2.4rem;
 
       &:after {
         display: none;

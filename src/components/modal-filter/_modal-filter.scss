@@ -1,137 +1,137 @@
 .modal-filter {
 
   .modal__wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 90px;
+    padding-left: 3.0rem;
+    padding-right: 3.0rem;
+    padding-bottom: 9.0rem;
 
     @media (max-width: 1199px) {
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 60px;
+      padding-left: 2.0rem;
+      padding-right: 2.0rem;
+      padding-bottom: 6.0rem;
     }
   }
 
   &__title {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 3.0rem;
+    left: 3.0rem;
     display: flex;
     align-items: center;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 2.3rem;
     font-variant: all-small-caps;
     color: #000000;
 
     svg {
-      margin-right: 10px;
+      margin-right: 1.0rem;
       display: block;
-      width: 22px;
-      height: 22px;
+      width: 2.2rem;
+      height: 2.2rem;
       fill: #000000;
     }
 
     @media (max-width: 1199px) {
-      top: 20px;
-      left: 20px;
-      font-size: 19px;
+      top: 2.0rem;
+      left: 2.0rem;
+      font-size: 1.9rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 18px;
+      font-size: 1.8rem;
     }
   }
 
   &__form {
-    margin-top: 30px;
+    margin-top: 3.0rem;
     max-width: 500px;
 
     @media (max-width: 1199px) {
-      margin-top: 20px;
+      margin-top: 2.0rem;
     }
 
     @media (max-width: 767px) {
-      margin-top: 30px;
+      margin-top: 3.0rem;
     }
   }
 
   &__group {
-    margin-bottom: 60px;
+    margin-bottom: 6.0rem;
 
     &-title {
-      font-size: 19px;
+      font-size: 1.9rem;
       line-height: 1.2em;
       font-variant: all-small-caps;
 
       @media (max-width: 1199px) {
-        font-size: 15px;
+        font-size: 1.5rem;
       }
 
       @media (max-width: 767px) {
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
 
     hr {
-      margin: 10px 0;
+      margin: 1.0rem 0;
       border-color: #d2d2d2;
       opacity: 1;
     }
 
     @media (max-width: 1199px) {
-      margin-bottom: 50px;
+      margin-bottom: 5.0rem;
     }
   }
 
   &__list {
-    margin: 30px 0;
+    margin: 3.0rem 0;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 15px 10px;
+    grid-gap: 1.5rem 1.0rem;
 
     @media (max-width: 1199px) {
-      margin: 20px 0;
+      margin: 2.0rem 0;
     }
   }
 
   &__item {
-    font-size: 19px;
+    font-size: 1.9rem;
     line-height: 1.2em;
     font-variant: all-small-caps;
     overflow: hidden;
 
     span {
       overflow: hidden;
-      width: calc(100% - 18px - 20px);
+      width: calc(100% - 1.8rem - 2.0rem);
       text-overflow: ellipsis;
       white-space: nowrap;
 
       @media (max-width: 767px) {
-        margin-left: 10px !important;
-        width: calc(100% - 12px - 10px);
+        margin-left: 1.0rem !important;
+        width: calc(100% - 1.2rem - 1.0rem);
       }
     }
 
     @media (max-width: 1199px) {
-      font-size: 15px;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 14px;
+      font-size: 1.4rem;
     }
   }
 
   &__submit {
     position: absolute;
     top: auto;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
+    left: 3.0rem;
+    right: 3.0rem;
+    bottom: 3.0rem;
 
     @media (max-width: 1199px) {
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
+      left: 2.0rem;
+      right: 2.0rem;
+      bottom: 2.0rem;
     }
 
     .form-submit {

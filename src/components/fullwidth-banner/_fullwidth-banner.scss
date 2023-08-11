@@ -5,7 +5,9 @@
   height: calc(var(--app-height, 1vh) * 100);
   background: #979797;
   transition: $transition-default;
-
+  @include breakpoint($xl-bp) {
+    height: 83.8rem;
+  }
   &__slider {
     width: 100%;
     height: 100%;
@@ -32,68 +34,169 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: none;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__content {
     display: block;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 20rem;
     pointer-events: none;
     user-select: none;
 
     @media (max-width: 1199px) {
-      margin-bottom: 95px;
+      margin-bottom: 9.5rem;
     }
 
     @media (max-width: 767px) {
-      margin-bottom: 200px;
+      margin-bottom: 20rem;
     }
   }
 
   &__title {
     font-weight: 500;
-    font-size: 46px;
+    font-size: 4.6rem;
     line-height: 1.2em;
     color: #ffffff;
     text-transform: uppercase;
     
     @media (max-width: 1199px) {
-      font-size: 29px;
+      font-size: 2.9rem;
     }
 
     @media (max-width: 767px) {
-      font-size: 19px;
+      font-size: 1.9rem;
     }
   }
 
-  &__pagination {
-    position: absolute;
-    bottom: 130px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media (max-width: 1199px) {
-      bottom: 50px !important;
+  .swiper-pagination {
+    bottom: 13rem;
+    @include breakpoint($xl-bp) {
+      bottom: 5rem;
+    }
+    @include breakpoint($sm-bp) {
+      bottom: 2rem;
+    }
+    .swiper-pagination-bullet {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      background-color: var(--grey);
+      transition: background-color .3s, transform .3s;
+      @include breakpoint($sm-bp) {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
     }
 
-    @media (max-width: 767px) {
-      bottom: 20px !important;
+    .swiper-pagination-bullet-active {
+      transform: scale(1.2);
+      background-color: var(--white);
+    }
+  }
+}
+
+.bestSell-swiper-wrapper {
+  position: relative;
+  .swiper-pagination {
+    display: none;
+    bottom: -3rem;
+    @include breakpoint($sm-bp) {
+      display: block;
     }
 
     .swiper-pagination-bullet {
-      margin: 0 7.5px !important;
-      width: 8px;
-      height: 8px;
-      background: #d2d2d2;
+      background-color: var(--grey);
       opacity: 1;
-      transition: $transition-default;
-
-      &-active {
-        background: #ffffff;
-        width: 10px;
-        height: 10px;
-      }
+      width: 0.5rem;
+      height: 0.5rem;
     }
+    .swiper-pagination-bullet-active {
+      background-color: var(--black);
+    }
+  }
+}
+
+.bestSell-swiper {
+  .swiper-slide {
+    height: 61.5rem;
+    width: 100%;
+    margin-right: 2rem;
+    @include breakpoint($sm-bp) {
+      height: 58.5rem;
+    }
+    a {
+      display: block;
+      height: 100%;
+    }
+    picture {
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.bestSell-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  @include breakpoint($xl-bp) {
+
+  }
+}
+
+.bestSell-title {
+  color: var(--white);
+  text-align: center;
+  font-size: 4.6rem;
+  font-weight: 500;
+  line-height: normal;
+  font-variant: all-small-caps;
+  @include breakpoint($xl-bp) {
+    font-size: 2.9rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+}
+
+.bestSell-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 6.7rem;
+  background-color: var(--white);
+
+  color: var(--black, #0D0D0D);
+  text-align: center;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-variant: all-small-caps;
+
+  width: max-content;
+  @include breakpoint($xl-bp) {
+    display: none;
   }
 }

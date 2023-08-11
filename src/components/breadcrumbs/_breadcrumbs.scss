@@ -1,12 +1,12 @@
 .breadcrumbs {
-  margin: 60px 0;
+  margin: 6.0rem 0;
 
   @media (max-width: 1199px) {
-    margin: 20px 0 30px 0;
+    margin: 2.0rem 0 3.0rem 0;
   }
 
   @media (max-width: 767px) {
-    margin: 10px 0 20px 0;
+    margin: 1.0rem 0 2.0rem 0;
   }
 
   &__wrapper {
@@ -23,7 +23,7 @@
 
   &__item {
     overflow: hidden;
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 1.2em;
     font-variant: all-small-caps;
     color: #797979;
@@ -50,14 +50,14 @@
   }
 
   &__item:not(:first-child) &__link {
-    margin: 0 5px;
+    margin: 0 0.5rem;
 
     &:before {
       content: '';
-      margin: 0 5px 0 0;
+      margin: 0 0.5rem 0 0;
       display: inline-block;
-      width: 15px;
-      height: 1px;
+      width: 1.5rem;
+      height: 0.1rem;
       background: currentColor;
       vertical-align: middle;
     }
