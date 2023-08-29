@@ -1,13 +1,13 @@
 .category-banners {
   margin: 6.6rem 0;
-  
+
   &__title {
     margin-bottom: 2.2rem;
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 1.2em;
     color: #797979;
-    
+
     @media (max-width: 1199px) {
       margin-bottom: 1.1rem;
       font-size: 1.1rem;
@@ -144,16 +144,96 @@
     width: 42.4rem;
     height: 58.5rem;
     margin-right: 3.1rem;
+
     @include breakpoint($sm-bp) {
       width: 100%;
     }
+
     a {
       display: block;
       height: 100%;
+
+      &:hover {
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .3s;
+      }
     }
+
     picture {
       height: 100%;
     }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.favorite-swiper {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    @include breakpoint($xl-bp) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @include breakpoint($sm-bp) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .swiper-slide {
+    width: 42.4rem;
+    height: 58.5rem;
+    margin-right: 3.1rem;
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+
+      &:hover {
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .3s;
+      }
+    }
+
+    picture {
+      height: 100%;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -171,9 +251,10 @@
   font-variant: all-small-caps;
   letter-spacing: 0.145rem;
   position: absolute;
-  bottom: 3.1rem;
+  bottom: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+
   @include breakpoint($xl-bp) {
     font-size: 2.3rem;
     line-height: 2.7rem;

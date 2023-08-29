@@ -10,7 +10,119 @@ class Indress {
       this.calculateAppHeight();
       this.checkHeaderMenuSize();
       this.checkHeaderDark();
+      this.initTabs();
     }).bind(this));
+  }
+
+  initTabs() {
+    let tab = document.querySelectorAll('.filt-tab'),
+      header = document.querySelector('.filt'),
+      tabContent = document.querySelectorAll('.tabcontent');
+
+    function hideTabContent(a) {
+      if (a !== null) {
+        for (let i = 0; i < tabContent.length; i++) {
+          if (i === a) {
+            tabContent[i].classList.add('show');
+            tabContent[i].classList.remove('hide');
+            continue;
+          }
+          tabContent[i].classList.remove('show');
+          tabContent[i].classList.add('hide');
+        }
+      } else {
+        for (let i = 0; i < tabContent.length; i++) {
+          tabContent[i].classList.remove('show');
+          tabContent[i].classList.add('hide');
+        }
+      }
+    }
+    let activeTab = null;
+
+    for (let i = 0; i < tab.length; i++) {
+      if (tab[i].classList.contains('active')) {
+        activeTab = i;
+        break;
+      }
+    }
+    hideTabContent(activeTab);
+
+
+
+    function showTabContent(b) {
+      if (tabContent[b].classList.contains('hide')) {
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+      }
+    }
+
+    header.addEventListener('click', function (event) {
+      let target = event.target;
+      if (target && target.classList.contains('active')) {
+        for (let j = 0; j < tab.length; j++) {
+          tab[j].classList.remove('active');
+        }
+        hideTabContent(null)
+        return;
+      }
+      if (target && target.classList.contains('filt-tab')) {
+        for (let j = 0; j < tab.length; j++) {
+          tab[j].classList.remove('active');
+        }
+        target.classList.add('active');
+        for (let i = 0; i < tab.length; i++) {
+          if (target == tab[i]) {
+            hideTabContent(i);
+            break;
+          }
+        }
+      }
+
+    });
+
+    const buttons = document.querySelectorAll('[data-modal]');
+
+    if (buttons.length) {
+      buttons.forEach(el => {
+        el.addEventListener('click', function () {
+          const modal = document.getElementById(this.dataset.modal);
+          if (modal) {
+            modal.classList.add('open')
+          }
+        })
+
+        
+      })
+    }
+
+    const buttons2 = document.querySelectorAll('[data-submit]');
+
+    if (buttons2.length) {
+      buttons2.forEach(el => {
+        el.addEventListener('click', function () {
+          const modal = document.getElementById(this.dataset.submit);
+          if (modal) {
+            modal.click()
+          }
+        })
+
+        
+      })
+    }
+
+    const closeButtons = document.querySelectorAll('.newModal-close');
+
+    if (closeButtons.length) {
+      closeButtons.forEach(el => {
+        el.addEventListener('click', function () {
+          const modal = this.closest('.newModal');
+          console.log(modal)
+          if (modal) {
+            modal.classList.remove('open')
+          }
+        })
+      })
+    }
   }
 
   initEvents() {
@@ -70,24 +182,24 @@ class Indress {
       slidesPerView: 'auto',
       speed: 400,
     })
-    const wrapper = document.querySelector('.bestSell-swiper-wrapper');
+    // const wrapper = document.querySelector('.bestSell-swiper-wrapper');
 
-    if (wrapper) {
-      const swiper = wrapper.querySelector('.bestSell-swiper');
-      const pagination = wrapper.querySelector('.swiper-pagination')
-      if (swiper) {
-        new Swiper(swiper, {
-          loop: true,
-          slidesPerView: 'auto',
-          speed: 400,
-          pagination: {
-            el: pagination,
-            clickable: true,
-          },
-        })
-      }
+    // if (wrapper) {
+    //   const swiper = wrapper.querySelector('.bestSell-swiper');
+    //   const pagination = wrapper.querySelector('.swiper-pagination')
+    //   if (swiper) {
+    //     new Swiper(swiper, {
+    //       loop: true,
+    //       slidesPerView: 'auto',
+    //       speed: 400,
+    //       pagination: {
+    //         el: pagination,
+    //         clickable: true,
+    //       },
+    //     })
+    //   }
 
-    }
+    // }
 
 
     let productLines = document.querySelectorAll('.product-line');

@@ -296,165 +296,179 @@
 						<h1 class="catalog-section__title">Каталог</h1>
 						<div class="catalog-section__filter">
 							<div class="catalog-filter">
-								<div class="catalog-filter__filter" data-modal-id="modal-filter">
+								<div class="catalog-filter__filter" data-modal="filtLeft">
 									<svg>
 										<use xlink:href="../img/sprite.svg#tune"></use>
 									</svg>
 									<span>Фильтр</span>
 								</div>
-								<div class="catalog-filter__sort" data-modal-id="modal-sort">
+								<div class="catalog-filter__sort" data-modal="filtRight">
 									<svg>
 										<use xlink:href="../img/sprite.svg#sorting"></use>
 									</svg>
 									<span>Сортировка</span>
 								</div>
-								<div class="modal _left modal-filter" id="modal-filter">
-									<div class="modal__close"></div>
-									<div class="modal__wrapper">
-										<h2 class="modal-filter__title">
-											<svg>
-												<use xlink:href="../img/sprite.svg#tune"></use>
-											</svg>
-											<span>Фильтр</span>
-										</h2>
-										<form action="?filter=Y" class="modal-filter__form">
-											<div class="modal-filter__group">
-												<div class="modal-filter__group-title">Размер</div>
-												<hr>
-												<ul class="modal-filter__list">
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="size[]" value="1">
-															<span title="One size">One size</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="size[]" value="2">
-															<span title="xs">xs</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="size[]" value="3">
-															<span title="s">s</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="size[]" value="4">
-															<span title="m">m</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="size[]" value="5">
-															<span title="l">l</span>
-														</label>
-													</li>
-												</ul>
+								<div class="filt-form">
+									<div class="filt">
+										<div class="filt-head">
+											<button type="button" class="filt-tab">Размер</button>
+											<button type="button" class="filt-tab">Цвет</button>
+											<button type="button" class="filt-tab">Цена</button>
+											<button type="button" class="filt-tab">Сортировать</button>
+										</div>
+										<div class="filt-content">
+											<div class="filt-inner">
+												<form action="#" class="newModal --left" id="filtLeft">
+													<div class="newModal-head">
+														<svg>
+															<use xlink:href="../img/sprite.svg#tune"></use>
+														</svg>
+														<span>Фильтр</span>
+													</div>
+													<button type="button" class="newModal-close"></button>
+													<div class="tabcontent hide">
+														<div class="tab-content-subtitle">Размер</div>
+														<ul class="description">
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="size[]" value="1">
+																	<span title="One size">One size</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="size[]" value="2">
+																	<span title="xs">xs</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="size[]" value="3">
+																	<span title="s">s</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="size[]" value="4">
+																	<span title="m">m</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="size[]" value="5">
+																	<span title="l">l</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+													<div class="tabcontent hide">
+														<div class="tab-content-subtitle">цвет</div>
+														<ul class="description">
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="бежевая палитра">бежевая палитра</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="зеленая палитра">зеленая палитра</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="красная палитра">красная палитра</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="фиолетовая палитра">фиолетовая палитра</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="черно-белая палитра">черно-белая палитра</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="принт">принт</span>
+																</label>
+															</li>
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
+																	<span title="синяя палитра">синяя палитра</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+													<div class="tabcontent hide">
+														<div class="tab-content-subtitle">Цена</div>
+														<ul class="description">
+															<li class="modal-filter__item">
+																<label class="form-label-checkbox">
+																	<input type="checkbox" class="form-input-checkbox" name="price" value="> 1000">
+																	<span title="> 1000">> 1000</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+													<div class="custom-submit-wrapper"><input type="submit" class="custom-submit" value="Применить"></div>
+												</form>
+												<form action="#" class="newModal --right" id="filtRight">
+													<div class="newModal-head">
+														<svg>
+															<use xlink:href="../img/sprite.svg#sorting"></use>
+														</svg>
+														<span>Сортировка</span>
+													</div>
+													<button type="button" class="newModal-close"></button>
+													<div class="tabcontent hide">
+														<ul class="description radio">
+															<li class="modal-sort__item">
+																<label class="form-label-checkbox">
+																	<input type="radio" class="form-input-checkbox" name="sort" value="new">
+																	<span title="по новизне">по новизне</span>
+																</label>
+															</li>
+															<li class="modal-sort__item">
+																<label class="form-label-checkbox">
+																	<input type="radio" class="form-input-checkbox" name="sort" value="shows">
+																	<span title="по популярности">по популярности</span>
+																</label>
+															</li>
+															<li class="modal-sort__item">
+																<label class="form-label-checkbox">
+																	<input type="radio" class="form-input-checkbox" name="sort" value="discount">
+																	<span title="по размеру скидок">по размеру скидок</span>
+																</label>
+															</li>
+															<li class="modal-sort__item">
+																<label class="form-label-checkbox">
+																	<input type="radio" class="form-input-checkbox" name="sort" value="price_asc">
+																	<span title="по возрастанию цены">по возрастанию цены</span>
+																</label>
+															</li>
+															<li class="modal-sort__item">
+																<label class="form-label-checkbox">
+																	<input type="radio" class="form-input-checkbox" name="sort" value="price_desc">
+																	<span title="по убыванию цены">по убыванию цены</span>
+																</label>
+															</li>
+														</ul>
+													</div>
+													<div class="custom-submit-wrapper"><input type="submit" class="custom-submit" value="Применить"></div>
+												</form>
 											</div>
-											<div class="modal-filter__group">
-												<div class="modal-filter__group-title">Цвет</div>
-												<hr>
-												<ul class="modal-filter__list">
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="бежевая палитра">бежевая палитра</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="зеленая палитра">зеленая палитра</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="красная палитра">красная палитра</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="фиолетовая палитра">фиолетовая палитра</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="черно-белая палитра">черно-белая палитра</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="принт">принт</span>
-														</label>
-													</li>
-													<li class="modal-filter__item">
-														<label class="form-label-checkbox">
-															<input type="checkbox" class="form-input-checkbox" name="color[]" value="1">
-															<span title="синяя палитра">синяя палитра</span>
-														</label>
-													</li>
-												</ul>
-											</div>
-											<div class="modal-filter__submit">
-												<input type="submit" class="form-submit" name="apply" value="Применить">
-											</div>
-										</form>
+										</div>
 									</div>
-								</div>
-								<div class="modal _right modal-sort" id="modal-sort">
-									<div class="modal__close"></div>
-									<div class="modal__wrapper">
-										<h2 class="modal-sort__title">
-											<svg>
-												<use xlink:href="../img/sprite.svg#sorting"></use>
-											</svg>
-											<span>Сортировка</span>
-										</h2>
-										<form action="" class="modal-sort__form">
-											<ul class="modal-sort__list">
-												<li class="modal-sort__item">
-													<label class="form-label-checkbox">
-														<input type="radio" class="form-input-checkbox" name="sort" value="new">
-														<span title="по новизне">по новизне</span>
-													</label>
-												</li>
-												<li class="modal-sort__item">
-													<label class="form-label-checkbox">
-														<input type="radio" class="form-input-checkbox" name="sort" value="shows">
-														<span title="по популярности">по популярности</span>
-													</label>
-												</li>
-												<li class="modal-sort__item">
-													<label class="form-label-checkbox">
-														<input type="radio" class="form-input-checkbox" name="sort" value="discount">
-														<span title="по размеру скидок">по размеру скидок</span>
-													</label>
-												</li>
-												<li class="modal-sort__item">
-													<label class="form-label-checkbox">
-														<input type="radio" class="form-input-checkbox" name="sort" value="price_asc">
-														<span title="по возрастанию цены">по возрастанию цены</span>
-													</label>
-												</li>
-												<li class="modal-sort__item">
-													<label class="form-label-checkbox">
-														<input type="radio" class="form-input-checkbox" name="sort" value="price_desc">
-														<span title="по убыванию цены">по убыванию цены</span>
-													</label>
-												</li>
-											</ul>
-											<div class="modal-sort__submit">
-												<input type="submit" class="form-submit" name="apply" value="Применить">
-											</div>
-										</form>
-									</div>
+									<!-- <input type="submit" class="filt-submit" value="применить" id="FormSubmit"> -->
 								</div>
 							</div>
 						</div>
@@ -463,7 +477,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -487,7 +501,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -511,7 +525,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -535,7 +549,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -559,7 +573,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -583,7 +597,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -607,7 +621,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -631,7 +645,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -655,7 +669,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -679,7 +693,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -703,7 +717,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -727,7 +741,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -751,7 +765,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -775,7 +789,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -799,7 +813,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -823,7 +837,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -847,7 +861,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>
@@ -871,7 +885,7 @@
 								<div class="catalog-section__item">
 									<a href="./product/" class="product-card">
 										<div class="product-card__img">
-											<div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+											<div class="product-card__like " onclick="Indress.productLike.call(this, event);">
 												<svg>
 													<use xlink:href="../img/sprite.svg#like"></use>
 												</svg>

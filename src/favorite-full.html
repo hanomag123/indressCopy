@@ -1,0 +1,97 @@
+@@include('components/header/_header.html', {
+  "lang": "ru",
+  "title": "Indress - Магазин одежды",
+  "description": "",
+  "url": "/",
+  "classes": {"body": ""},
+  "page": "Главная",
+  "space": false,
+  })
+  
+  <div class="header__space"></div>
+  
+  <div class="wrapper__content">
+    <div class="delivery-breadcrumbs">
+      @@include("components/breadcrumbs/_breadcrumbs.html", {
+        "items": [
+        {"text": "Главная", "link": "/"},
+        {"text": "Корзина", "link": "#"},
+        ],
+        })
+    </div>
+  
+    <div class="profile-orders">
+      <div class="container">
+        <div class="profile-orders__wrapper">
+          <h1 class="profile-orders__title">Личный кабинет</h1>
+          @@include("components/profile-sections/_profile-sections.html", {
+          "items": [
+          {"text": "Данные", "link": "/profile/info/"},
+          {"text": "Доставка", "link": "/profile/delivery/"},
+          {"text": "Покупки", "link": "/profile/orders/"},
+          {"text": "Избранное", "link": "/profile/like/", "selected": true},
+          {"text": "Выйти", "link": "/?logout=Y", "class": "_exit"},
+          ],
+          })
+    
+          <div class="favorite-list">
+            <div class="swiper-slide">
+              @@include("components/product-card/_product-card.html", {
+              "name": "Костюм трикотажный c двойным",
+              "img": "img/product-1.jpg",
+              "price": "7 890 р.",
+              "colors": {
+              "grey": "Серый",
+              "rosybrown": "Розово-коричневый",
+              "brown": "Коричневый",
+              },
+              "like": true,
+              })
+          </div>
+          <div class="swiper-slide">
+              @@include("components/product-card/_product-card.html", {
+              "name": "Жакет двубортный «Гусиная лапка»",
+              "img": "img/product-2.jpg",
+              "price": "7 890 р.",
+              "colors": {
+              "grey": "Серый",
+              "black": "Черный",
+              },
+              "like": true,
+              })
+          </div>
+          <div class="swiper-slide ">
+              @@include("components/product-card/_product-card.html", {
+              "name": "Свитер «Леопард»",
+              "img": "img/product-3.jpg",
+              "price": "7 890 р.",
+              "colors": {
+              "grey": "Серый",
+              "brown": "Коричневый",
+              },
+              "like": true,
+              })
+          </div>
+          <div class="swiper-slide">
+              @@include("components/product-card/_product-card.html", {
+              "name": "Платье расклешённое",
+              "img": "img/product-4.jpg",
+              "price": "7 890 р.",
+              "colors": {
+              "black": "Черный",
+              },
+              "like": true,
+              })
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  
+  @@include('components/footer/_footer.html', {
+  "page": "home",
+  })

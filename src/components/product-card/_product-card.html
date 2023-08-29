@@ -1,6 +1,6 @@
 <a href="./product/" class="product-card">
     <div class="product-card__img">
-        <div class="product-card__like" onclick="Indress.productLike.call(this, event);">
+        <div class="product-card__like @@if(like) {_active}" onclick="Indress.productLike.call(this, event);">
             <svg>
                 <use xlink:href="@@webRoot/img/sprite.svg#like"></use>
             </svg>

@@ -1,0 +1,79 @@
+@@include('components/header/_header.html', {
+  "lang": "ru",
+  "title": "Indress - Магазин одежды",
+  "description": "",
+  "url": "/",
+  "classes": {"body": ""},
+  "page": "Главная",
+  "space": false,
+  })
+  
+  <div class="header__space"></div>
+  
+  <div class="wrapper__content">
+    <div class="delivery-breadcrumbs">
+      @@include("components/breadcrumbs/_breadcrumbs.html", {
+        "items": [
+        {"text": "Главная", "link": "/"},
+        {"text": "личный кабинет", "link": "#"},
+        {"text": "Избранное", "link": "#"},
+        ],
+        })
+    </div>
+  
+    <div class="profile-orders favorite">
+      <div class="container">
+        <div class="profile-orders__wrapper">
+          <h1 class="profile-orders__title">Личный кабинет</h1>
+          @@include("components/profile-sections/_profile-sections.html", {
+          "items": [
+          {"text": "Данные", "link": "/profile/info/"},
+          {"text": "Доставка", "link": "/profile/delivery/"},
+          {"text": "Покупки", "link": "/profile/orders/"},
+          {"text": "Избранное", "link": "/profile/like/", "selected": true},
+          {"text": "Выйти", "link": "/?logout=Y", "class": "_exit"},
+          ],
+          })
+    
+          <div class="profile-orders__tabs">
+            <div class="empty-text">Cписок избранного пуст</div>
+          </div>
+        </div>
+      </div>
+    
+      <section class="directory mt-60 container">
+        <div class="directory-text">Перейти в</div>
+        <div class="favorite-swiper">
+          <ul class="">
+      
+            <li class="swiper-slide">
+              <a href="#">
+                <img src="@@webRoot/img/category-1.jpg" alt="directory">
+                <h2 class="directory-title">каталог</h2>
+              </a>
+            </li>
+      
+            <li class="swiper-slide">
+              <a href="#">
+                <img src="@@webRoot/img/category-2.jpg" alt="directory">
+                <h2 class="directory-title">sale</h2>
+              </a>
+            </li>
+      
+            <li class="swiper-slide">
+              <a href="#">
+                <img src="@@webRoot/img/category-3.jpg" alt="directory">
+                <h2 class="directory-title">new</h2>
+              </a>
+            </li>
+      
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </div>
+  
+  @@include('components/footer/_footer.html', {
+  "page": "home",
+  })

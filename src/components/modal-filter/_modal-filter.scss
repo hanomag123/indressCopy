@@ -99,10 +99,11 @@
     line-height: 1.2em;
     font-variant: all-small-caps;
     overflow: hidden;
-
+    max-width: 18.2rem;
+    height: min-content;
     span {
       overflow: hidden;
-      width: calc(100% - 1.8rem - 2.0rem);
+      width: calc(100% - 1.8rem);
       text-overflow: ellipsis;
       white-space: nowrap;
 

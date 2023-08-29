@@ -1,16 +1,100 @@
 <div class="catalog-filter">
-    <div class="catalog-filter__filter" data-modal-id="modal-filter">
-        <svg>
-            <use xlink:href="@@webRoot/img/sprite.svg#tune"></use>
-        </svg>
-        <span>Фильтр</span>
+  <div class="catalog-filter__filter" data-modal="filtLeft">
+    <svg>
+      <use xlink:href="@@webRoot/img/sprite.svg#tune"></use>
+    </svg>
+    <span>Фильтр</span>
+  </div>
+  <div class="catalog-filter__sort" data-modal="filtRight">
+    <svg>
+      <use xlink:href="@@webRoot/img/sprite.svg#sorting"></use>
+    </svg>
+    <span>Сортировка</span>
+  </div>
+
+  <div class="filt-form">
+    <div class="filt">
+      <div class="filt-head">
+        <button type="button" class="filt-tab">Размер</button>
+        <button type="button" class="filt-tab">Цвет</button>
+        <button type="button" class="filt-tab">Цена</button>
+        <button type="button" class="filt-tab">Сортировать</button>
+      </div>
+      <div class="filt-content">
+        <div class="filt-inner">
+          <form action="#" class="newModal --left" id="filtLeft">
+            <div class="newModal-head">
+              <svg>
+                <use xlink:href="../img/sprite.svg#tune"></use>
+              </svg>
+              <span>Фильтр</span>
+            </div>
+            <button type="button" class="newModal-close"></button>
+
+            <div class="tabcontent hide">
+              <div class="tab-content-subtitle">Размер</div>
+              <ul class="description">
+                @@loop("../modal-filter/_checkbox-item.html", [
+                {"text": "One size", "value": "1", "name": "size[]"},
+                {"text": "xs", "value": "2", "name": "size[]"},
+                {"text": "s", "value": "3", "name": "size[]"},
+                {"text": "m", "value": "4", "name": "size[]"},
+                {"text": "l", "value": "5", "name": "size[]"},
+                ])
+              </ul>
+            </div>
+            <div class="tabcontent hide">
+              <div class="tab-content-subtitle">цвет</div>
+              <ul class="description">
+                @@loop("../modal-filter/_checkbox-item.html", [
+                {"text": "бежевая палитра", "value": "1", "name": "color[]"},
+                {"text": "зеленая палитра", "value": "1", "name": "color[]"},
+                {"text": "красная палитра", "value": "1", "name": "color[]"},
+                {"text": "фиолетовая палитра", "value": "1", "name": "color[]"},
+                {"text": "черно-белая палитра", "value": "1", "name": "color[]"},
+                {"text": "принт", "value": "1", "name": "color[]"},
+                {"text": "синяя палитра", "value": "1", "name": "color[]"},
+                ])
+              </ul>
+            </div>
+            <div class="tabcontent hide">
+              <div class="tab-content-subtitle">Цена</div>
+              <ul class="description">
+                @@loop("../modal-filter/_checkbox-item.html", [
+                {"text": "> 1000", "value": "> 1000", "name": "price"},
+                ])
+              </ul>
+            </div>
+
+            <div class="custom-submit-wrapper"><input type="submit" class="custom-submit" value="Применить"></div>
+          </form>
+          <form action="#" class="newModal --right" id="filtRight">
+            <div class="newModal-head">
+              <svg>
+                <use xlink:href="../img/sprite.svg#sorting"></use>
+              </svg>
+              <span>Сортировка</span>
+
+            </div>
+            <button type="button" class="newModal-close"></button>
+
+            <div class="tabcontent hide">
+              <ul class="description radio">
+                @@loop("../modal-sort/_radio-item.html", [
+                {"text": "по новизне", "value": "new", "name": "sort"},
+                {"text": "по популярности", "value": "shows", "name": "sort"},
+                {"text": "по размеру скидок", "value": "discount", "name": "sort"},
+                {"text": "по возрастанию цены", "value": "price_asc", "name": "sort"},
+                {"text": "по убыванию цены", "value": "price_desc", "name": "sort"},
+                ])
+              </ul>
+            </div>
+
+            <div class="custom-submit-wrapper"><input type="submit" class="custom-submit" value="Применить"></div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="catalog-filter__sort" data-modal-id="modal-sort">
-        <svg>
-            <use xlink:href="@@webRoot/img/sprite.svg#sorting"></use>
-        </svg>
-        <span>Сортировка</span>
-    </div>
-    @@include("../modal-filter/_modal-filter.html")
-    @@include("../modal-sort/_modal-sort.html")
+    <!-- <input type="submit" class="filt-submit" value="применить" id="FormSubmit"> -->
+  </div>
 </div>

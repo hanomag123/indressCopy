@@ -84,7 +84,8 @@ function browsersync() {
 
 function html() {
     return src(paths.html.src)
-        .pipe(include({
+        .pipe(include(
+          {
             context: {
                 navItems: [
                     {

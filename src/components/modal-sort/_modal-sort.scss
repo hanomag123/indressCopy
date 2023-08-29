@@ -73,10 +73,14 @@
     line-height: 1.2em;
     font-variant: all-small-caps;
     overflow: hidden;
-
+    width: 22rem;
+    .form-label-checkbox {
+      width: 100%;
+      max-width: 100%;
+    }
     span {
       overflow: hidden;
-      width: calc(100% - 1.8rem - 2.0rem);
+      width: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
 
