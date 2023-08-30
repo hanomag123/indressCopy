@@ -11,13 +11,207 @@ class Indress {
       this.checkHeaderMenuSize();
       this.checkHeaderDark();
       this.initTabs();
+      this.initForm();
     }).bind(this));
+  }
+
+  initForm() {
+    const radioButtons = document.querySelectorAll('[data-deliveryId]');
+
+    if (radioButtons.length) {
+      radioButtons.forEach(el => {
+        const content = document.getElementById(el.dataset.deliverycontent);
+        if (content) {
+          const inputs = document.getElementById(el.dataset.deliveryid);
+
+          if (inputs && el.checked) {
+            content.innerHTML = inputs.innerHTML;
+          }
+
+          el.addEventListener('change', function () {
+            if (inputs && this.checked) {
+              content.innerHTML = inputs.innerHTML;
+            }
+          })
+        }
+      })
+    }
+
+    const formBlockButtons = document.querySelectorAll('.form-block-title');
+
+    if (formBlockButtons.length) {
+      formBlockButtons.forEach(el => {
+        el.addEventListener('click', function () {
+          if (!this.classList.contains('selected')) {
+            return
+          }
+          formBlockButtons.forEach(btn => {
+            btn.classList.remove('active')
+          })
+          const parent = this.closest('.form-right');
+
+          if (parent) {
+            parent.classList.toggle('open')
+          }
+          this.classList.toggle('active');
+          customScroll(this)
+        })
+      })
+    }
+
+    function customScroll(nextBlock) {
+      const header = document.querySelector('header');
+      let headerH = null;
+      if (header) {
+        headerH = header.getBoundingClientRect().height;
+      }
+      const yOffset = headerH ? -headerH : -200;
+      const y = nextBlock.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'auto' });
+    }
+
+    const nextButtons = document.querySelectorAll('[data-nextformid]');
+
+    if (nextButtons.length) {
+      nextButtons.forEach(el => {
+        el.addEventListener('click', function () {
+          const parent = this.closest('.form-block');
+
+          if (parent) {
+            const btn = parent.querySelector('.form-block-title');
+
+            const inputs = parent.querySelectorAll('input[required]');
+            let validate = true;
+            if (inputs.length) {
+              inputs.forEach(inp => {
+                if (inp.value.trim() === '') {
+                  const wrapper = inp.closest('.input-wrapper');
+                  validate = false;
+                  if (wrapper) {
+                    wrapper.classList.add('error')
+                  }
+                } else if (inp.dataset.pattern) {
+                  const regExp = new RegExp(inp.dataset.pattern)
+                  if (!regExp.test(inp.value.trim())) {
+                    const wrapper = inp.closest('.input-wrapper');
+                    validate = false;
+                    if (wrapper) {
+                      wrapper.classList.add('error')
+                    }
+                  }
+                }
+              })
+
+              if (validate === false) {
+                customScroll(parent)
+              }
+            }
+
+            if (this.classList.contains('prev')) {
+              validate = true;
+            }
+
+            if (btn && validate) {
+              btn.classList.remove('active');
+              btn.classList.add('selected');
+
+              const selected = parent.querySelector('.form-block-selected');
+
+              const inputsNew = parent.querySelectorAll('input, textarea')
+
+              if (selected && inputsNew.length) {
+                selected.innerHTML = '';
+                inputsNew.forEach(inp => {
+                  if (inp.dataset.sprintf) {
+                    selected.insertAdjacentHTML('beforeend', inp.dataset.sprintf.replace('%s', inp.value))
+                  } else {
+
+                    if (inp.type === 'radio' || inp.type === 'checkbox') {
+                      if (inp.checked) {
+                        const div = document.createElement('div');
+                        div.innerHTML = inp.value;
+                        selected.appendChild(div)
+                      }
+                    } else {
+                      const div = document.createElement('div');
+                      div.innerHTML = inp.value;
+                      selected.appendChild(div)
+
+                    }
+
+                  }
+                })
+              }
+
+              const nextBlock = document.getElementById(this.dataset.nextformid);
+
+              if (nextBlock) {
+                const nextBtn = nextBlock.querySelector('.form-block-title');
+
+                if (nextBtn) {
+                  nextBtn.classList.add('active');
+                  const parentBlock = nextBtn.closest('.form-right');
+
+                  if (parentBlock) {
+                    parentBlock.classList.add('open')
+                  }
+                  setTimeout(() => {
+                    customScroll(nextBlock)
+                  }, 0)
+                }
+              }
+            }
+          }
+        })
+      })
+    }
+
   }
 
   initTabs() {
     let tab = document.querySelectorAll('.filt-tab'),
       header = document.querySelector('.filt'),
       tabContent = document.querySelectorAll('.tabcontent');
+
+    if (tab.length && header && tabContent.length) {
+
+      let activeTab = null;
+
+
+      for (let i = 0; i < tab.length; i++) {
+        if (tab[i].classList.contains('active')) {
+          activeTab = i;
+          break;
+        }
+      }
+      hideTabContent(activeTab);
+
+
+      header.addEventListener('click', function (event) {
+        let target = event.target;
+        if (target && target.classList.contains('active')) {
+          for (let j = 0; j < tab.length; j++) {
+            tab[j].classList.remove('active');
+          }
+          hideTabContent(null)
+          return;
+        }
+        if (target && target.classList.contains('filt-tab')) {
+          for (let j = 0; j < tab.length; j++) {
+            tab[j].classList.remove('active');
+          }
+          target.classList.add('active');
+          for (let i = 0; i < tab.length; i++) {
+            if (target == tab[i]) {
+              hideTabContent(i);
+              break;
+            }
+          }
+        }
+
+      });
+    }
 
     function hideTabContent(a) {
       if (a !== null) {
@@ -37,15 +231,7 @@ class Indress {
         }
       }
     }
-    let activeTab = null;
 
-    for (let i = 0; i < tab.length; i++) {
-      if (tab[i].classList.contains('active')) {
-        activeTab = i;
-        break;
-      }
-    }
-    hideTabContent(activeTab);
 
 
 
@@ -56,29 +242,7 @@ class Indress {
       }
     }
 
-    header.addEventListener('click', function (event) {
-      let target = event.target;
-      if (target && target.classList.contains('active')) {
-        for (let j = 0; j < tab.length; j++) {
-          tab[j].classList.remove('active');
-        }
-        hideTabContent(null)
-        return;
-      }
-      if (target && target.classList.contains('filt-tab')) {
-        for (let j = 0; j < tab.length; j++) {
-          tab[j].classList.remove('active');
-        }
-        target.classList.add('active');
-        for (let i = 0; i < tab.length; i++) {
-          if (target == tab[i]) {
-            hideTabContent(i);
-            break;
-          }
-        }
-      }
 
-    });
 
     const buttons = document.querySelectorAll('[data-modal]');
 
@@ -91,7 +255,7 @@ class Indress {
           }
         })
 
-        
+
       })
     }
 
@@ -106,7 +270,7 @@ class Indress {
           }
         })
 
-        
+
       })
     }
 
@@ -116,13 +280,58 @@ class Indress {
       closeButtons.forEach(el => {
         el.addEventListener('click', function () {
           const modal = this.closest('.newModal');
-          console.log(modal)
           if (modal) {
             modal.classList.remove('open')
           }
         })
       })
     }
+
+    function addMask() {
+      [].forEach.call(document.querySelectorAll('input[type="tel"]'), function (input) {
+        let keyCode;
+        function mask(event) {
+          event.keyCode && (keyCode = event.keyCode);
+          let pos = this.selectionStart;
+          if (pos < 3) event.preventDefault();
+          let matrix = "+7 (___) ___-__-__",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function (a) {
+              return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+            });
+          i = new_value.indexOf("_");
+          if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i);
+          };
+          let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+            function (a) {
+              return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+          reg = new RegExp("^" + reg + "$");
+          this.parentElement.classList.remove('error');
+          if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+          if (event.type == "blur" && this.value.length < 5) this.value = ""
+        };
+
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, false);
+        input.addEventListener("keydown", mask, false);
+
+      });
+
+    };
+    addMask();
+
+    document.addEventListener('click', function () {
+      const error = event.target.closest('.error');
+      if (error) {
+        error.classList.remove('error')
+      }
+    })
   }
 
   initEvents() {
