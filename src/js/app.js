@@ -81,11 +81,11 @@ class Indress {
           if (parent) {
             const btn = parent.querySelector('.form-block-title');
 
-            const inputs = parent.querySelectorAll('input[required]');
+            const inputs = parent.querySelectorAll('input[required], input[type="email"]');
             let validate = true;
             if (inputs.length) {
               inputs.forEach(inp => {
-                if (inp.value.trim() === '') {
+                if (inp.value.trim() === '' && inp.type !== 'email') {
                   const wrapper = inp.closest('.input-wrapper');
                   validate = false;
                   if (wrapper) {
@@ -94,6 +94,16 @@ class Indress {
                 } else if (inp.dataset.pattern) {
                   const regExp = new RegExp(inp.dataset.pattern)
                   if (!regExp.test(inp.value.trim())) {
+                    const wrapper = inp.closest('.input-wrapper');
+                    validate = false;
+                    if (wrapper) {
+                      wrapper.classList.add('error')
+                    }
+                  }
+                } else if (inp.type === 'email' && inp.value.trim() !== '') {
+                  const regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+
+                  if (!regex.test(inp.value)) {
                     const wrapper = inp.closest('.input-wrapper');
                     validate = false;
                     if (wrapper) {

@@ -1,0 +1,150 @@
+@@include('components/header/_header.html', {
+  "lang": "ru",
+  "title": "Indress - Магазин одежды",
+  "description": "",
+  "url": "/",
+  "classes": {"body": ""},
+  "page": "Главная",
+  "space": false,
+  })
+  
+  <div class="header__space"></div>
+  
+  <div class="wrapper__content">
+    
+    <h1 class="details-title container">детали заказа</h1>
+
+    <div class="details-wrapper container">
+      <div class="details-data">
+        <h2 class="details-subtitle">Данные заказа</h2>
+  
+        <ul class="details-block">
+          <li>
+            <div>Номер заказа:</div>
+            <div>2837594769</div>
+          </li>
+
+          <li>
+            <div>Дата:</div>
+            <div>28.01.2022, 18:59</div>
+          </li>
+
+          <li>
+            <div>Статус заказа:</div>
+            <div class="text-green">выполнен</div>
+          </li>
+
+        </ul>
+
+        <ul class="details-block">
+          <li>
+            <div>Способ оплаты:</div>
+            <div>MasterCard</div>
+          </li>
+
+          <li>
+            <div>Способ доставки:</div>
+            <div>Почта России</div>
+          </li>
+        </ul>
+
+        <ul class="details-block">
+          <li>
+            <div>Покупатель:</div>
+            <div>Иванова Мария Ивановна</div>
+          </li>
+
+          <li>
+            <div>Контанты:</div>
+            <div>+7 (999) 999-99-99</div>
+          </li>
+
+          
+          <li>
+            <div>Адрес доставки:</div>
+            <div class="max-w-162">Россия, г. Москва, ул. Свободы, 32, кв. 387</div>
+          </li>
+        </ul>
+
+        <ul class="details-block font-bold">
+          <li>
+            <div>Сумма за заказ:</div>
+            <div>6 450 р.</div>
+          </li>
+          <li>
+            <div>Доставка:</div>
+            <div>400 р.</div>
+          </li>
+          <li>
+            <div>Сумма к оплате:</div>
+            <div>6 850 р.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="details-order">
+        <h2 class="details-subtitle">состав заказа</h2>
+        <div class="modal-basket__list">
+          <div class="modal-basket__item" data-basket-item-id="1">
+            <div class="modal-basket__item-image">
+              <img src="./img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
+            </div>
+            <div class="modal-basket__item-info">
+              <div class="modal-basket__item-top">
+                <a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
+
+              </div>
+              <p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+              <ul class="modal-basket__item-props">
+                <li class="modal-basket__item-prop">чёрный</li>
+                <li class="modal-basket__item-prop">s</li>
+              </ul>
+            </div>
+            <div class="modal-basket__item-bottom">
+              <div class="modal-basket__item-quantity">
+                
+                <div class="quantity-text">1 шт.</div>
+                
+              </div>
+              <div class="modal-basket__item-price">
+                <span class="old-price">5 490 р.</span>
+                <span class="current-price">2 190 р.</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-basket__item" data-basket-item-id="2">
+            <div class="modal-basket__item-image">
+              <img src="./img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
+            </div>
+            <div class="modal-basket__item-info">
+              <div class="modal-basket__item-top">
+                <a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
+              </div>
+              <p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+              <ul class="modal-basket__item-props">
+                <li class="modal-basket__item-prop">чёрный</li>
+                <li class="modal-basket__item-prop">s</li>
+              </ul>
+            </div>
+            <div class="modal-basket__item-bottom">
+              <div class="modal-basket__item-quantity">
+                <div class="quantity-text">1 шт.</div>
+              </div>
+              <div class="modal-basket__item-price">
+                <span class="current-price">2 590 р.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  
+  </div>
+  
+  @@include('components/footer/_footer.html', {
+  "page": "home",
+  })

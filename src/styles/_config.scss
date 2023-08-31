@@ -34,7 +34,7 @@ html {
   font-size: calc(100vw / 1512 * 10);
 
   @include breakpoint($xl-bp) {
-    font-size: calc(100vw / 768 * 10);
+    font-size: calc(100vw / 834 * 10);
   }
 
   @include breakpoint($sm-bp) {

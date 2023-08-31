@@ -1939,6 +1939,9 @@
 
     grid-column: 2 / 3;
     border: 0.1rem solid #000000;
+    @include breakpoint($xl-bp) {
+      grid-column: 6 span;
+    }
   }
 }
 
@@ -1949,5 +1952,126 @@
   }
   @include breakpoint($sm-bp) {
     margin-top: 0;
+  }
+}
+
+.details-title {
+  color: var(--color-black, #000);
+  font-size: 2.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-top: 6rem;
+  @include breakpoint($sm-bp) {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    letter-spacing: 0em;
+    margin-top: 3rem;
+    
+  }
+}
+
+.details-wrapper {
+  margin-top: 6rem;
+  @include breakpoint($sm-bp) {
+    margin-top: 4rem;
+  }
+}
+.details-data {
+  grid-column: 6 span;
+}
+.details-subtitle {
+  color: #000;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-variant: all-small-caps;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+
+  & > .details-block {
+    @include breakpoint($sm-bp) {
+      margin-top: 2rem;
+    }
+  }
+}
+.details-block {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--color-black, #000);
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include breakpoint($sm-bp) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 3rem;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    & > div {
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
+  
+  &.font-bold {
+    margin-top: 9rem;
+
+    font-weight: 500;
+    @include breakpoint($xl-bp) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.details-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  @include breakpoint($sm-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.text-green {
+  color: #3EAE5D;
+  font-weight: 500;
+}
+
+.details-order {
+  grid-column: 8 / 13;
+  @include breakpoint($xl-bp) {
+    grid-column: 6 span;
+  }
+}
+
+.max-w-162 {
+  @include breakpoint($xl-bp) {
+    max-width: 16.2rem;
   }
 }

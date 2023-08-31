@@ -198,313 +198,114 @@
 		</header>
 		<div class="header__space"></div>
 		<div class="wrapper__content">
-			<div class="delivery-breadcrumbs">
-				<div class="breadcrumbs">
-					<div class="container">
-						<div class="breadcrumbs__wrapper">
-							<ul class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a class="breadcrumbs__link" itemprop="item" href="/">
-										<span itemprop="name" title="Главная">Главная</span>
-									</a>
-									<meta itemprop="position" content="1" />
-								</li>
-								<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a class="breadcrumbs__link" itemprop="item" href="#">
-										<span itemprop="name" title="Корзина">Корзина</span>
-									</a>
-									<meta itemprop="position" content="2" />
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container order-wrapper">
-				<h1 class="order-title">оформление заказа</h1>
-				<form action="#" class="order-form">
-					<ul class="form-left">
-						<li class="form-block" id="0form">
-							<h2 class="form-block-title active">Данные для оформления</h2>
-							<div class="form-block-wrapper col-span-full">
-								<div class="form-block-inner grid-cols-6">
-									<div class="input-wrapper col-span-full" data-error="Поле ФИО должно быть заполнено">
-										<h3 class="input-placeholder">Ф.И.О. (полностью) <span class="text-red">*</span> </h3>
-										<input type="text" name="name" required>
-									</div>
-									<div class="input-wrapper col-span-3" data-error="Введен неверный email">
-										<h3 class="input-placeholder">Email</h3>
-										<input type="email" name="email">
-									</div>
-									<div class="input-wrapper col-span-3" data-error="Поле телефон должно быть заполнено верно">
-										<h3 class="input-placeholder">Моб. телефон <span class="text-red">*</span> </h3>
-										<input type="tel" name="tel" required data-pattern="^\+7.{16,}" value="+7">
-									</div>
-									<div class="form-block-buttons"><button type="button" class="next" data-nextformid="1form">Далее</button>
-									</div>
-								</div>
-							</div>
-							<!-- Вывод введенных данных пользователя -->
-							<div class="form-block-selected">
-							</div>
+			<h1 class="details-title container">детали заказа</h1>
+			<div class="details-wrapper container">
+				<div class="details-data">
+					<h2 class="details-subtitle">Данные заказа</h2>
+					<ul class="details-block">
+						<li>
+							<div>Номер заказа:</div>
+							<div>2837594769</div>
 						</li>
-						<li class="form-block" id="1form">
-							<h2 class="form-block-title">Способ доставки</h2>
-							<div class="form-block-wrapper col-span-full">
-								<div class="form-block-inner grid-cols-6">
-									<div class="input-wrapper col-span-full" data-error="Поле населенный пункт должно быть заполнено">
-										<h3 class="input-placeholder">Населенный пункт <span class="text-red">*</span> </h3>
-										<input type="text" name="city" required>
-									</div>
-									<div class="input-radio-wrapper my-30">
-										<label>
-											<input type="radio" name="delivery" value="Почта России" checked data-deliverycontent="delivery-content" data-deliveryid="delivery1">
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">Почта России</span>
-												<span class="radio-info">400 р.</span>
-											</span>
-										</label>
-										<label>
-											<input type="radio" name="delivery" value="СДЭК" data-deliverycontent="delivery-content" data-deliveryid="delivery1">
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">СДЭК</span>
-												<span class="radio-info">от 1 дня</span>
-											</span>
-										</label>
-										<label>
-											<input type="radio" name="delivery" value="Доставка курьером" data-deliverycontent="delivery-content" data-deliveryid="delivery1">
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">Доставка курьером <br class="sm-hidden">по Москве внутри МКАД</span>
-												<span class="radio-info">от 1 дня, 500 р.</span>
-											</span>
-										</label>
-										<label>
-											<input type="radio" name="delivery" value="Самовывоз из магазина" data-deliverycontent="delivery-content" data-deliveryid="delivery4">
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">Самовывоз из магазина <br class="sm-hidden">в Москве</span>
-											</span>
-										</label>
-									</div>
-									<!-- Контент в зависимости от выбранного способа доставки -->
-									<div id="delivery-content" class="grid-cols-6 col-span-full">
-									</div>
-									<div class="form-block-buttons">
-										<button type="button" class="prev" data-nextformid="0form">Назад</button>
-										<button type="button" class="next" data-nextformid="2form">Далее</button>
-									</div>
-								</div>
-							</div>
-							<!-- Вывод введенных данных пользователя -->
-							<div class="form-block-selected">
-							</div>
+						<li>
+							<div>Дата:</div>
+							<div>28.01.2022, 18:59</div>
 						</li>
-						<li class="form-block" id="2form">
-							<h2 class="form-block-title">Способ оплаты</h2>
-							<div class="form-block-wrapper col-span-full">
-								<div class="form-block-inner grid-cols-6">
-									<div class="input-radio-wrapper min-h-5">
-										<label>
-											<input type="radio" name="pay" value="Картой через Tinkoff" checked>
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">Картой через Tinkoff</span>
-											</span>
-										</label>
-										<label>
-											<input type="radio" name="pay" value="Картой через Робокассу">
-											<span class="radio-box"></span>
-											<span class="radio-block">
-												<span class="radio-name">Картой через Робокассу</span>
-											</span>
-										</label>
-									</div>
-									<div class="form-block-buttons">
-										<button type="button" class="prev" data-nextformid="1form">Назад</button>
-										<button type="button" class="next" data-nextformid="3form">Далее</button>
-									</div>
-								</div>
-							</div>
-							<!-- Вывод введенных данных пользователя -->
-							<div class="form-block-selected">
-							</div>
+						<li>
+							<div>Статус заказа:</div>
+							<div class="text-green">выполнен</div>
 						</li>
 					</ul>
-					<div class="form-right" id="3form">
-						<h2 class="form-block-title">состав заказа</h2>
-						<div class="form-block-wrapper col-span-full">
-							<div class="form-block-inner">
-								<div class="modal-basket__list">
-									<div class="modal-basket__item" data-basket-item-id="1">
-										<div class="modal-basket__item-image">
-											<img src="./img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
-										</div>
-										<div class="modal-basket__item-info">
-											<div class="modal-basket__item-top">
-												<a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
-												<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(1);">
-													удалить
-												</div>
-											</div>
-											<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
-											<ul class="modal-basket__item-props">
-												<li class="modal-basket__item-prop">чёрный</li>
-												<li class="modal-basket__item-prop">s</li>
-											</ul>
-										</div>
-										<div class="modal-basket__item-bottom">
-											<div class="modal-basket__item-quantity">
-												<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(1);"></span>
-												<input type="number" value="1" name="quantity">
-												<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(1);"></span>
-											</div>
-											<div class="modal-basket__item-price">
-												<span class="old-price">5 490 р.</span>
-												<span class="current-price">2 190 р.</span>
-											</div>
-										</div>
-									</div>
-									<div class="modal-basket__item" data-basket-item-id="2">
-										<div class="modal-basket__item-image">
-											<img src="./img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
-										</div>
-										<div class="modal-basket__item-info">
-											<div class="modal-basket__item-top">
-												<a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
-												<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(2);">
-													удалить
-												</div>
-											</div>
-											<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
-											<ul class="modal-basket__item-props">
-												<li class="modal-basket__item-prop">чёрный</li>
-												<li class="modal-basket__item-prop">s</li>
-											</ul>
-										</div>
-										<div class="modal-basket__item-bottom">
-											<div class="modal-basket__item-quantity">
-												<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(2);"></span>
-												<input type="number" value="1" name="quantity">
-												<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(2);"></span>
-											</div>
-											<div class="modal-basket__item-price">
-												<span class="current-price">2 590 р.</span>
-											</div>
-										</div>
-									</div>
-									<div class="modal-basket__item" data-basket-item-id="3">
-										<div class="modal-basket__item-image">
-											<img src="./img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
-										</div>
-										<div class="modal-basket__item-info">
-											<div class="modal-basket__item-top">
-												<a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
-												<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(1);">
-													удалить
-												</div>
-											</div>
-											<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
-											<ul class="modal-basket__item-props">
-												<li class="modal-basket__item-prop">чёрный</li>
-												<li class="modal-basket__item-prop">s</li>
-											</ul>
-										</div>
-										<div class="modal-basket__item-bottom">
-											<div class="modal-basket__item-quantity">
-												<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(1);"></span>
-												<input type="number" value="1" name="quantity">
-												<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(1);"></span>
-											</div>
-											<div class="modal-basket__item-price">
-												<span class="old-price">5 490 р.</span>
-												<span class="current-price">2 190 р.</span>
-											</div>
-										</div>
-									</div>
-									<div class="modal-basket__item" data-basket-item-id="4">
-										<div class="modal-basket__item-image">
-											<img src="./img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
-										</div>
-										<div class="modal-basket__item-info">
-											<div class="modal-basket__item-top">
-												<a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
-												<div class="modal-basket__item-delete animated-underline" onclick="Indress.deleteBasketItem(2);">
-													удалить
-												</div>
-											</div>
-											<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
-											<ul class="modal-basket__item-props">
-												<li class="modal-basket__item-prop">чёрный</li>
-												<li class="modal-basket__item-prop">s</li>
-											</ul>
-										</div>
-										<div class="modal-basket__item-bottom">
-											<div class="modal-basket__item-quantity">
-												<span class="modal-basket__item-decrease" onclick="Indress.decreaseBasketItem(2);"></span>
-												<input type="number" value="1" name="quantity">
-												<span class="modal-basket__item-increase" onclick="Indress.increaseBasketItem(2);"></span>
-											</div>
-											<div class="modal-basket__item-price">
-												<span class="current-price">2 590 р.</span>
-											</div>
-										</div>
-									</div>
+					<ul class="details-block">
+						<li>
+							<div>Способ оплаты:</div>
+							<div>MasterCard</div>
+						</li>
+						<li>
+							<div>Способ доставки:</div>
+							<div>Почта России</div>
+						</li>
+					</ul>
+					<ul class="details-block">
+						<li>
+							<div>Покупатель:</div>
+							<div>Иванова Мария Ивановна</div>
+						</li>
+						<li>
+							<div>Контанты:</div>
+							<div>+7 (999) 999-99-99</div>
+						</li>
+						<li>
+							<div>Адрес доставки:</div>
+							<div class="max-w-162">Россия, г. Москва, ул. Свободы, 32, кв. 387</div>
+						</li>
+					</ul>
+					<ul class="details-block font-bold">
+						<li>
+							<div>Сумма за заказ:</div>
+							<div>6 450 р.</div>
+						</li>
+						<li>
+							<div>Доставка:</div>
+							<div>400 р.</div>
+						</li>
+						<li>
+							<div>Сумма к оплате:</div>
+							<div>6 850 р.</div>
+						</li>
+					</ul>
+				</div>
+				<div class="details-order">
+					<h2 class="details-subtitle">состав заказа</h2>
+					<div class="modal-basket__list">
+						<div class="modal-basket__item" data-basket-item-id="1">
+							<div class="modal-basket__item-image">
+								<img src="./img/product-1.jpg" alt="Жакет двубортный «Гусиная лапка»">
+							</div>
+							<div class="modal-basket__item-info">
+								<div class="modal-basket__item-top">
+									<a href="/product/" class="modal-basket__item-name">Жакет двубортный «Гусиная лапка»</a>
 								</div>
-								<div class="justify-between">
-									<div>Сумма за заказ:</div>
-									<div>2 590 p.</div>
+								<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+								<ul class="modal-basket__item-props">
+									<li class="modal-basket__item-prop">чёрный</li>
+									<li class="modal-basket__item-prop">s</li>
+								</ul>
+							</div>
+							<div class="modal-basket__item-bottom">
+								<div class="modal-basket__item-quantity">
+									<div class="quantity-text">1 шт.</div>
 								</div>
-								<div class="justify-between">
-									<div>Доставка:</div>
-									<div>400 p.</div>
+								<div class="modal-basket__item-price">
+									<span class="old-price">5 490 р.</span>
+									<span class="current-price">2 190 р.</span>
 								</div>
-								<div class="input-wrapper">
-									<h3 class="input-placeholder">Промокод</h3>
-									<input type="text" name="promo">
+							</div>
+						</div>
+						<div class="modal-basket__item" data-basket-item-id="2">
+							<div class="modal-basket__item-image">
+								<img src="./img/product-3.jpg" alt="Жакет двубортный «Гусиная лапка»">
+							</div>
+							<div class="modal-basket__item-info">
+								<div class="modal-basket__item-top">
+									<a href="/product/" class="modal-basket__item-name">Водолазка в рубчик</a>
 								</div>
-								<div class="modal-basket__summary">
-									<span>Всего к оплате:</span>
-									<span class="modal-basket__summary-price">4 780 р.</span>
+								<p class="modal-basket__item-artnumber">арт. <span>Fg-24875</span></p>
+								<ul class="modal-basket__item-props">
+									<li class="modal-basket__item-prop">чёрный</li>
+									<li class="modal-basket__item-prop">s</li>
+								</ul>
+							</div>
+							<div class="modal-basket__item-bottom">
+								<div class="modal-basket__item-quantity">
+									<div class="quantity-text">1 шт.</div>
 								</div>
-								<input type="submit" class="order-submit" value="Оформить заказ" />
+								<div class="modal-basket__item-price">
+									<span class="current-price">2 590 р.</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="form-checkbox col-span-full">
-						<label for="register-agree2" class="form-label-checkbox">
-							<input type="checkbox" class="form-input-checkbox" id="register-agree2" name="agree" value="Y" required>
-							<span>Я согласен (-на) с условиями политики конфиденциальности</span>
-						</label>
-					</div>
-				</form>
-			</div>
-			<div class="hidden-block" hidden>
-				<div id="delivery1">
-					<div class="input-wrapper col-span-2 sm-col-span-full">
-						<h3 class="input-placeholder">Улица <span class="text-red">*</span> </h3>
-						<input type="text" name="street" required data-sprintf="&lt;span&gt;ул. %s, &lt;span/&gt;">
-					</div>
-					<div class="input-wrapper col-span-2" data-error="Поле дом должно быть заполнено">
-						<h3 class="input-placeholder">Дом <span class="text-red">*</span> </h3>
-						<input type="number" name="house" required data-sprintf="&lt;span&gt; %s, &lt;span/&gt;">
-					</div>
-					<div class="input-wrapper col-span-2" data-error="Поле квартира должно быть заполнено">
-						<h3 class="input-placeholder">Квартира/офис <span class="text-red">*</span> </h3>
-						<input type="number" name="appartments" required data-sprintf="&lt;span&gt; кв. %s, &lt;span/&gt;">
-					</div>
-					<div class="input-wrapper col-span-2 sm-col-span-full" data-error="Поле почтовый индекс должно быть заполнено">
-						<h3 class="input-placeholder">Почтовый индекс <span class="text-red">*</span> </h3>
-						<input type="number" name="postIndex" required>
-					</div>
-					<div class="input-wrapper col-span-full mt-5">
-						<h3 class="input-placeholder">Комментарии к заказу </h3>
-						<textarea type="text" name="comment"></textarea>
-					</div>
-				</div>
-				<div id="delivery4">
 				</div>
 			</div>
 		</div>
