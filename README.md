@@ -1,17 +1,1 @@
-# gulp-starter-kit
-
-A light foundation for your next front-end based on gulp.
-
-## Usage
-
-Install dependencies with npm:
-
-```bash
-npm ci
-```
-
-Run development mode
-
-```bash
-npm run start
-```
+[figma](https://www.figma.com/file/penJW6MT34HEn28JrRAg4w/indress?mode=dev)
